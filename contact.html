@@ -21,8 +21,18 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+            /* Form comes first on mobile */
             .contact-info-panel {
                 position: static;
+                order: 2;
+            }
+            .contact-form-panel {
+                order: 1;
+            }
+            /* Hide the heavy info panel content on mobile — keep only the response badge + social */
+            .contact-reason,
+            .contact-info-panel > p {
+                display: none;
             }
         }
         /* ── LEFT: INFO PANEL ── */
