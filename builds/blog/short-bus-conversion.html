@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jess Converts a Short Bus — VanWild</title>
+    <meta name="description" content="A short bus conversion for solo travel: 170 sq ft, standing height, 500W solar, composting toilet. 11 months of weekends, $16,500 total. Fully documented.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>
+        .img-169 {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #16120e;
+            border-radius: var(--radius-lg);
+            margin: var(--space-md) 0;
+        }
+        
+        .img-169 img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .img-169 img[src=""] {
+            display: none;
+        }
+        
+        .img-169.loaded .img-placeholder {
+            display: none;
+        }
+        
+        .img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+        
+        .ph-name {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 44px);
+            color: rgba(244, 99, 30, 0.45);
+            letter-spacing: .06em;
+        }
+        
+        .ph-ratio {
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.18);
+        }
+        
+        .ph-icon {
+            font-size: 32px;
+            opacity: .2;
+        }
+        
+        .img-caption {
+            font-family: var(--font-head);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            letter-spacing: .05em;
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .vs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: var(--space-md) 0;
+        }
+        
+        .vs-card {
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            border: 1px solid var(--sand);
+        }
+        
+        .vs-card.pro {
+            background: rgba(46, 125, 50, 0.07);
+            border-color: rgba(46, 125, 50, 0.3);
+        }
+        
+        .vs-card.con {
+            background: #fff5f5;
+            border-color: #ffd0d0;
+        }
+        
+        .vs-card h4 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .vs-card.pro h4 {
+            color: #2e7d32;
+        }
+        
+        .vs-card.con h4 {
+            color: #c62828;
+        }
+        
+        .vs-card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        
+        .vs-card li {
+            font-size: var(--fs-sm);
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+        
+        @media(max-width:560px) {
+            .vs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="container nav-inner">
+            <a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+            <ul class="nav-links">
+                <li><a href="../../guides/solar.html">Solar</a></li>
+                <li><a href="../../guides/insulation.html">Insulation</a></li>
+                <li><a href="../../guides/budget.html">Budget</a></li>
+                <li><a href="../index.html" class="active">Builds</a></li>
+                <li><a href="../../blog/index.html">Blog</a></li>
+                <li><a href="../../about.html">About</a></li>
+            </ul>
+            <a href="../../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../../guides/solar.html">SOLAR</a><a href="../../guides/insulation.html">INSULATION</a>
+        <a href="../../guides/budget.html">BUDGET</a><a href="../index.html">BUILDS</a>
+        <a href="../../blog/index.html">BLOG</a><a href="../../about.html">ABOUT</a>
+        <a href="../../guides/solar.html" class="btn btn-primary">Start Building →</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+        <div class="container page-hero-content">
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a><span class="sep">›</span>
+                <a href="../index.html">Builds</a><span class="sep">›</span>
+                <span class="current">Short Bus Conversion</span>
+            </div>
+            <div class="tag dark">🚌 Build Log · Short Bus</div>
+            <h1>JESS CONVERTS<br>A SHORT BUS —<br>AND IT'S PERFECT</h1>
+            <p class="lead">170 square feet of standing-height living space. Easier to park than a full-size. Cheaper to fuel. 11 months of weekends. Total: $16,500. Every step documented.</p>
+            <span style="color:rgba(255,255,255,0.4);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Sep 2025 · 16 min read</span>
+        </div>
+    </section>
+
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span>SHORT BUS</span><span class="dot">◆</span><span>$16,500</span><span class="dot">◆</span>
+            <span>INTERNATIONAL RE</span><span class="dot">◆</span><span>SOLO BUILD</span><span class="dot">◆</span>
+            <span>500W SOLAR</span><span class="dot">◆</span><span>COMPOSTING TOILET</span><span class="dot">◆</span>
+            <span>SHORT BUS</span><span class="dot">◆</span><span>$16,500</span><span class="dot">◆</span>
+            <span>INTERNATIONAL RE</span><span class="dot">◆</span><span>SOLO BUILD</span><span class="dot">◆</span>
+            <span>500W SOLAR</span><span class="dot">◆</span><span>COMPOSTING TOILET</span><span class="dot">◆</span>
+        </div>
+    </div>
+
+    <section class="section-pad">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+
+                    <!-- img1 -->
+                    <div class="img-169" id="img1-wrap">
+                        <img id="img1" src="../img/short1.jpeg" alt="2004 International RE short bus before conversion">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img1</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The bus before: a 2004 International RE short bus, 26 feet total length, purchased from a special needs transport company in Ohio for $5,400.</p>
+
+                    <h2>Why a Short Bus</h2>
+                    <p>Jess spent two years watching full-size skoolie builds before deciding a 40-footer wasn't the right move for solo travel. Parking in cities is nearly impossible. Fuel economy is brutal. Campsite size restrictions exclude many national
+                        park and state park sites. And frankly, 280 square feet is too much space for one person — it's space to heat, insulate, and maintain.</p>
+                    <p>A short bus — typically 20–26 feet, often called a "shorty" in the skoolie community — is a different proposition. You get standing headroom (unlike a van), real layout flexibility, and a dedicated bathroom space that's genuinely separate
+                        from where you sleep and cook. You give up some storage but gain an enormously more practical daily driver.</p>
+
+                    <div class="callout">
+                        <strong>📐 The Short Bus Specs</strong> 2004 International RE chassis, 26 feet overall length, 20 feet of interior usable space behind the driver's compartment. 7.3 PowerStroke diesel engine. 88,000 miles. Factory seating for 24
+                        passengers, removed entirely. All original windows retained (more natural light than most builds).
+                    </div>
+
+                    <!-- img2: demo complete -->
+                    <div class="img-169" id="img2-wrap">
+                        <img id="img2" src="../img/short2.jpeg" alt="Short bus interior after complete demo — bare steel walls">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img2</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Demo complete: 24 seats removed, all interior trim stripped, floor rubber mat pulled. The floor was cleaner than expected — only surface rust in 3 spots, easily treated.</p>
+
+                    <h2>Short Bus vs Full-Size: The Real Trade-offs</h2>
+                    <div class="vs-grid">
+                        <div class="vs-card pro">
+                            <h4>✅ Short Bus Advantages</h4>
+                            <ul>
+                                <li>Fits in standard parking spots (with overhang)</li>
+                                <li>Can enter most campgrounds and state parks</li>
+                                <li>Better fuel economy (Jess averages 14 MPG)</li>
+                                <li>Cheaper to register and insure in most states</li>
+                                <li>Easier to find a mechanic willing to work on it</li>
+                                <li>Quicker to build — less square footage to finish</li>
+                            </ul>
+                        </div>
+                        <div class="vs-card con">
+                            <h4>❌ Short Bus Disadvantages</h4>
+                            <ul>
+                                <li>Less storage than a full-size</li>
+                                <li>Can't fit a full kitchen + bathroom + bedroom without careful planning</li>
+                                <li>Fewer model options — harder to find good ones at auction</li>
+                                <li>Shorter wheelbase means bumpier ride on rough roads</li>
+                                <li>Resale value lower than well-converted full-size buses</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>The Layout (20 Feet of Interior)</h2>
+                    <p>Front to back: driver's compartment (retained as-is, with a curtain divider), then the living space at 240 inches of usable length. Jess spent 3 weekends on cardboard mockups before committing to any layout. Final arrangement:</p>
+                    <ul>
+                        <li><strong>Living/dining (72")</strong> — L-shaped bench sofa that converts to a guest bed, fold-down dining table that mounts to the wall, bookshelf built into the wheel well on the driver's side.</li>
+                        <li><strong>Kitchen (48")</strong> — full galley: 2-burner propane range, 12V 35L fridge, stainless sink with cold running water (no hot water plumbing — Jess uses an Eccotemp portable for occasional hot water outside), upper cabinets
+                            running the full length.</li>
+                        <li><strong>Bathroom (36")</strong> — composting toilet (Nature's Head), corner shower (38"×38"), small sink mounted to the wall. Full door. More useful per square inch than any other room on the bus.</li>
+                        <li><strong>Bedroom (84")</strong> — queen bed crosswise (fits perfectly in a short bus width), two-drawer nightstands built into the wheel wells, large windows on both sides for cross-ventilation, curtains for full blackout.</li>
+                    </ul>
+
+                    <!-- img3: kitchen -->
+                    <div class="img-169" id="img3-wrap">
+                        <img id="img3" src="../img/short3.jpeg" alt="Short bus kitchen — compact galley with full functionality">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img3</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The kitchen: 2-burner propane, 35L compressor fridge, stainless sink — all in 48 inches. Butcher block countertop makes the whole space feel warm.</p>
+
+                    <!-- img4: bathroom -->
+                    <div class="img-169" id="img4-wrap">
+                        <img id="img4" src="../img/short4.jpeg" alt="Composting toilet and corner shower in short bus bathroom">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img4</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The bathroom: Nature's Head composting toilet, 38"×38" corner shower with fiberglass walls, wall-mounted sink. Full door with lock. 36 inches of floor space is surprisingly workable.</p>
+
+                    <h2>Electrical: 500W Solar + 200Ah LiFePO4</h2>
+                    <p>Jess's daily power use is modest by van standards — no work-from-bus setup, no multiple devices charging simultaneously. Budget: fridge (100Wh/day), lights (20Wh/day), fan (30Wh/day), laptop + phone (80Wh/day), shower water pump (10Wh/day).
+                        Total: ~240Wh/day. With 500W of solar in reasonable sun, this is trivially easy to maintain.</p>
+
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Spec</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Solar panels</td>
+                                <td>Renogy 200W × 2 + 100W flex = 500W</td>
+                                <td>$478</td>
+                            </tr>
+                            <tr>
+                                <td>Charge controller</td>
+                                <td>Victron SmartSolar MPPT 100/30</td>
+                                <td>$168</td>
+                            </tr>
+                            <tr>
+                                <td>Battery bank</td>
+                                <td>Battle Born 100Ah × 2 = 200Ah LiFePO4</td>
+                                <td>$1,800</td>
+                            </tr>
+                            <tr>
+                                <td>Inverter</td>
+                                <td>Renogy 700W pure sine</td>
+                                <td>$118</td>
+                            </tr>
+                            <tr>
+                                <td>Battery monitor</td>
+                                <td>Victron BMV-712</td>
+                                <td>$108</td>
+                            </tr>
+                            <tr>
+                                <td>Fuse block, wiring, misc</td>
+                                <td>Blue Sea + correct AWG wire</td>
+                                <td>$186</td>
+                            </tr>
+                            <tr class="total">
+                                <td colspan="2"><strong>Electrical Total</strong></td>
+                                <td><strong>$2,858</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- img5: bedroom -->
+                    <div class="img-169" id="img5-wrap">
+                        <img id="img5" src="../img/short5.jpeg" alt="Queen bed crosswise in short bus bedroom — natural light from windows">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img5</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The bedroom: queen bed crosswise, nightstands built into both wheel wells, windows on both sides for cross-ventilation and natural light.</p>
+
+                    <h2>Full Cost Breakdown</h2>
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bus purchase (2004 International RE, Ohio)</td>
+                                <td>$5,400</td>
+                            </tr>
+                            <tr>
+                                <td>Demo + disposal (seat hauling, dump fees)</td>
+                                <td>$120</td>
+                            </tr>
+                            <tr>
+                                <td>Floor restoration (surface rust + POR-15)</td>
+                                <td>$280</td>
+                            </tr>
+                            <tr>
+                                <td>Insulation (Thinsulate + polyiso + foam tape)</td>
+                                <td>$480</td>
+                            </tr>
+                            <tr>
+                                <td>Subfloor + vinyl plank flooring</td>
+                                <td>$320</td>
+                            </tr>
+                            <tr>
+                                <td>Wall + ceiling paneling (birch ply + cedar accent)</td>
+                                <td>$440</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical system (itemized above)</td>
+                                <td>$2,858</td>
+                            </tr>
+                            <tr>
+                                <td>Kitchen (stove, fridge, sink, pump, cabinets)</td>
+                                <td>$1,240</td>
+                            </tr>
+                            <tr>
+                                <td>Bathroom (toilet, shower, sink, plumbing)</td>
+                                <td>$1,480</td>
+                            </tr>
+                            <tr>
+                                <td>Bedroom (bed platform, custom foam, curtains)</td>
+                                <td>$580</td>
+                            </tr>
+                            <tr>
+                                <td>Living area (sofa conversion, dining table)</td>
+                                <td>$480</td>
+                            </tr>
+                            <tr>
+                                <td>Diesel heater (Vevor + professional install)</td>
+                                <td>$380</td>
+                            </tr>
+                            <tr>
+                                <td>Roof fan (Maxxair 4500K)</td>
+                                <td>$140</td>
+                            </tr>
+                            <tr>
+                                <td>Tools (kept, used throughout build)</td>
+                                <td>$620</td>
+                            </tr>
+                            <tr>
+                                <td>Misc: hardware, sealants, lighting, curtains</td>
+                                <td>$382</td>
+                            </tr>
+                            <tr class="total">
+                                <td><strong>Total All-In Cost</strong></td>
+                                <td><strong>$15,200</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size:var(--fs-sm);color:var(--muted);">The $16,500 figure includes $1,300 in unplanned costs that came up during the build — mostly an unexpected engine service (injectors at 88k miles on the 7.3 PowerStroke) and one electrical redo after Jess wired the battery bank incorrectly
+                        the first time.</p>
+
+                    <h2>8 Months Full-Time: What Jess Says</h2>
+                    <p>"The short bus is the right answer for solo travel and I'd make the same decision again without hesitation. I've parked in cities, campgrounds, neighborhoods, and backcountry spots. I fit places a full-size never could. The bathroom
+                        makes a two-week off-grid stretch feel normal instead of adventurous-but-uncomfortable. The solar system is massively oversized for my actual needs — I never go below 80% state of charge."</p>
+                    <p>The one regret: "I wish I'd added a second composting toilet vent to pull smell out of the bathroom faster. It works fine — Nature's Head is a great product — but in hot weather the venting could be better. A second vent fan on the
+                        opposite wall would fix it."</p>
+
+                    <div class="callout">
+                        <strong>📷 Photo Log</strong> Jess documented the entire build with weekly photos in the VanWild Facebook community — over 400 photos from day one to move-in day. Search "Jess short bus" in the group to find the full archive.
+                        <br><br><a href="https://web.facebook.com/profile.php?id=100066665391782" class="btn btn-primary btn-sm" style="margin-top:10px;">Join the Community →</a>
+                    </div>
+
+                </article>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget">
+                        <h4>🔧 More Builds</h4>
+                        <div class="sidebar-links">
+                            <a href="transit-build.html" class="sidebar-link"><span class="link-icon">🚐</span> Transit — Every Receipt</a>
+                            <a href="sprinter-remote-work.html" class="sidebar-link"><span class="link-icon">🚐</span> Sprinter Remote Work</a>
+                            <a href="rodriguez-skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Rodriguez Skoolie</a>
+                            <a href="promaster-budget-build.html" class="sidebar-link"><span class="link-icon">💰</span> $3,800 ProMaster</a>
+                            <a href="revel-upgrade.html" class="sidebar-link"><span class="link-icon">🏕</span> Revel Upgrade</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>📚 Related Guides</h4>
+                        <div class="sidebar-links">
+                            <a href="../../guides/skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Skoolie Guide</a>
+                            <a href="../../guides/solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Guide</a>
+                            <a href="../../blog/skoolie-rust-guide.html" class="sidebar-link"><span class="link-icon">🔧</span> Rust Removal Guide</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+                        <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Newsletter</h4>
+                        <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Weekly guides. No spam.</p>
+                        <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2>THINKING ABOUT A BUS?</h2>
+            <p>Read the full skoolie guide before you buy anything.</p>
+            <div class="cta-btns">
+                <a href="../../guides/skoolie.html" class="btn btn-white">Skoolie Guide →</a>
+                <a href="../index.html" class="btn btn-ghost">All Builds</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+                    <p>Real guides for real builds. No sponsors.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="../../guides/solar.html">Solar Power</a></li>
+                        <li><a href="../../guides/insulation.html">Insulation</a></li>
+                        <li><a href="../../guides/budget.html">Budget</a></li>
+                        <li><a href="../../guides/battery.html">Batteries</a></li>
+                        <li><a href="../../guides/skoolie.html">Skoolie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="../index.html">All Builds</a></li>
+                        <li><a href="../../blog/index.html">Blog</a></li>
+                        <li><a href="../../compare.html">Compare</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 VanWild.</span>
+                <div class="social-links"><a href="https://web.facebook.com/profile.php?id=100066665391782" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            const img = document.getElementById('img' + i);
+            const wrap = document.getElementById('img' + i + '-wrap');
+            if (!img || !wrap) continue;
+            const hide = () => {
+                if (img.naturalWidth > 0) wrap.classList.add('loaded');
+            };
+            img.addEventListener('load', hide);
+            hide();
+        }
+    </script>
+</body>
+
+</html>

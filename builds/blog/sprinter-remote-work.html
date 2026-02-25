@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah & James: Remote Work Sprinter Build — VanWild</title>
+    <meta name="description" content="A couple converted a 2019 Mercedes Sprinter for full-time remote work — 600W solar, 300Ah lithium, standing desk, shower. Full cost breakdown.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>
+        .img-169 {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #16120e;
+            border-radius: var(--radius-lg);
+            margin: var(--space-md) 0;
+        }
+        
+        .img-169 img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .img-169 img[src=""] {
+            display: none;
+        }
+        
+        .img-169.loaded .img-placeholder {
+            display: none;
+        }
+        
+        .img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+        
+        .ph-name {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 44px);
+            color: rgba(244, 99, 30, 0.45);
+            letter-spacing: .06em;
+        }
+        
+        .ph-ratio {
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.18);
+        }
+        
+        .ph-icon {
+            font-size: 32px;
+            opacity: .2;
+        }
+        
+        .img-caption {
+            font-family: var(--font-head);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            letter-spacing: .05em;
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: var(--space-sm);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="container nav-inner">
+            <a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+            <ul class="nav-links">
+                <li><a href="../../guides/solar.html">Solar</a></li>
+                <li><a href="../../guides/insulation.html">Insulation</a></li>
+                <li><a href="../../guides/budget.html">Budget</a></li>
+                <li><a href="../index.html" class="active">Builds</a></li>
+                <li><a href="../../blog/index.html">Blog</a></li>
+                <li><a href="../../about.html">About</a></li>
+            </ul>
+            <a href="../../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../../guides/solar.html">SOLAR</a><a href="../../guides/insulation.html">INSULATION</a>
+        <a href="../../guides/budget.html">BUDGET</a><a href="../index.html">BUILDS</a>
+        <a href="../../blog/index.html">BLOG</a><a href="../../about.html">ABOUT</a>
+        <a href="../../guides/solar.html" class="btn btn-primary">Start Building →</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+        <div class="container page-hero-content">
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a><span class="sep">›</span>
+                <a href="../index.html">Builds</a><span class="sep">›</span>
+                <span class="current">Sprinter Remote Work</span>
+            </div>
+            <div class="tag dark">🚐 Build Log · Van</div>
+            <h1>SARAH &amp; JAMES:<br>REMOTE WORK<br>SPRINTER BUILD</h1>
+            <p class="lead">Two remote workers who needed a real desk, reliable wifi, and enough power for two laptops running 8 hours a day. Total cost: $11,400.</p>
+            <span style="color:rgba(255,255,255,0.4);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Jan 2026 · 18 min read</span>
+        </div>
+    </section>
+
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span>MERCEDES SPRINTER</span><span class="dot">◆</span><span>$11,400</span><span class="dot">◆</span>
+            <span>600W SOLAR</span><span class="dot">◆</span><span>REMOTE WORK</span><span class="dot">◆</span>
+            <span>STANDING DESK</span><span class="dot">◆</span><span>COUPLE BUILD</span><span class="dot">◆</span>
+            <span>MERCEDES SPRINTER</span><span class="dot">◆</span><span>$11,400</span><span class="dot">◆</span>
+            <span>600W SOLAR</span><span class="dot">◆</span><span>REMOTE WORK</span><span class="dot">◆</span>
+            <span>STANDING DESK</span><span class="dot">◆</span><span>COUPLE BUILD</span><span class="dot">◆</span>
+        </div>
+    </div>
+
+    <section class="section-pad">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+
+                    <!-- img1: exterior or hero shot -->
+                    <div class="img-169" id="img1-wrap">
+                        <img id="img1" src="../img/sprin1.jpeg" alt="Sprinter exterior — Sarah and James build">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img1</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The Sprinter 170" extended — 2019 high-roof, purchased with 48,000 miles.</p>
+
+                    <h2>Why a Sprinter</h2>
+                    <p>Sarah is a UX designer and James is a software engineer. Both fully remote, both used to multiple monitors and a proper sitting/standing workspace. After 9 months of trying to work from their Transit (which they'd owned before this
+                        build), they sold it and upgraded specifically for the workspace. A 170" Sprinter with the extended body gave them room for a real desk setup without sacrificing the bed.</p>
+
+                    <div class="callout">
+                        <strong>🖥️ The Non-Negotiables</strong> Before designing the layout they listed their minimum requirements: (1) a desk wide enough for two laptops + external monitors, (2) ability to sit or stand, (3) strong enough electrical
+                        to run both setups all day with charging to spare, (4) a real shower — not a camp shower bag.
+                    </div>
+
+                    <!-- img2: interior workspace -->
+                    <div class="img-169" id="img2-wrap">
+                        <img id="img2" src="../img/sprin2.jpeg  " alt="Standing desk workspace inside the Sprinter">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img2</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The workspace: motorized standing desk, dual monitor arms, cable-managed power strip, fiber wifi router on a Starlink connection.</p>
+
+                    <h2>The Layout</h2>
+                    <p>The 170" extended Sprinter gave them 148" of interior floor space behind the driver partition. The layout from front to back: (1) driver cab with folding passenger seat for occasional passenger use, (2) standing desk workspace taking
+                        up the first 48" of the cargo area, (3) kitchen galley along the driver's side for 36", (4) wet bath in its own separate compartment with a real door, (5) queen bed in the rear filling the full width.</p>
+
+                    <p>The desk is a custom motorized frame (FlexiSpot E7) with a butcher block top cut to 54" wide × 24" deep. At sitting height it's 27", at standing it raises to 47" — enough clearance for working standing in a high-roof Sprinter without
+                        hunching.
+                    </p>
+
+                    <!-- img3: electrical bay -->
+                    <div class="img-169" id="img3-wrap">
+                        <img id="img3" src="../img/sprin3.jpeg" alt="Electrical bay — Victron system, 300Ah lithium">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img3</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The electrical bay under the bed: three 100Ah Battle Born batteries, Victron Multiplus, SmartSolar, and BMV-712.</p>
+
+                    <h2>The Electrical System</h2>
+                    <p>This is the most-asked-about part of their build, and it's the most thoroughly documented. Their daily power budget: two laptop chargers (180W combined), two external monitors (80W combined), fridge (130Wh/day), lights (30Wh/day),
+                        fan (40Wh/day), Starlink (75Wh/day), miscellaneous phone/camera charging (50Wh/day). Total: approximately 585Wh/day.</p>
+
+                    <p>With 600W of solar in a sunny climate they generate 1,800–2,400Wh on a good day. On overcast days in the Pacific Northwest (where they spent 3 months), they were generating 300–600Wh/day — fine with 300Ah of lithium as a buffer, but
+                        they learned to run the engine alternator for 45 minutes after two consecutive cloudy days.</p>
+
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Spec</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Solar panels</td>
+                                <td>Renogy 200W × 3 = 600W total</td>
+                                <td>$474</td>
+                            </tr>
+                            <tr>
+                                <td>Charge controller</td>
+                                <td>Victron SmartSolar MPPT 100/50</td>
+                                <td>$248</td>
+                            </tr>
+                            <tr>
+                                <td>Battery bank</td>
+                                <td>Battle Born 100Ah × 3 = 300Ah</td>
+                                <td>$2,700</td>
+                            </tr>
+                            <tr>
+                                <td>Inverter/charger</td>
+                                <td>Victron Multiplus 12/2000/80</td>
+                                <td>$680</td>
+                            </tr>
+                            <tr>
+                                <td>Battery monitor</td>
+                                <td>Victron BMV-712</td>
+                                <td>$108</td>
+                            </tr>
+                            <tr>
+                                <td>DC-DC charger</td>
+                                <td>Victron Orion-Tr 30A</td>
+                                <td>$168</td>
+                            </tr>
+                            <tr>
+                                <td>Fuse block + bus bars</td>
+                                <td>Blue Sea Systems</td>
+                                <td>$124</td>
+                            </tr>
+                            <tr>
+                                <td>Wire, lugs, conduit</td>
+                                <td>All AWG-correct runs</td>
+                                <td>$178</td>
+                            </tr>
+                            <tr class="total">
+                                <td colspan="2"><strong>Electrical Total</strong></td>
+                                <td><strong>$4,680</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- img4: shower/wet bath -->
+                    <div class="img-169" id="img4-wrap">
+                        <img id="img4" src="../img/sprin4.jpeg" alt="Wet bath with real shower — Sprinter build">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img4</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The wet bath: fiberglass walls, real showerhead, Separett composting toilet, full door with lock.</p>
+
+                    <h2>The Wet Bath</h2>
+                    <p>Building a proper wet bath in a Sprinter takes 42–48" of length depending on how you handle the toilet placement. Sarah and James gave it 44" — tight, but fully functional. Fiberglass shower walls (cut from a camper replacement panel
+                        kit) make cleanup easy. The shower drain goes to a gray water tank under the van. Hot water from an Eccotemp L5 tankless propane heater mounted just outside the wet bath wall.</p>
+
+                    <!-- img5: finished bed area -->
+                    <div class="img-169" id="img5-wrap">
+                        <img id="img5" src="../img/sprin5.jpeg" alt="Queen bed rear of Sprinter — finished interior">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img5</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The queen bed fills the full rear width with 4" of custom foam. Storage drawers below on full-extension slides.</p>
+
+                    <h2>Full Cost Breakdown</h2>
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Van purchase (2019 Sprinter 170", 48k miles)</td>
+                                <td>$38,500</td>
+                            </tr>
+                            <tr>
+                                <td>Insulation (spray foam + polyiso + Thinsulate)</td>
+                                <td>$680</td>
+                            </tr>
+                            <tr>
+                                <td>Subfloor + flooring (vinyl plank)</td>
+                                <td>$380</td>
+                            </tr>
+                            <tr>
+                                <td>Wall paneling (birch ply + paint)</td>
+                                <td>$240</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical system (full itemized above)</td>
+                                <td>$4,680</td>
+                            </tr>
+                            <tr>
+                                <td>Standing desk (FlexiSpot E7 + butcher block)</td>
+                                <td>$420</td>
+                            </tr>
+                            <tr>
+                                <td>Kitchen (stove, sink, pump, tank, fridge)</td>
+                                <td>$980</td>
+                            </tr>
+                            <tr>
+                                <td>Wet bath (shower, toilet, drain, propane heater)</td>
+                                <td>$1,240</td>
+                            </tr>
+                            <tr>
+                                <td>Bed platform + custom foam mattress</td>
+                                <td>$480</td>
+                            </tr>
+                            <tr>
+                                <td>Starlink (dish + first month)</td>
+                                <td>$599</td>
+                            </tr>
+                            <tr>
+                                <td>Diesel heater (Webasto Air Top 2000 STC)</td>
+                                <td>$1,200</td>
+                            </tr>
+                            <tr>
+                                <td>Roof fan (Maxxair 4500K)</td>
+                                <td>$140</td>
+                            </tr>
+                            <tr>
+                                <td>Misc hardware, lighting, curtains</td>
+                                <td>$361</td>
+                            </tr>
+                            <tr class="total">
+                                <td><strong>Total Build Cost</strong></td>
+                                <td><strong>$11,400</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size:var(--fs-sm);color:var(--muted);margin-top:8px;">Van purchase price not included in build total above.</p>
+
+                    <h2>6 Months Later — Honest Assessment</h2>
+                    <p>Sarah and James have been full-time in the van for 6 months as of this writing. The workspace is exactly what they needed — James works 8-hour days with no complaints about ergonomics, Sarah runs design sessions with her 27" external
+                        monitor without issue. The electrical system has never failed them. The wet bath is the thing they use most to justify the added complexity — "a real shower changes everything about how long you can comfortably stay off-grid,"
+                        Sarah says.</p>
+                    <p>One thing they'd change: they'd add a second roof fan at the rear for better airflow over the bed in summer. The single fan in the workspace area doesn't reach the sleeping area well on hot nights.</p>
+
+                    <div class="callout">
+                        <strong>💬 Questions?</strong> Sarah and James answer questions in the VanWild Facebook community weekly. Post your electrical questions specifically — James has documented their full wiring diagram there.
+                        <br><br><a href="https://web.facebook.com/profile.php?id=100066665391782" class="btn btn-primary btn-sm" style="margin-top:10px;">Join the Community →</a>
+                    </div>
+
+                </article>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget">
+                        <h4>🔧 More Builds</h4>
+                        <div class="sidebar-links">
+                            <a href="transit-build.html" class="sidebar-link"><span class="link-icon">🚐</span> Transit — Every Receipt</a>
+                            <a href="rodriguez-skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Rodriguez Skoolie</a>
+                            <a href="promaster-budget-build.html" class="sidebar-link"><span class="link-icon">💰</span> $3,800 ProMaster</a>
+                            <a href="revel-upgrade.html" class="sidebar-link"><span class="link-icon">🏕</span> Revel Upgrade</a>
+                            <a href="short-bus-conversion.html" class="sidebar-link"><span class="link-icon">🚌</span> Short Bus</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>📚 Related Guides</h4>
+                        <div class="sidebar-links">
+                            <a href="../../guides/solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Guide</a>
+                            <a href="../../guides/battery.html" class="sidebar-link"><span class="link-icon">🔋</span> Battery Guide</a>
+                            <a href="../../guides/budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+                        <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Newsletter</h4>
+                        <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Weekly guides. No spam.</p>
+                        <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2>PLAN YOUR ELECTRICAL</h2>
+            <p>The solar calculator helps you size your system before you spend a dollar.</p>
+            <div class="cta-btns">
+                <a href="../../guides/solar.html" class="btn btn-white">Solar Guide →</a>
+                <a href="../index.html" class="btn btn-ghost">All Builds</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+                    <p>Real guides for real builds. No sponsors.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="../../guides/solar.html">Solar Power</a></li>
+                        <li><a href="../../guides/insulation.html">Insulation</a></li>
+                        <li><a href="../../guides/budget.html">Budget</a></li>
+                        <li><a href="../../guides/battery.html">Batteries</a></li>
+                        <li><a href="../../guides/skoolie.html">Skoolie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="../index.html">All Builds</a></li>
+                        <li><a href="../../blog/index.html">Blog</a></li>
+                        <li><a href="../../compare.html">Compare</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 VanWild.</span>
+                <div class="social-links"><a href="https://web.facebook.com/profile.php?id=100066665391782" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            const img = document.getElementById('img' + i);
+            const wrap = document.getElementById('img' + i + '-wrap');
+            if (!img || !wrap) continue;
+            const hide = () => {
+                if (img.naturalWidth > 0) wrap.classList.add('loaded');
+            };
+            img.addEventListener('load', hide);
+            hide();
+        }
+    </script>
+</body>
+
+</html>

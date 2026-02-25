@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ford Transit Build: Every Receipt — VanWild</title>
+<meta name="description" content="We built a Ford Transit for $6,247. Here's every single receipt, every mistake, and the $340 spray foam disaster.">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.receipt-box {
+  background: var(--dark); color: white;
+  border-radius: var(--radius-lg); overflow: hidden;
+  margin: var(--space-md) 0;
+}
+.receipt-header {
+  background: var(--orange); padding: 14px 24px;
+  font-family: var(--font-display); font-size: 22px; letter-spacing: 0.04em;
+}
+.receipt-body { padding: var(--space-sm) var(--space-md); }
+.receipt-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: var(--fs-sm);
+}
+.receipt-row:last-child { border-bottom: none; }
+.receipt-row .item { color: rgba(255,255,255,0.75); }
+.receipt-row .price { font-family: var(--font-head); font-weight: 700; color: var(--orange); }
+.receipt-row.mistake .item { color: #ff6b6b; }
+.receipt-row.mistake .price { color: #ff6b6b; }
+.receipt-total {
+  background: rgba(244,99,30,0.15); padding: 14px 24px;
+  display: flex; justify-content: space-between;
+  font-family: var(--font-head); font-weight: 800; font-size: var(--fs-md);
+}
+.receipt-total .label { color: white; }
+.receipt-total .amount { color: var(--orange); }
+.month-badge {
+  display: inline-block;
+  background: var(--orange); color: white;
+  font-family: var(--font-display); font-size: 14px; letter-spacing: 0.08em;
+  padding: 4px 14px; border-radius: 99px; margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo">VAN<span>WILD</span></a>
+    <ul class="nav-links">
+      <li><a href="../guides/solar.html">Solar</a></li>
+      <li><a href="../guides/insulation.html">Insulation</a></li>
+      <li><a href="../guides/budget.html">Budget</a></li>
+      <li><a href="../builds/index.html">Builds</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+    <a href="../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../guides/solar.html">SOLAR</a><a href="../guides/insulation.html">INSULATION</a>
+  <a href="../guides/budget.html">BUDGET</a><a href="../builds/index.html">BUILDS</a>
+  <a href="index.html">BLOG</a><a href="../about.html">ABOUT</a>
+  <a href="../guides/solar.html" class="btn btn-primary">Start Building →</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('http://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');"></div>
+  <div class="page-hero-gradient"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="index.html">Blog</a><span class="sep">›</span>
+      <span class="current">Transit Build Log</span>
+    </div>
+    <div class="tag dark">🔧 Build Log</div>
+    <h1>WE BUILT A VAN FOR<br>$6,247. EVERY RECEIPT.</h1>
+    <p class="lead">One Ford Transit, 8 weeks, zero prior experience. Here's exactly where every dollar went — including the mistakes.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:8px;">
+      <span style="color:rgba(255,255,255,0.45);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Feb 14, 2026</span>
+      <span style="color:rgba(255,255,255,0.45);font-size:13px;font-family:var(--font-head);font-weight:600;">📖 22 min read</span>
+      <span style="color:rgba(255,255,255,0.45);font-size:13px;font-family:var(--font-head);font-weight:600;">🏷 Build Log</span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span>FORD TRANSIT</span><span class="dot">◆</span><span>$6,247 TOTAL</span><span class="dot">◆</span>
+    <span>8 WEEKS</span><span class="dot">◆</span><span>EVERY RECEIPT</span><span class="dot">◆</span>
+    <span>REAL MISTAKES</span><span class="dot">◆</span><span>REAL WINS</span><span class="dot">◆</span>
+    <span>FORD TRANSIT</span><span class="dot">◆</span><span>$6,247 TOTAL</span><span class="dot">◆</span>
+    <span>8 WEEKS</span><span class="dot">◆</span><span>EVERY RECEIPT</span><span class="dot">◆</span>
+    <span>REAL MISTAKES</span><span class="dot">◆</span><span>REAL WINS</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="article-grid">
+      <article class="article-content">
+
+        <h2>The Van</h2>
+        <p>2019 Ford Transit 148" high roof, 92,000 miles, bought from a plumbing company that kept immaculate maintenance records. Purchase price: $16,400. That's not included in the $6,247 build cost below — we're talking build only.</p>
+        <p>I had zero construction experience. I'd watched probably 80 hours of YouTube across 3 months before buying the van. I still made expensive mistakes. That's exactly why I'm publishing every receipt.</p>
+
+        <div class="callout">
+          <strong>📌 Ground Rules for This Post</strong>
+          Every number comes from an actual receipt, saved in a Google Drive folder. Items marked in red below were mistakes — money spent on something that had to be redone or thrown away.
+        </div>
+
+        <h2>Week 1–2: Demo &amp; Prep</h2>
+        <div class="month-badge">Weeks 1–2</div>
+
+        <p>First two weeks were mostly free — just labor. Removed the factory cargo liner, cleaned 3 years of plumber grime off every surface, identified two rust spots near the rear doors (manageable), and made a cardboard mockup of the floor plan.</p>
+
+        <p>The one expensive decision in week 1: I bought a cheap angle grinder to prep the rust spots. It worked fine. I almost bought a $280 Makita when a $47 Harbor Freight unit did the exact same job for prep work.</p>
+
+        <div class="receipt-box">
+          <div class="receipt-header">Week 1–2 Receipts</div>
+          <div class="receipt-body">
+            <div class="receipt-row"><span class="item">Angle grinder (Harbor Freight)</span><span class="price">$47</span></div>
+            <div class="receipt-row"><span class="item">Wire wheels &amp; flap discs</span><span class="price">$22</span></div>
+            <div class="receipt-row"><span class="item">Rust converter (Corroseal)</span><span class="price">$31</span></div>
+            <div class="receipt-row"><span class="item">Cleaning supplies</span><span class="price">$18</span></div>
+            <div class="receipt-row"><span class="item">Cardboard (floor plan mock)</span><span class="price">$0</span></div>
+          </div>
+          <div class="receipt-total"><span class="label">Week 1–2 Total</span><span class="amount">$118</span></div>
+        </div>
+
+        <h2>Week 3–4: Insulation (and the $340 Mistake)</h2>
+        <div class="month-badge">Weeks 3–4</div>
+
+        <p>This is where I made the most expensive mistake of the entire build. I bought a 2-part closed-cell spray foam kit from a brand I won't name (you'll find it on Amazon) that advertised 200 board feet of coverage. Actual yield: 110 board feet. The foam also didn't adhere properly to the bare metal ribs, peeling off in sheets when it cured.</p>
+
+        <p>I had to scrape off everything I'd sprayed, order a Froth-Pak 650 from a proper supplier, and start over. Total spray foam cost ended up being $340 more than if I'd just bought the Froth-Pak first.</p>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ Spray Foam Lesson Learned</strong>
+          Don't buy spray foam kits from Amazon. Buy a Froth-Pak 650 or 1030 from a local HVAC or spray foam supplier. The Amazon kits are inconsistent and often yield far less than advertised.
+        </div>
+
+        <div class="receipt-box">
+          <div class="receipt-header">Week 3–4 Receipts</div>
+          <div class="receipt-body">
+            <div class="receipt-row mistake"><span class="item">❌ Amazon spray foam kit (wasted)</span><span class="price">$189</span></div>
+            <div class="receipt-row"><span class="item">Froth-Pak 650 (replacement, actual product used)</span><span class="price">$298</span></div>
+            <div class="receipt-row"><span class="item">Polyiso rigid board 2" (12 sheets)</span><span class="price">$156</span></div>
+            <div class="receipt-row"><span class="item">Foil tape (3M 3381)</span><span class="price">$34</span></div>
+            <div class="receipt-row"><span class="item">Great Stuff Pro gaps &amp; cracks (ribs)</span><span class="price">$28</span></div>
+            <div class="receipt-row"><span class="item">Thinsulate SM600L ceiling (4 yards)</span><span class="price">$88</span></div>
+            <div class="receipt-row"><span class="item">3M spray adhesive</span><span class="price">$19</span></div>
+          </div>
+          <div class="receipt-total"><span class="label">Week 3–4 Total</span><span class="amount">$812</span></div>
+        </div>
+
+        <h2>Week 4–5: Subfloor &amp; Walls</h2>
+        <div class="month-badge">Weeks 4–5</div>
+
+        <p>Cut a plywood subfloor from two sheets of 3/4" birch. Used 1.5" XPS foam underneath for floor insulation (R-7.5 — solid for a van floor). Walls went up in cedar-paneled tongue-and-groove strips that I ripped from 1×6 cedar fence boards — cost about 1/3 of pre-made shiplap.</p>
+
+        <div class="receipt-box">
+          <div class="receipt-header">Week 4–5 Receipts</div>
+          <div class="receipt-body">
+            <div class="receipt-row"><span class="item">Birch plywood 3/4" (2 sheets, subfloor)</span><span class="price">$88</span></div>
+            <div class="receipt-row"><span class="item">XPS foam 1.5" (floor insulation)</span><span class="price">$44</span></div>
+            <div class="receipt-row"><span class="item">Cedar fence boards (wall paneling)</span><span class="price">$67</span></div>
+            <div class="receipt-row"><span class="item">Vinyl plank flooring (LifeProof)</span><span class="price">$148</span></div>
+            <div class="receipt-row"><span class="item">Construction adhesive &amp; screws</span><span class="price">$31</span></div>
+            <div class="receipt-row"><span class="item">Jigsaw blades &amp; router bits</span><span class="price">$24</span></div>
+          </div>
+          <div class="receipt-total"><span class="label">Week 4–5 Total</span><span class="amount">$402</span></div>
+        </div>
+
+        <h2>Week 5–6: Electrical</h2>
+        <div class="month-badge">Weeks 5–6</div>
+
+        <p>I went slightly over budget on electrical because I upgraded from the 200Ah AGM I'd planned to a 200Ah lithium from Ampere Time. I don't regret it for a second — the weight savings alone (103 lbs lighter) made the van noticeably better to drive.</p>
+
+        <div class="receipt-box">
+          <div class="receipt-header">Week 5–6 Receipts</div>
+          <div class="receipt-body">
+            <div class="receipt-row"><span class="item">Renogy 200W panels (×2)</span><span class="price">$316</span></div>
+            <div class="receipt-row"><span class="item">Victron SmartSolar MPPT 100/30</span><span class="price">$168</span></div>
+            <div class="receipt-row"><span class="item">Ampere Time 200Ah LiFePO4</span><span class="price">$549</span></div>
+            <div class="receipt-row"><span class="item">Victron BMV-712 battery monitor</span><span class="price">$108</span></div>
+            <div class="receipt-row"><span class="item">Renogy 1000W pure sine inverter</span><span class="price">$189</span></div>
+            <div class="receipt-row"><span class="item">Blue Sea Systems fuse block</span><span class="price">$62</span></div>
+            <div class="receipt-row"><span class="item">Battery disconnect switch</span><span class="price">$28</span></div>
+            <div class="receipt-row"><span class="item">4/0 AWG wire + lugs (battery cables)</span><span class="price">$74</span></div>
+            <div class="receipt-row"><span class="item">10 AWG wire (200ft) + 12 AWG (100ft)</span><span class="price">$89</span></div>
+            <div class="receipt-row"><span class="item">Bus bars, terminals, misc hardware</span><span class="price">$44</span></div>
+            <div class="receipt-row"><span class="item">Maxxair 4500K roof fan</span><span class="price">$138</span></div>
+          </div>
+          <div class="receipt-total"><span class="label">Week 5–6 Total</span><span class="amount">$1,765</span></div>
+        </div>
+
+        <h2>Week 6–8: Furniture &amp; Finishing</h2>
+        <div class="month-badge">Weeks 6–8</div>
+
+        <p>Built everything from scratch. The bed frame and kitchen cabinets are plywood — no IKEA hacks, no pre-made furniture. Total furniture lumber cost was $178. The biggest win of the build: making rather than buying saved at least $800 in pre-built van furniture prices.</p>
+
+        <div class="receipt-box">
+          <div class="receipt-header">Week 6–8 Receipts</div>
+          <div class="receipt-body">
+            <div class="receipt-row"><span class="item">Plywood for bed, cabinets, shelves (4 sheets)</span><span class="price">$178</span></div>
+            <div class="receipt-row"><span class="item">Hardware, hinges, drawer slides</span><span class="price">$64</span></div>
+            <div class="receipt-row"><span class="item">4" custom foam mattress (Foamorder)</span><span class="price">$188</span></div>
+            <div class="receipt-row"><span class="item">2-burner propane stove (Camp Chef)</span><span class="price">$88</span></div>
+            <div class="receipt-row"><span class="item">Stainless sink + 12V pump + 7gal tank</span><span class="price">$164</span></div>
+            <div class="receipt-row"><span class="item">Dometic CFX3 35 fridge</span><span class="price">$349</span></div>
+            <div class="receipt-row"><span class="item">LED strip lights + puck lights</span><span class="price">$44</span></div>
+            <div class="receipt-row"><span class="item">Curtain rod + blackout fabric</span><span class="price">$38</span></div>
+            <div class="receipt-row"><span class="item">Propane quick-connect &amp; hose</span><span class="price">$22</span></div>
+            <div class="receipt-row"><span class="item">Misc screws, brackets, caulk</span><span class="price">$41</span></div>
+          </div>
+          <div class="receipt-total"><span class="label">Week 6–8 Total</span><span class="amount">$1,176</span></div>
+        </div>
+
+        <h2>Grand Total</h2>
+        <table class="cost-table">
+          <thead><tr><th>Phase</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Week 1–2: Demo &amp; Prep</td><td>$118</td></tr>
+            <tr><td>Week 3–4: Insulation (incl. $189 wasted)</td><td>$812</td></tr>
+            <tr><td>Week 4–5: Subfloor &amp; Walls</td><td>$402</td></tr>
+            <tr><td>Week 5–6: Electrical</td><td>$1,765</td></tr>
+            <tr><td>Week 6–8: Furniture &amp; Finish</td><td>$1,176</td></tr>
+            <tr><td>Tools purchased during build</td><td>$484</td></tr>
+            <tr><td>Random miscellaneous (returns, shipping, etc.)</td><td>$290</td></tr>
+            <tr class="total"><td><strong>TOTAL BUILD COST</strong></td><td><strong>$5,047</strong></td></tr>
+            <tr class="total"><td><strong>+ wasted / mistake money</strong></td><td style="color:#c62828;"><strong>$189</strong></td></tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:16px;font-size:var(--fs-sm);color:var(--muted);">Note: I published $6,247 in the headline — that includes the $1,200 in tools I purchased during the build that I'm keeping. If you already own basic power tools, your build will run closer to $4,000–$4,500 for a similar setup.</p>
+
+        <h2>What I'd Do Differently</h2>
+        <ol>
+          <li><strong>Buy the right spray foam first</strong> — Froth-Pak only. Saved $189 in wasted product immediately.</li>
+          <li><strong>Design the electrical before the walls go up</strong> — I had to drill through a finished wall to run one cable I forgot. Embarrassing and fixable, but annoying.</li>
+          <li><strong>Get a bigger fridge</strong> — The CFX3 35 is great but I wish I'd bought the 45L. For $60 more it has significantly more room.</li>
+          <li><strong>Add a diesel heater from day one</strong> — I added a Webasto Air Top 2000 STC 3 months after moving in. Should have been in the original build budget.</li>
+        </ol>
+
+        <div class="callout" style="margin-top:var(--space-md);">
+          <strong>💬 Questions?</strong>
+          Drop them in the Facebook community. I check it daily and answer every build question personally.
+          <br><br><a href="https://facebook.com" class="btn btn-primary btn-sm" style="margin-top:10px;">Join the Community →</a>
+        </div>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-widget">
+          <h4>📚 Related Guides</h4>
+          <div class="sidebar-links">
+            <a href="../guides/solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Power Guide</a>
+            <a href="../guides/insulation.html" class="sidebar-link"><span class="link-icon">🧱</span> Insulation Guide</a>
+            <a href="../guides/budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
+            <a href="../guides/battery.html" class="sidebar-link"><span class="link-icon">🔋</span> Battery Guide</a>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <h4>📝 More Build Logs</h4>
+          <div class="sidebar-links">
+            <a href="skoolie-build-log-1.html" class="sidebar-link"><span class="link-icon">🚌</span> Skoolie Build Log #1</a>
+            <a href="../builds/index.html" class="sidebar-link"><span class="link-icon">🔧</span> All Community Builds</a>
+          </div>
+        </div>
+        <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+          <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Free Newsletter</h4>
+          <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">New guides weekly. No spam.</p>
+          <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>READY TO PLAN YOUR BUILD?</h2>
+    <p>Start with the solar sizing calculator and budget breakdown.</p>
+    <div class="cta-btns">
+      <a href="../guides/solar.html" class="btn btn-white">Solar Guide →</a>
+      <a href="../guides/budget.html" class="btn btn-ghost">Budget Guide →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="../index.html" class="logo">VAN<span>WILD</span></a><p>Real guides for real builds. No sponsors.</p></div>
+      <div class="footer-col"><h4>Guides</h4><ul>
+        <li><a href="../guides/solar.html">Solar Power</a></li>
+        <li><a href="../guides/insulation.html">Insulation</a></li>
+        <li><a href="../guides/budget.html">Budget</a></li>
+        <li><a href="../guides/battery.html">Batteries</a></li>
+        <li><a href="../guides/skoolie.html">Skoolie</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More</h4><ul>
+        <li><a href="../builds/index.html">Builds</a></li>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="../compare.html">Compare</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 VanWild.</span>
+      <div class="social-links"><a href="https://facebook.com" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

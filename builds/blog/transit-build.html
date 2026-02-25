@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike's Ford Transit Build — Every Receipt — VanWild</title>
+    <meta name="description" content="A Ford Transit build for $6,247. Every receipt, every mistake, the $340 spray foam disaster — fully documented.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>
+        /* ── 9:16 image slot (reused across all build posts) ── */
+        
+        .img-169 {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #16120e;
+            border-radius: var(--radius-lg);
+            margin: var(--space-md) 0;
+        }
+        
+        .img-169 img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .img-169 img[src=""] {
+            display: none;
+        }
+        
+        .img-169.loaded .img-placeholder {
+            display: none;
+        }
+        
+        .img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+        
+        .ph-name {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 44px);
+            color: rgba(244, 99, 30, 0.45);
+            letter-spacing: .06em;
+        }
+        
+        .ph-ratio {
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.18);
+        }
+        
+        .ph-icon {
+            font-size: 32px;
+            opacity: .2;
+        }
+        
+        .img-caption {
+            font-family: var(--font-head);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            letter-spacing: .05em;
+            text-align: center;
+            margin-top: -12px;
+            margin-bottom: var(--space-sm);
+        }
+        /* receipt box */
+        
+        .receipt-box {
+            background: var(--dark);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: var(--space-md) 0;
+        }
+        
+        .receipt-header {
+            background: var(--orange);
+            padding: 13px 24px;
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: white;
+            letter-spacing: .04em;
+        }
+        
+        .receipt-body {
+            padding: var(--space-sm) var(--space-md);
+        }
+        
+        .receipt-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: var(--fs-sm);
+        }
+        
+        .receipt-row:last-child {
+            border-bottom: none;
+        }
+        
+        .receipt-row .item {
+            color: rgba(255, 255, 255, .7);
+        }
+        
+        .receipt-row .price {
+            font-family: var(--font-head);
+            font-weight: 700;
+            color: var(--orange);
+        }
+        
+        .receipt-row.bad .item,
+        .receipt-row.bad .price {
+            color: #ff6b6b;
+        }
+        
+        .receipt-total {
+            background: rgba(244, 99, 30, .15);
+            padding: 13px 24px;
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: var(--fs-md);
+        }
+        
+        .receipt-total .label {
+            color: white;
+        }
+        
+        .receipt-total .amount {
+            color: var(--orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="container nav-inner">
+            <a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+            <ul class="nav-links">
+                <li><a href="../../guides/solar.html">Solar</a></li>
+                <li><a href="../../guides/insulation.html">Insulation</a></li>
+                <li><a href="../../guides/budget.html">Budget</a></li>
+                <li><a href="../index.html" class="active">Builds</a></li>
+                <li><a href="../../blog/index.html">Blog</a></li>
+                <li><a href="../../about.html">About</a></li>
+            </ul>
+            <a href="../../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../../guides/solar.html">SOLAR</a>
+        <a href="../../guides/insulation.html">INSULATION</a>
+        <a href="../../guides/budget.html">BUDGET</a>
+        <a href="../index.html">BUILDS</a>
+        <a href="../../blog/index.html">BLOG</a>
+        <a href="../../about.html">ABOUT</a>
+        <a href="../../guides/solar.html" class="btn btn-primary">Start Building →</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+        <div class="container page-hero-content">
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a><span class="sep">›</span>
+                <a href="../index.html">Builds</a><span class="sep">›</span>
+                <span class="current">Transit Build</span>
+            </div>
+            <div class="tag dark">🔧 Build Log · Van</div>
+            <h1>MIKE'S TRANSIT<br>BUILD: EVERY<br>RECEIPT.</h1>
+            <p class="lead">2019 Ford Transit 148" high-roof. 8 weeks. $6,247. Zero experience. Every dollar documented — including the $340 mistake.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;">
+                <span style="color:rgba(255,255,255,0.4);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Feb 2026 · 22 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span>FORD TRANSIT</span><span class="dot">◆</span><span>$6,247</span><span class="dot">◆</span>
+            <span>8 WEEKS</span><span class="dot">◆</span><span>EVERY RECEIPT</span><span class="dot">◆</span>
+            <span>REAL MISTAKES</span><span class="dot">◆</span><span>FULL BUILD</span><span class="dot">◆</span>
+            <span>FORD TRANSIT</span><span class="dot">◆</span><span>$6,247</span><span class="dot">◆</span>
+            <span>8 WEEKS</span><span class="dot">◆</span><span>EVERY RECEIPT</span><span class="dot">◆</span>
+            <span>REAL MISTAKES</span><span class="dot">◆</span><span>FULL BUILD</span><span class="dot">◆</span>
+        </div>
+    </div>
+
+    <section class="section-pad">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+
+                    <!-- img1 -->
+                    <div class="img-169" id="img1-wrap">
+                        <img id="img1" src="../img/tran1.jpeg" alt="Transit before the build — empty cargo van">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img1</span><span class="ph-ratio">16 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The Transit on day one — 92,000 miles, straight from a plumbing company fleet.</p>
+
+                    <h2>The Van</h2>
+                    <p>2019 Ford Transit 148" high roof, bought from a plumbing company with full maintenance records. 92,000 miles. Purchase price $16,400 — not included in the build budget below. I had zero construction experience. I'd watched 80 hours
+                        of YouTube before buying. I still made expensive mistakes. That's exactly why I'm publishing every receipt.</p>
+
+                    <div class="callout">
+                        <strong>📌 Ground Rules</strong> Every number here comes from an actual receipt saved in a Google Drive folder. Items in red are mistakes — money spent on something that had to be redone or thrown away.
+                    </div>
+
+                    <h2>Week 1–2: Demo &amp; Rust Prep</h2>
+
+                    <!-- img2 -->
+                    <div class="img-169" id="img2-wrap">
+                        <img id="img2" src="../img/tran2.jpeg" alt="Transit interior after demo — bare metal">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img2</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Week 1: stripped to bare metal. Two rust spots near the rear doors — both surface rust, easily treated.</p>
+
+                    <p>Weeks one and two were mostly labor. Removed the factory cargo liner, cleaned three years of plumber grime, found two minor rust spots near the rear doors (manageable), and built a full cardboard mockup of the floor plan on the driveway
+                        before touching the van.</p>
+
+                    <div class="receipt-box">
+                        <div class="receipt-header">Week 1–2 Receipts</div>
+                        <div class="receipt-body">
+                            <div class="receipt-row"><span class="item">Angle grinder (Harbor Freight)</span><span class="price">$47</span></div>
+                            <div class="receipt-row"><span class="item">Wire wheels &amp; flap discs</span><span class="price">$22</span></div>
+                            <div class="receipt-row"><span class="item">Rust converter (Corroseal)</span><span class="price">$31</span></div>
+                            <div class="receipt-row"><span class="item">Cleaning supplies</span><span class="price">$18</span></div>
+                        </div>
+                        <div class="receipt-total"><span class="label">Week 1–2</span><span class="amount">$118</span></div>
+                    </div>
+
+                    <h2>Week 3–4: Insulation (and the $340 Mistake)</h2>
+
+                    <!-- img3 -->
+                    <div class="img-169" id="img3-wrap">
+                        <img id="img3" src="../img/tran3.jpeg" alt="Insulation installed — spray foam and rigid board">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img3</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Week 4: second attempt at insulation after the Amazon foam failure. Froth-Pak 650 only from here.</p>
+
+                    <p>I bought a 2-part closed-cell spray foam kit from Amazon that advertised 200 board feet of coverage. Actual yield: 110 board feet — and it didn't adhere properly to bare metal ribs. I had to scrape off everything and start over with
+                        a Froth-Pak 650 from a local supplier. That decision cost $340 extra and two weeks of time.</p>
+
+                    <div class="callout callout-warn">
+                        <strong>⚠️ Don't Buy Spray Foam from Amazon</strong> Always buy Froth-Pak from a proper HVAC supplier. Amazon kits are inconsistent on yield and adhesion. One bad kit costs more than the savings.
+                    </div>
+
+                    <div class="receipt-box">
+                        <div class="receipt-header">Week 3–4 Receipts</div>
+                        <div class="receipt-body">
+                            <div class="receipt-row bad"><span class="item">❌ Amazon spray foam kit (wasted)</span><span class="price">$189</span></div>
+                            <div class="receipt-row"><span class="item">Froth-Pak 650 (replacement)</span><span class="price">$298</span></div>
+                            <div class="receipt-row"><span class="item">Polyiso rigid board 2" (12 sheets)</span><span class="price">$156</span></div>
+                            <div class="receipt-row"><span class="item">3M foil tape (3381)</span><span class="price">$34</span></div>
+                            <div class="receipt-row"><span class="item">Great Stuff Pro (rib gaps)</span><span class="price">$28</span></div>
+                            <div class="receipt-row"><span class="item">Thinsulate SM600L ceiling (4 yards)</span><span class="price">$88</span></div>
+                        </div>
+                        <div class="receipt-total"><span class="label">Week 3–4</span><span class="amount">$793</span></div>
+                    </div>
+
+                    <h2>Week 4–5: Subfloor &amp; Wall Paneling</h2>
+
+                    <!-- img4 -->
+                    <div class="img-169" id="img4-wrap">
+                        <img id="img4" src="../img/tran4.jpeg" alt="Cedar wall panels going up">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img4</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Cedar fence boards ripped into tongue-and-groove strips — cost 1/3 of pre-made shiplap.</p>
+
+                    <div class="receipt-box">
+                        <div class="receipt-header">Week 4–5 Receipts</div>
+                        <div class="receipt-body">
+                            <div class="receipt-row"><span class="item">Birch plywood 3/4" (2 sheets, subfloor)</span><span class="price">$88</span></div>
+                            <div class="receipt-row"><span class="item">XPS foam 1.5" (floor insulation)</span><span class="price">$44</span></div>
+                            <div class="receipt-row"><span class="item">Cedar fence boards (wall paneling)</span><span class="price">$67</span></div>
+                            <div class="receipt-row"><span class="item">LifeProof vinyl plank flooring</span><span class="price">$148</span></div>
+                            <div class="receipt-row"><span class="item">Construction adhesive &amp; screws</span><span class="price">$31</span></div>
+                        </div>
+                        <div class="receipt-total"><span class="label">Week 4–5</span><span class="amount">$378</span></div>
+                    </div>
+
+                    <h2>Week 5–6: Electrical</h2>
+
+                    <!-- img5 -->
+                    <div class="img-169" id="img5-wrap">
+                        <img id="img5" src="../img/tran5.jpeg" alt="Electrical panel and battery bank installed">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img5</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The electrical bay: Ampere Time 200Ah lithium, Victron MPPT, BMV-712 monitor, Blue Sea fuse block.</p>
+
+                    <div class="receipt-box">
+                        <div class="receipt-header">Week 5–6 Receipts</div>
+                        <div class="receipt-body">
+                            <div class="receipt-row"><span class="item">Renogy 200W panels ×2</span><span class="price">$316</span></div>
+                            <div class="receipt-row"><span class="item">Victron SmartSolar MPPT 100/30</span><span class="price">$168</span></div>
+                            <div class="receipt-row"><span class="item">Ampere Time 200Ah LiFePO4</span><span class="price">$549</span></div>
+                            <div class="receipt-row"><span class="item">Victron BMV-712 battery monitor</span><span class="price">$108</span></div>
+                            <div class="receipt-row"><span class="item">Renogy 1000W pure sine inverter</span><span class="price">$189</span></div>
+                            <div class="receipt-row"><span class="item">Blue Sea Systems fuse block</span><span class="price">$62</span></div>
+                            <div class="receipt-row"><span class="item">4/0 AWG cable + lugs</span><span class="price">$74</span></div>
+                            <div class="receipt-row"><span class="item">10 AWG + 12 AWG wire (300ft)</span><span class="price">$89</span></div>
+                            <div class="receipt-row"><span class="item">Bus bars, terminals, misc</span><span class="price">$44</span></div>
+                            <div class="receipt-row"><span class="item">Maxxair 4500K roof fan</span><span class="price">$138</span></div>
+                        </div>
+                        <div class="receipt-total"><span class="label">Week 5–6</span><span class="amount">$1,737</span></div>
+                    </div>
+
+                    <h2>Week 6–8: Furniture &amp; Finishing</h2>
+
+                    <!-- img6 -->
+                    <div class="img-169" id="img6-wrap">
+                        <img id="img6" src="../img/tran6.jpeg" alt="Finished kitchen and bed area">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img6</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Week 8: finished kitchen, plywood cabinets, and the Dometic CFX3 35 fridge that we wish was 10L bigger.</p>
+
+                    <div class="receipt-box">
+                        <div class="receipt-header">Week 6–8 Receipts</div>
+                        <div class="receipt-body">
+                            <div class="receipt-row"><span class="item">Plywood: bed, cabinets, shelves (4 sheets)</span><span class="price">$178</span></div>
+                            <div class="receipt-row"><span class="item">Hardware, hinges, drawer slides</span><span class="price">$64</span></div>
+                            <div class="receipt-row"><span class="item">4" foam mattress (Foamorder)</span><span class="price">$188</span></div>
+                            <div class="receipt-row"><span class="item">Camp Chef 2-burner propane stove</span><span class="price">$88</span></div>
+                            <div class="receipt-row"><span class="item">Stainless sink + 12V pump + 7gal tank</span><span class="price">$164</span></div>
+                            <div class="receipt-row"><span class="item">Dometic CFX3 35 fridge</span><span class="price">$349</span></div>
+                            <div class="receipt-row"><span class="item">LED strip lights + puck lights</span><span class="price">$44</span></div>
+                            <div class="receipt-row"><span class="item">Curtain rod + blackout fabric</span><span class="price">$38</span></div>
+                            <div class="receipt-row"><span class="item">Misc: screws, caulk, brackets</span><span class="price">$41</span></div>
+                        </div>
+                        <div class="receipt-total"><span class="label">Week 6–8</span><span class="amount">$1,154</span></div>
+                    </div>
+
+                    <!-- img7: finished van exterior -->
+                    <div class="img-169" id="img7-wrap">
+                        <img id="img7" src="../img/tran7.jpeg" alt="Finished van exterior">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img7</span><span class="ph-ratio">6 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Done. Eight weeks from empty cargo van to move-in ready.</p>
+
+                    <h2>Grand Total</h2>
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Phase</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Week 1–2: Demo &amp; Prep</td>
+                                <td>$118</td>
+                            </tr>
+                            <tr>
+                                <td>Week 3–4: Insulation (incl. $189 wasted)</td>
+                                <td>$793</td>
+                            </tr>
+                            <tr>
+                                <td>Week 4–5: Subfloor &amp; Walls</td>
+                                <td>$378</td>
+                            </tr>
+                            <tr>
+                                <td>Week 5–6: Electrical</td>
+                                <td>$1,737</td>
+                            </tr>
+                            <tr>
+                                <td>Week 6–8: Furniture &amp; Finish</td>
+                                <td>$1,154</td>
+                            </tr>
+                            <tr>
+                                <td>Tools purchased during build</td>
+                                <td>$484</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping, returns, misc</td>
+                                <td>$290</td>
+                            </tr>
+                            <tr class="total">
+                                <td><strong>Total Build Cost</strong></td>
+                                <td><strong>$4,954</strong></td>
+                            </tr>
+                            <tr class="total">
+                                <td><strong>+ Wasted / mistake money</strong></td>
+                                <td style="color:#c62828"><strong>+ $189</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>What I'd Do Differently</h2>
+                    <ol>
+                        <li><strong>Buy the right spray foam first</strong> — Froth-Pak only. Saved $189 in waste immediately.</li>
+                        <li><strong>Plan all electrical runs before walls close</strong> — I had to drill through a finished wall for one forgotten cable.</li>
+                        <li><strong>Get the 45L fridge not the 35L</strong> — $60 more upfront, significantly more room every day.</li>
+                        <li><strong>Add a diesel heater from day one</strong> — Added a Webasto 3 months after move-in. Should have been in the original build.</li>
+                    </ol>
+
+                </article>
+
+                <!-- SIDEBAR -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget">
+                        <h4>🔧 More Builds</h4>
+                        <div class="sidebar-links">
+                            <a href="sprinter-remote-work.html" class="sidebar-link"><span class="link-icon">🚐</span> Sprinter Remote Work</a>
+                            <a href="rodriguez-skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Rodriguez Skoolie</a>
+                            <a href="promaster-budget-build.html" class="sidebar-link"><span class="link-icon">💰</span> $3,800 ProMaster</a>
+                            <a href="revel-upgrade.html" class="sidebar-link"><span class="link-icon">🏕</span> Revel Upgrade</a>
+                            <a href="short-bus-conversion.html" class="sidebar-link"><span class="link-icon">🚌</span> Short Bus</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>📚 Related Guides</h4>
+                        <div class="sidebar-links">
+                            <a href="../../guides/solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Guide</a>
+                            <a href="../../guides/insulation.html" class="sidebar-link"><span class="link-icon">🧱</span> Insulation Guide</a>
+                            <a href="../../guides/budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+                        <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Newsletter</h4>
+                        <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Weekly guides. No spam.</p>
+                        <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe →</a>
+                    </div>
+                </aside>
+
+            </div>
+            <!-- /article-grid -->
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2>PLAN YOUR OWN BUILD</h2>
+            <p>Start with the solar calculator and budget breakdown.</p>
+            <div class="cta-btns">
+                <a href="../../guides/solar.html" class="btn btn-white">Solar Guide →</a>
+                <a href="../index.html" class="btn btn-ghost">All Builds</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+                    <p>Real guides for real builds. No sponsors.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="../../guides/solar.html">Solar Power</a></li>
+                        <li><a href="../../guides/insulation.html">Insulation</a></li>
+                        <li><a href="../../guides/budget.html">Budget</a></li>
+                        <li><a href="../../guides/battery.html">Batteries</a></li>
+                        <li><a href="../../guides/skoolie.html">Skoolie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="../index.html">All Builds</a></li>
+                        <li><a href="../../blog/index.html">Blog</a></li>
+                        <li><a href="../../compare.html">Compare</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 VanWild.</span>
+                <div class="social-links"><a href="https://web.facebook.com/profile.php?id=100066665391782" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+        /* Auto-hide placeholder when image loads */
+        for (let i = 1; i <= 7; i++) {
+            const img = document.getElementById('img' + i);
+            const wrap = document.getElementById('img' + i + '-wrap');
+            if (!img || !wrap) continue;
+            const hide = () => {
+                if (img.naturalWidth > 0) wrap.classList.add('loaded');
+            };
+            img.addEventListener('load', hide);
+            hide();
+        }
+    </script>
+</body>
+
+</html>

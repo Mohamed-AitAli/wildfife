@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Find Free Camping in Any State — VanWild</title>
+<meta name="description" content="Our actual workflow for finding free camping across 34 states: apps, websites, BLM land, stealth spots, and tricks nobody else shares.">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.app-card {
+  background:var(--white); border:1px solid var(--sand); border-radius:var(--radius-lg);
+  padding:var(--space-sm) var(--space-md); margin-bottom:14px;
+  display:grid; grid-template-columns:48px 1fr auto; gap:16px; align-items:center;
+  transition:var(--transition);
+}
+.app-card:hover { transform:translateX(6px); border-color:var(--orange); }
+.app-icon { font-size:32px; }
+.app-name { font-family:var(--font-head); font-weight:800; font-size:var(--fs-base); margin-bottom:3px; }
+.app-desc { font-size:var(--fs-sm); color:var(--muted); }
+.app-price {
+  font-family:var(--font-head); font-weight:700; font-size:13px;
+  color:white; background:var(--dark); padding:6px 12px; border-radius:99px;
+  white-space:nowrap;
+}
+.app-price.free { background:var(--orange); }
+.land-type {
+  background:var(--white); border:1px solid var(--sand); border-radius:var(--radius-lg);
+  padding:var(--space-md); margin-bottom:14px;
+}
+.land-type h4 { font-family:var(--font-head); font-weight:800; margin-bottom:6px; }
+.land-type p { color:var(--muted); font-size:var(--fs-sm); margin-bottom:0; }
+.land-badge {
+  display:inline-block; font-family:var(--font-head); font-size:11px; font-weight:700;
+  letter-spacing:0.1em; text-transform:uppercase; padding:3px 10px; border-radius:99px; margin-bottom:8px;
+}
+.land-badge.easy { background:rgba(46,125,50,0.12); color:#2e7d32; }
+.land-badge.medium { background:rgba(255,152,0,0.12); color:#e65100; }
+.land-badge.hard { background:rgba(198,40,40,0.12); color:#c62828; }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo">VAN<span>WILD</span></a>
+    <ul class="nav-links">
+      <li><a href="../guides/solar.html">Solar</a></li><li><a href="../guides/insulation.html">Insulation</a></li>
+      <li><a href="../guides/budget.html">Budget</a></li><li><a href="../builds/index.html">Builds</a></li>
+      <li><a href="index.html" class="active">Blog</a></li><li><a href="../about.html">About</a></li>
+    </ul>
+    <a href="../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../guides/solar.html">SOLAR</a><a href="../guides/insulation.html">INSULATION</a>
+  <a href="../guides/budget.html">BUDGET</a><a href="../builds/index.html">BUILDS</a>
+  <a href="index.html">BLOG</a><a href="../about.html">ABOUT</a>
+  <a href="../guides/solar.html" class="btn btn-primary">Start Building →</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('http://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');"></div>
+  <div class="page-hero-gradient"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="index.html">Blog</a><span class="sep">›</span>
+      <span class="current">Free Camping Guide</span>
+    </div>
+    <div class="tag dark">📍 Tips &amp; How-To</div>
+    <h1>HOW TO FIND FREE<br>CAMPING IN ANY STATE</h1>
+    <p class="lead">18 months, 34 states, and the real workflow we use every day. Apps, BLM land, Forest Service roads, stealth spots, and the tricks nobody posts.</p>
+    <span style="color:rgba(255,255,255,0.45);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Jan 22, 2026 · 📖 12 min read</span>
+  </div>
+</section>
+
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span>FREE CAMPING</span><span class="dot">◆</span><span>BLM LAND</span><span class="dot">◆</span>
+    <span>DISPERSED CAMPING</span><span class="dot">◆</span><span>IOVERLAND</span><span class="dot">◆</span>
+    <span>STEALTH PARKING</span><span class="dot">◆</span><span>34 STATES</span><span class="dot">◆</span>
+    <span>FREE CAMPING</span><span class="dot">◆</span><span>BLM LAND</span><span class="dot">◆</span>
+    <span>DISPERSED CAMPING</span><span class="dot">◆</span><span>IOVERLAND</span><span class="dot">◆</span>
+    <span>STEALTH PARKING</span><span class="dot">◆</span><span>34 STATES</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="article-grid">
+      <article class="article-content">
+
+        <h2>The Honest Reality of Free Camping</h2>
+        <p>Free camping is abundant across the American West. The Mountain West and Southwest have enormous amounts of Bureau of Land Management (BLM) and National Forest land that allows free dispersed camping, often with no reservation, no fee, and 14-day stay limits. The East and Midwest are harder — more private land, stricter regulations, and denser population. Here's how we navigate both.</p>
+
+        <div class="callout">
+          <strong>📊 Our Numbers</strong>
+          Over 18 months we camped 547 nights. 67% were completely free, 18% were under $15/night, and only 15% were at paid campgrounds or RV parks. Monthly average camping cost: $68.
+        </div>
+
+        <h2>The Apps We Actually Use</h2>
+
+        <div class="app-card reveal">
+          <div class="app-icon">🗺️</div>
+          <div class="app-info">
+            <div class="app-name">iOverlander</div>
+            <div class="app-desc">Community-sourced camping spots worldwide. Our most used app. Filter by "free" and "suitable for vans."</div>
+          </div>
+          <div class="app-price free">Free</div>
+        </div>
+
+        <div class="app-card reveal">
+          <div class="app-icon">⚡</div>
+          <div class="app-info">
+            <div class="app-name">Campendium</div>
+            <div class="app-desc">Best for reading detailed reviews. Great BLM coverage. Slow to load but reviews are high quality.</div>
+          </div>
+          <div class="app-price free">Free</div>
+        </div>
+
+        <div class="app-card reveal">
+          <div class="app-icon">🌲</div>
+          <div class="app-info">
+            <div class="app-name">The Dyrt</div>
+            <div class="app-desc">Large database, offline maps on Pro plan. Worth the $36/year for offline access alone.</div>
+          </div>
+          <div class="app-price">$36/yr Pro</div>
+        </div>
+
+        <div class="app-card reveal">
+          <div class="app-icon">🌎</div>
+          <div class="app-info">
+            <div class="app-name">OnX Offroad</div>
+            <div class="app-desc">Shows land ownership (BLM, Forest Service, private) with property lines. Essential for the West. Expensive but invaluable.</div>
+          </div>
+          <div class="app-price">$30/yr</div>
+        </div>
+
+        <div class="app-card reveal">
+          <div class="app-icon">🛰️</div>
+          <div class="app-info">
+            <div class="app-name">Gaia GPS</div>
+            <div class="app-desc">Topographic maps, land designation overlays, offline maps. The serious overlander's tool. More complex to learn.</div>
+          </div>
+          <div class="app-price">$40/yr</div>
+        </div>
+
+        <h2>Land Types: Easiest to Hardest</h2>
+
+        <div class="land-type reveal">
+          <div class="land-badge easy">✓ Easiest</div>
+          <h4>BLM Land (Bureau of Land Management)</h4>
+          <p>Covers 245 million acres mostly in the Mountain West. Unless posted otherwise, dispersed camping is allowed for 14 consecutive days. No fee, no reservation. Just pull off a dirt road 200+ feet from any water source and you're legal. The entire Southwest is a free camper's paradise on BLM land.</p>
+        </div>
+
+        <div class="land-type reveal">
+          <div class="land-badge easy">✓ Easy</div>
+          <h4>National Forests (Dispersed Camping)</h4>
+          <p>Most National Forests allow free dispersed camping outside of designated campgrounds. The key: you must be on a forest road (not a trail), 200 feet from water/roads/trails, and follow the specific forest's rules (some have fire bans, some require permits for dispersed camping). Always check the specific forest's website before going in.</p>
+        </div>
+
+        <div class="land-type reveal">
+          <div class="land-badge medium">~ Medium</div>
+          <h4>Casino Parking Lots</h4>
+          <p>Most casinos in the West allow overnight RV parking — sometimes for free, sometimes for $10–$20. They want you in the building, not in a campground. Always go in and spend a few dollars at the restaurant or slots to be a good guest. Ask at the front desk first — not all allow it.</p>
+        </div>
+
+        <div class="land-type reveal">
+          <div class="land-badge medium">~ Medium</div>
+          <h4>Walmart / Cracker Barrel</h4>
+          <p>Both have historically allowed overnight parking. This has become more restricted in recent years — many urban Walmarts now explicitly prohibit it. Rural and suburban Walmarts are more likely to allow it. Always check signage and ask the manager if you're unsure. Never assume.</p>
+        </div>
+
+        <div class="land-type reveal">
+          <div class="land-badge hard">✗ Harder</div>
+          <h4>Urban Stealth Parking (East Coast / Cities)</h4>
+          <p>In cities, the goal is to look like you belong. High-roof vans in non-residential areas (industrial, light commercial, near universities) fare best. Keep your exterior clean. Don't leave food or gear visible through windows. Arrive late, leave early. Never use a generator. The more your van looks like a work vehicle, the longer you'll stay under the radar.</p>
+        </div>
+
+        <h2>Our Night-of Workflow</h2>
+        <ol>
+          <li>Check iOverlander for any community-reported spots within 30 miles of our destination</li>
+          <li>Cross-reference with OnX to confirm the land is public (BLM / Forest Service)</li>
+          <li>Read the most recent reviews on Campendium — older spots get shut down, crowded, or trashed</li>
+          <li>Have two backup spots identified before leaving in the evening</li>
+          <li>Never arrive at a new spot after dark if you can avoid it — you can't assess the terrain properly</li>
+          <li>Check fire restrictions for the area (NFSA.usfs.gov) before building any fire</li>
+        </ol>
+
+        <div class="callout">
+          <strong>🤝 Leave No Trace — Seriously</strong>
+          Free camping only stays free as long as we don't abuse it. Pack out everything, don't cut vegetation, stay on established paths, and never camp closer than 200 feet from any water source. One careless camper ruins the spot for everyone. We've seen BLM areas closed permanently because of trash and fire rings. Don't be that person.
+        </div>
+
+        <h2>The East vs West Reality</h2>
+        <table class="cost-table">
+          <thead><tr><th>Region</th><th>Free Camping Availability</th><th>Strategy</th></tr></thead>
+          <tbody>
+            <tr><td>Mountain West</td><td class="best">Abundant — BLM everywhere</td><td>OnX + iOverlander</td></tr>
+            <tr><td>Southwest</td><td class="best">Excellent — Year-round BLM</td><td>Campendium reviews</td></tr>
+            <tr><td>Pacific Northwest</td><td class="mid">Good — National Forest focus</td><td>Forest road dispersed</td></tr>
+            <tr><td>Midwest</td><td class="mid">Limited — State forests, Corps of Engineers</td><td>Recreation.gov, state sites</td></tr>
+            <tr><td>Southeast</td><td class="mid">Moderate — National Forests, some state land</td><td>Campendium, ranger stations</td></tr>
+            <tr><td>Northeast</td><td class="worst">Difficult — Dense population, regulations</td><td>State parks, stealth, paid more often</td></tr>
+          </tbody>
+        </table>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-widget">
+          <h4>📝 More Tips</h4>
+          <div class="sidebar-links">
+            <a href="winter-vanlife-tips.html" class="sidebar-link"><span class="link-icon">❄️</span> Winter Van Tips</a>
+            <a href="baja-in-a-van.html" class="sidebar-link"><span class="link-icon">🌄</span> Baja in a Van</a>
+            <a href="van-electrical-mistakes.html" class="sidebar-link"><span class="link-icon">🔌</span> Electrical Mistakes</a>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <h4>📚 Build Guides</h4>
+          <div class="sidebar-links">
+            <a href="../guides/solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Guide</a>
+            <a href="../guides/budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
+            <a href="../compare.html" class="sidebar-link"><span class="link-icon">⚖️</span> Compare Rigs</a>
+          </div>
+        </div>
+        <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+          <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Newsletter</h4>
+          <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Weekly guides. No spam.</p>
+          <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>BUILD SOMETHING WORTH CAMPING IN</h2>
+    <p>Start with the guides and build it right the first time.</p>
+    <div class="cta-btns">
+      <a href="../guides/solar.html" class="btn btn-white">Solar Guide →</a>
+      <a href="index.html" class="btn btn-ghost">More Posts</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="../index.html" class="logo">VAN<span>WILD</span></a><p>Real guides for real builds. No sponsors.</p></div>
+      <div class="footer-col"><h4>Guides</h4><ul>
+        <li><a href="../guides/solar.html">Solar Power</a></li><li><a href="../guides/insulation.html">Insulation</a></li>
+        <li><a href="../guides/budget.html">Budget</a></li><li><a href="../guides/battery.html">Batteries</a></li>
+        <li><a href="../guides/skoolie.html">Skoolie</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More</h4><ul>
+        <li><a href="../builds/index.html">Builds</a></li><li><a href="index.html">Blog</a></li>
+        <li><a href="../compare.html">Compare</a></li><li><a href="../about.html">About</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 VanWild.</span>
+      <div class="social-links"><a href="https://facebook.com" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

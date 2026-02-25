@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — VanWild</title>
+<meta name="description" content="Van life tips, build logs, product reviews, and real stories from the road. No sponsors, no BS.">
+<link rel="stylesheet" href="css/main.css">
+<style>
+.filter-bar {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: var(--space-md);
+}
+.filter-btn {
+  padding: 8px 18px; border-radius: 99px;
+  border: 1px solid var(--sand);
+  font-family: var(--font-head); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--white); cursor: pointer; transition: var(--transition);
+  color: var(--muted);
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--orange); border-color: var(--orange); color: white;
+}
+.featured-post {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px,4vw,60px);
+  align-items: center;
+  background: var(--dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+.featured-post-img {
+  height: clamp(280px,35vw,420px);
+  background: var(--mid);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 100px;
+}
+.featured-post-body { padding: var(--space-md); }
+.featured-post-body .tag { color: var(--orange); background: rgba(244,99,30,0.15); }
+.featured-post-body h2 {
+  font-family: var(--font-display); font-size: var(--fs-lg);
+  color: white; line-height: 1.05; letter-spacing: 0.02em; margin-bottom: 14px;
+}
+.featured-post-body p { color: rgba(255,255,255,0.6); font-size: var(--fs-sm); margin-bottom: 20px; }
+@media (max-width: 640px) {
+  .featured-post { grid-template-columns: 1fr; }
+  .featured-post-img { height: 220px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">VAN<span>WILD</span></a>
+    <ul class="nav-links">
+      <li><a href="guides/solar.html">Solar</a></li>
+      <li><a href="guides/insulation.html">Insulation</a></li>
+      <li><a href="guides/budget.html">Budget</a></li>
+      <li><a href="builds/index.html">Builds</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="guides/solar.html">SOLAR</a><a href="guides/insulation.html">INSULATION</a>
+  <a href="guides/budget.html">BUDGET</a><a href="builds/index.html">BUILDS</a>
+  <a href="blog.html">BLOG</a><a href="about.html">ABOUT</a>
+  <a href="guides/solar.html" class="btn btn-primary">Start Building →</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+  <div class="container page-hero-content">
+    <div class="tag dark">📝 The VanWild Blog</div>
+    <h1>TIPS, BUILDS<br>& ROAD STORIES</h1>
+    <p class="lead">Real posts from real builders. No sponsored content, no affiliate roundups dressed up as advice.</p>
+  </div>
+</section>
+
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BUILD LOGS</span><span class="dot">◆</span><span>PRODUCT REVIEWS</span><span class="dot">◆</span>
+    <span>VANLIFE TIPS</span><span class="dot">◆</span><span>SKOOLIE STORIES</span><span class="dot">◆</span>
+    <span>ROAD TRIPS</span><span class="dot">◆</span><span>HONEST OPINIONS</span><span class="dot">◆</span>
+    <span>BUILD LOGS</span><span class="dot">◆</span><span>PRODUCT REVIEWS</span><span class="dot">◆</span>
+    <span>VANLIFE TIPS</span><span class="dot">◆</span><span>SKOOLIE STORIES</span><span class="dot">◆</span>
+    <span>ROAD TRIPS</span><span class="dot">◆</span><span>HONEST OPINIONS</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+
+    <!-- FEATURED POST -->
+    <div class="featured-post reveal">
+      <div class="featured-post-img">🚐</div>
+      <div class="featured-post-body">
+        <div class="tag">⭐ Featured Post</div>
+        <h2>WE BUILT A VAN FOR $6,200. HERE'S EVERY RECEIPT.</h2>
+        <p>One Transit, 8 weeks, $6,247 in receipts photographed and categorized. The real breakdown nobody else shows you — including the $340 mistake we made with the spray foam.</p>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+          <span style="font-size:12px;font-family:var(--font-head);font-weight:600;color:rgba(255,255,255,0.4);">Feb 10, 2026 · 22 min read</span>
+        </div>
+        <a href="blog/transit-build-log.html" class="btn btn-primary">Read Post →</a>
+      </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterPosts('all', this)">All Posts</button>
+      <button class="filter-btn" onclick="filterPosts('build-log', this)">Build Logs</button>
+      <button class="filter-btn" onclick="filterPosts('tips', this)">Tips & How-To</button>
+      <button class="filter-btn" onclick="filterPosts('review', this)">Reviews</button>
+      <button class="filter-btn" onclick="filterPosts('skoolie', this)">Skoolie</button>
+      <button class="filter-btn" onclick="filterPosts('road', this)">Road Stories</button>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid" id="blogGrid">
+
+      <div class="blog-card card reveal" data-cat="build-log">
+        <div class="blog-card-img">🔧</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Build Log</span><span>·</span><span>Feb 14, 2026</span><span>·</span><span>15 min</span></div>
+          <h3><a href="blog/transit-build-log.html">Our Ford Transit Build: Mistakes, Wins, and Final Cost</a></h3>
+          <p>Month 3 of our Transit build. We finished the insulation, realized we measured the bed wrong, and saved $800 by making our own cabinetry.</p>
+          <a href="blog/transit-build-log.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal reveal-delay-1" data-cat="review">
+        <div class="blog-card-img">🔋</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Review</span><span>·</span><span>Feb 8, 2026</span><span>·</span><span>10 min</span></div>
+          <h3><a href="blog/battle-born-review.html">Battle Born 100Ah Lithium Battery — 2 Year Review</a></h3>
+          <p>After 2 years and 700+ charge cycles, here's the real performance data on the most popular vanlife battery. Spoiler: it's still at 97% capacity.</p>
+          <a href="blog/battle-born-review.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal reveal-delay-2" data-cat="tips">
+        <div class="blog-card-img">❄️</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Tips</span><span>·</span><span>Feb 2, 2026</span><span>·</span><span>8 min</span></div>
+          <h3><a href="blog/winter-vanlife-tips.html">7 Things That Actually Keep You Warm in a Van in Winter</a></h3>
+          <p>We spent January in Minnesota in a van. Temperatures hit -18°F. Here's what worked, what failed, and what we wish we'd done before winter hit.</p>
+          <a href="blog/winter-vanlife-tips.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal" data-cat="skoolie">
+        <div class="blog-card-img">🚌</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Skoolie</span><span>·</span><span>Jan 28, 2026</span><span>·</span><span>18 min</span></div>
+          <h3><a href="blog/skoolie-rust-guide.html">How We Removed 40 Years of Rust From Our School Bus Floor</a></h3>
+          <p>Naval jelly, angle grinders, POR-15, and a lot of regret about buying a bus from Michigan. The complete floor restoration process from hell and back.</p>
+          <a href="blog/skoolie-rust-guide.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal reveal-delay-1" data-cat="tips">
+        <div class="blog-card-img">📍</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Tips</span><span>·</span><span>Jan 22, 2026</span><span>·</span><span>12 min</span></div>
+          <h3><a href="blog/free-camping-guide.html">How to Find Free Camping in Any State (Our Actual Method)</a></h3>
+          <p>We've spent 18 months finding free or nearly-free spots across 34 states. Here's our actual workflow — apps, websites, and the tricks nobody else posts.</p>
+          <a href="blog/free-camping-guide.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal reveal-delay-2" data-cat="road">
+        <div class="blog-card-img">🌄</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Road Stories</span><span>·</span><span>Jan 15, 2026</span><span>·</span><span>9 min</span></div>
+          <h3><a href="blog/baja-in-a-van.html">Baja California in a Cargo Van: What Nobody Tells You</a></h3>
+          <p>2,000 miles down the Baja Peninsula. Three breakdowns, one near-perfect sunset, a mechanical near-disaster, and why we'd do it again immediately.</p>
+          <a href="blog/baja-in-a-van.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal" data-cat="review">
+        <div class="blog-card-img">💨</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Review</span><span>·</span><span>Jan 9, 2026</span><span>·</span><span>7 min</span></div>
+          <h3><a href="blog/maxxair-vs-fantastic.html">Maxxair vs Fan-Tastic Fan — Which Should You Buy?</a></h3>
+          <p>We've owned both for 12+ months each. Honest comparison on airflow, noise, rain sensing, and which one we'd put in our next build without thinking twice.</p>
+          <a href="blog/maxxair-vs-fantastic.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal reveal-delay-1" data-cat="tips">
+        <div class="blog-card-img">🔌</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Tips</span><span>·</span><span>Dec 28, 2025</span><span>·</span><span>11 min</span></div>
+          <h3><a href="blog/van-electrical-mistakes.html">The 9 Most Common Van Electrical Mistakes (And How to Avoid Them)</a></h3>
+          <p>Undersized wire. No fuses. PWM instead of MPPT. We've seen every electrical mistake in the book — here's the full list so you don't make them.</p>
+          <a href="blog/van-electrical-mistakes.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card card reveal reveal-delay-2" data-cat="build-log">
+        <div class="blog-card-img">🚌</div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span class="cat">Skoolie Build Log</span><span>·</span><span>Dec 20, 2025</span><span>·</span><span>20 min</span></div>
+          <h3><a href="blog/skoolie-build-log-1.html">Skoolie Build Log #1: We Bought a 1998 Blue Bird and Now What?</a></h3>
+          <p>First week of our skoolie build. Seat removal, floor inspection horror, and the moment we realized we bought a bus with more rust than we expected.</p>
+          <a href="blog/skoolie-build-log-1.html" class="btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>NEVER MISS<br>A POST</h2>
+    <p>New guides and build logs every week. Join the newsletter.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-white">Subscribe Free →</a>
+      <a href="index.html#guides" class="btn btn-ghost">All Guides</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo">VAN<span>WILD</span></a><p>Real guides for real builds. No sponsors.</p></div>
+      <div class="footer-col"><h4>Guides</h4><ul>
+        <li><a href="guides/solar.html">Solar Power</a></li><li><a href="guides/insulation.html">Insulation</a></li>
+        <li><a href="guides/budget.html">Budget</a></li><li><a href="guides/battery.html">Batteries</a></li>
+        <li><a href="guides/skoolie.html">Skoolie</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More</h4><ul>
+        <li><a href="builds/index.html">Builds</a></li><li><a href="blog.html">Blog</a></li>
+        <li><a href="compare.html">Compare</a></li><li><a href="about.html">About</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 VanWild.</span>
+      <div class="social-links"><a href="https://facebook.com" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.blog-card').forEach(card => {
+    const show = cat === 'all' || card.dataset.cat === cat;
+    card.style.display = show ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

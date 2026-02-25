@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Removed 40 Years of Rust From Our School Bus Floor — VanWild</title>
+<meta name="description" content="Full process for removing rust from a school bus floor: tools, chemicals, POR-15, and what to do when the rust is worse than you expected.">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.process-step {
+  display:grid; grid-template-columns:44px 1fr; gap:18px;
+  padding:var(--space-sm) 0; border-bottom:1px solid var(--sand); align-items:flex-start;
+}
+.process-step:last-child { border-bottom:none; }
+.step-icon {
+  width:44px; height:44px; border-radius:50%; background:var(--dark);
+  display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;
+}
+.step-content h4 { font-family:var(--font-head); font-weight:800; margin-bottom:6px; }
+.step-content p { font-size:var(--fs-sm); color:var(--muted); margin-bottom:0; }
+.product-card {
+  background:var(--white); border:1px solid var(--sand); border-radius:var(--radius);
+  padding:16px 20px; display:flex; align-items:flex-start; gap:16px;
+  margin-bottom:12px; transition:var(--transition);
+}
+.product-card:hover { transform:translateX(4px); border-color:var(--orange); }
+.product-icon { font-size:28px; flex-shrink:0; }
+.product-info h5 { font-family:var(--font-head); font-weight:800; margin-bottom:4px; }
+.product-info p { font-size:var(--fs-sm); color:var(--muted); margin-bottom:0; }
+.product-price { font-family:var(--font-head); font-weight:700; color:var(--orange); font-size:13px; }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo">VAN<span>WILD</span></a>
+    <ul class="nav-links">
+      <li><a href="../guides/solar.html">Solar</a></li><li><a href="../guides/insulation.html">Insulation</a></li>
+      <li><a href="../guides/budget.html">Budget</a></li><li><a href="../builds/index.html">Builds</a></li>
+      <li><a href="index.html" class="active">Blog</a></li><li><a href="../about.html">About</a></li>
+    </ul>
+    <a href="../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../guides/solar.html">SOLAR</a><a href="../guides/insulation.html">INSULATION</a>
+  <a href="../guides/budget.html">BUDGET</a><a href="../builds/index.html">BUILDS</a>
+  <a href="index.html">BLOG</a><a href="../about.html">ABOUT</a>
+  <a href="../guides/solar.html" class="btn btn-primary">Start Building →</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('http://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');"></div>
+  <div class="page-hero-gradient"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="index.html">Blog</a><span class="sep">›</span>
+      <span class="current">Skoolie Rust Removal</span>
+    </div>
+    <div class="tag dark">🚌 Skoolie</div>
+    <h1>40 YEARS OF RUST.<br>WE FIXED IT.</h1>
+    <p class="lead">A 1998 Blue Bird from Michigan with a floor that had seen 26 winters. Here's the complete rust removal process — and what to do when it's worse than you thought.</p>
+    <span style="color:rgba(255,255,255,0.45);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Jan 28, 2026 · 📖 18 min read</span>
+  </div>
+</section>
+
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span>RUST REMOVAL</span><span class="dot">◆</span><span>POR-15</span><span class="dot">◆</span>
+    <span>NAVAL JELLY</span><span class="dot">◆</span><span>SCHOOL BUS FLOOR</span><span class="dot">◆</span>
+    <span>SKOOLIE BUILD</span><span class="dot">◆</span><span>METAL PREP</span><span class="dot">◆</span>
+    <span>RUST REMOVAL</span><span class="dot">◆</span><span>POR-15</span><span class="dot">◆</span>
+    <span>NAVAL JELLY</span><span class="dot">◆</span><span>SCHOOL BUS FLOOR</span><span class="dot">◆</span>
+    <span>SKOOLIE BUILD</span><span class="dot">◆</span><span>METAL PREP</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="article-grid">
+      <article class="article-content">
+
+        <h2>What We Were Dealing With</h2>
+        <p>The bus came from a rural Michigan school district. Michigan roads are heavily salted — which means school buses from the Midwest and Northeast are far more likely to have serious floor rust than buses from dry states like Arizona or New Mexico. The listing said "some surface rust." It was not just surface rust.</p>
+        <p>When we pulled the rubber floor mats and plywood subfloor panels (most school buses have a plywood layer over the structural steel floor), we found about 40% of the structural steel floor had active rust, 15% had perforation (holes rusted through), and 3 crossmembers needed to be professionally welded in. Total unplanned cost: $680 in steel and welding.</p>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ Always Inspect the Floor BEFORE Buying</strong>
+          Insist on pulling at least a section of the floor mat and plywood subfloor before purchase. Use a screwdriver to probe suspicious areas — if it goes through the metal easily, that's structural rust that needs serious attention. Walk away from buses where the seller refuses to let you inspect the floor.
+        </div>
+
+        <h2>The Complete Rust Removal Process</h2>
+
+        <div class="process-step reveal">
+          <div class="step-icon">🧹</div>
+          <div class="step-content">
+            <h4>Step 1: Remove Everything</h4>
+            <p>All seats, floor mats, loose plywood, and any remaining wheel well covers. Get down to bare steel. Use a heat gun to soften stubborn adhesive under old mats. Budget a full weekend just for demo — it's slower than you think.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-icon">🔍</div>
+          <div class="step-content">
+            <h4>Step 2: Assess and Mark</h4>
+            <p>Use chalk to mark every rusted area. Categories: surface rust (orange chalk), deep pitting (yellow), perforation (red). Red zones need welding or steel plate patching before anything else happens. Call a local mobile welder for the serious stuff — it's usually $60–$100/hr and worth every penny.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-icon">⚡</div>
+          <div class="step-content">
+            <h4>Step 3: Mechanical Removal</h4>
+            <p>Angle grinder with a wire cup wheel for heavily rusted areas. Flap disc (80 grit) for moderate rust. DA sander (80 grit) for surface rust on flat sections. Goal: bright bare metal wherever possible. You will go through many wire wheels. Buy a 10-pack. Wear a respirator — rust dust is not good to breathe.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-icon">🧪</div>
+          <div class="step-content">
+            <h4>Step 4: Chemical Treatment (Naval Jelly)</h4>
+            <p>Apply Naval Jelly or a phosphoric acid rust converter to any areas you couldn't fully grind to bare metal — tight corners, under flanges, around bolt holes. Let it work for 15–20 minutes until the rust turns black/dark purple. Wipe off and let dry completely. Do NOT apply POR-15 over wet Naval Jelly or you'll get adhesion failure.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-icon">🛡️</div>
+          <div class="step-content">
+            <h4>Step 5: POR-15 — The Important Rules</h4>
+            <p>POR-15 is one of the best rust encapsulators available, but it has specific rules that will ruin your job if you ignore them: (1) Apply in low humidity conditions — above 60% RH causes blushing and adhesion failure. (2) Don't let it dry in sunlight — it cures too fast and becomes brittle. (3) Apply two thin coats, not one thick one. (4) It MUST be topcoated within 96 hours or it becomes too hard to bond with anything.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-icon">🎨</div>
+          <div class="step-content">
+            <h4>Step 6: Topcoat &amp; Seal</h4>
+            <p>We used POR-15 Top Coat in chassis black over the POR-15 base. Two coats. This protects the UV-sensitive POR-15 underneath and gives a clean finished surface. The result is a floor that looks factory-done and is protected against future rust for years.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-icon">🪵</div>
+          <div class="step-content">
+            <h4>Step 7: New Subfloor</h4>
+            <p>Once the metal is treated and fully cured (48 hours minimum), lay new subfloor. We used 3/4" treated plywood on the structural floor, then 1.5" XPS foam insulation, then a second layer of 3/4" birch plywood as the finished subfloor surface. This gives R-7.5 floor insulation and a solid substrate for the finished flooring.</p>
+          </div>
+        </div>
+
+        <h2>Products Used</h2>
+        <div class="product-card reveal">
+          <div class="product-icon">🧪</div>
+          <div class="product-info">
+            <h5>Ospho (Phosphoric Acid Rust Converter)</h5>
+            <p>Better than Naval Jelly for heavy rust — penetrates deeper and leaves a harder primer surface.</p>
+            <div class="product-price">~$22/quart</div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-icon">🛡️</div>
+          <div class="product-info">
+            <h5>POR-15 Rust Preventive Coating</h5>
+            <p>The industry standard for rust encapsulation. Extremely durable when applied correctly.</p>
+            <div class="product-price">~$35/quart (covers ~70 sq ft)</div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-icon">🎨</div>
+          <div class="product-info">
+            <h5>POR-15 Top Coat</h5>
+            <p>UV-stable topcoat required over POR-15. Don't skip this step — bare POR-15 degrades in sunlight.</p>
+            <div class="product-price">~$28/quart</div>
+          </div>
+        </div>
+
+        <h2>Total Cost of Our Floor Restoration</h2>
+        <table class="cost-table">
+          <thead><tr><th>Item</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Welding (3 crossmembers + 4 patch plates)</td><td>$680</td></tr>
+            <tr><td>Wire wheels, flap discs, sandpaper</td><td>$68</td></tr>
+            <tr><td>Ospho (2 quarts)</td><td>$44</td></tr>
+            <tr><td>POR-15 (2 quarts)</td><td>$70</td></tr>
+            <tr><td>POR-15 Top Coat (1 quart)</td><td>$28</td></tr>
+            <tr><td>Treated plywood subfloor (6 sheets)</td><td>$186</td></tr>
+            <tr><td>XPS foam insulation (12 sheets)</td><td>$108</td></tr>
+            <tr><td>Birch plywood finish subfloor (5 sheets)</td><td>$155</td></tr>
+            <tr><td>Screws, adhesive, misc</td><td>$42</td></tr>
+            <tr class="total"><td><strong>Total Floor Restoration</strong></td><td><strong>$1,381</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>💡 Lesson Learned</strong>
+          We budgeted $400 for floor work. The actual cost was $1,381. Always add 30–50% to your estimated cost for any skoolie structural work — what looks manageable from the outside is almost always worse underneath.
+        </div>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-widget">
+          <h4>🚌 Skoolie Resources</h4>
+          <div class="sidebar-links">
+            <a href="../guides/skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Skoolie Full Guide</a>
+            <a href="../guides/insulation.html" class="sidebar-link"><span class="link-icon">🧱</span> Insulation Guide</a>
+            <a href="../guides/budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <h4>📝 More Skoolie Posts</h4>
+          <div class="sidebar-links">
+            <a href="skoolie-build-log-1.html" class="sidebar-link"><span class="link-icon">📋</span> Skoolie Build Log #1</a>
+            <a href="../builds/index.html" class="sidebar-link"><span class="link-icon">🔧</span> All Builds</a>
+          </div>
+        </div>
+        <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+          <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Newsletter</h4>
+          <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Weekly guides. No spam.</p>
+          <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>THINKING ABOUT A SKOOLIE?</h2>
+    <p>Read the complete conversion guide before you buy.</p>
+    <div class="cta-btns">
+      <a href="../guides/skoolie.html" class="btn btn-white">Skoolie Guide →</a>
+      <a href="index.html" class="btn btn-ghost">More Posts</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="../index.html" class="logo">VAN<span>WILD</span></a><p>Real guides for real builds. No sponsors.</p></div>
+      <div class="footer-col"><h4>Guides</h4><ul>
+        <li><a href="../guides/solar.html">Solar Power</a></li><li><a href="../guides/insulation.html">Insulation</a></li>
+        <li><a href="../guides/budget.html">Budget</a></li><li><a href="../guides/battery.html">Batteries</a></li>
+        <li><a href="../guides/skoolie.html">Skoolie</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More</h4><ul>
+        <li><a href="../builds/index.html">Builds</a></li><li><a href="index.html">Blog</a></li>
+        <li><a href="../compare.html">Compare</a></li><li><a href="../about.html">About</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 VanWild.</span>
+      <div class="social-links"><a href="https://facebook.com" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

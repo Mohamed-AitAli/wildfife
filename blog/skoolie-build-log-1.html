@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skoolie Build Log #1: We Bought a 1998 Blue Bird — VanWild</title>
+<meta name="description" content="Week one of our school bus conversion: seat removal, floor inspection horror, unexpected rust, and everything we learned buying our first bus.">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.log-week {
+  border-left: 3px solid var(--orange);
+  padding-left: var(--space-md);
+  margin: var(--space-md) 0;
+}
+.log-date {
+  font-family: var(--font-head); font-weight: 700; font-size: 12px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange);
+  margin-bottom: 8px;
+}
+.discovery-box {
+  background: var(--white); border: 1px solid var(--sand);
+  border-radius: var(--radius-lg); padding: var(--space-md);
+  margin: var(--space-sm) 0; display: flex; gap: 16px; align-items: flex-start;
+  transition: var(--transition);
+}
+.discovery-box:hover { transform: translateX(4px); border-color: var(--orange); }
+.discovery-icon { font-size: 28px; flex-shrink: 0; }
+.discovery-text h4 { font-family: var(--font-head); font-weight: 800; margin-bottom: 6px; }
+.discovery-text p { font-size: var(--fs-sm); color: var(--muted); margin-bottom: 0; }
+.bus-spec-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,160px),1fr));
+  gap: 14px; margin: var(--space-md) 0;
+}
+.bus-spec {
+  background: var(--white); border: 1px solid var(--sand); border-radius: var(--radius);
+  padding: 16px; text-align: center;
+}
+.bus-spec .val { font-family: var(--font-display); font-size: 28px; color: var(--orange); line-height: 1; }
+.bus-spec .key { font-size: 12px; color: var(--muted); font-family: var(--font-head); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo">VAN<span>WILD</span></a>
+    <ul class="nav-links">
+      <li><a href="../guides/solar.html">Solar</a></li><li><a href="../guides/insulation.html">Insulation</a></li>
+      <li><a href="../guides/budget.html">Budget</a></li><li><a href="../builds/index.html">Builds</a></li>
+      <li><a href="index.html" class="active">Blog</a></li><li><a href="../about.html">About</a></li>
+    </ul>
+    <a href="../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../guides/solar.html">SOLAR</a><a href="../guides/insulation.html">INSULATION</a>
+  <a href="../guides/budget.html">BUDGET</a><a href="../builds/index.html">BUILDS</a>
+  <a href="index.html">BLOG</a><a href="../about.html">ABOUT</a>
+  <a href="../guides/solar.html" class="btn btn-primary">Start Building →</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('http://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');"></div>
+  <div class="page-hero-gradient"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="index.html">Blog</a><span class="sep">›</span>
+      <span class="current">Skoolie Build Log #1</span>
+    </div>
+    <div class="tag dark">🚌 Skoolie Build Log</div>
+    <h1>SKOOLIE BUILD LOG #1:<br>WE BOUGHT A BUS.</h1>
+    <p class="lead">A 1998 Blue Bird All-American from a Wisconsin school district. 72 seats. 147,000 miles. More rust than we expected. Week one starts now.</p>
+    <span style="color:rgba(255,255,255,0.45);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Dec 20, 2025 · 📖 20 min read · Part 1 of ongoing series</span>
+  </div>
+</section>
+
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span>SKOOLIE BUILD LOG</span><span class="dot">◆</span><span>BLUE BIRD</span><span class="dot">◆</span>
+    <span>WEEK ONE</span><span class="dot">◆</span><span>SEAT REMOVAL</span><span class="dot">◆</span>
+    <span>FLOOR INSPECTION</span><span class="dot">◆</span><span>1998 BUS</span><span class="dot">◆</span>
+    <span>SKOOLIE BUILD LOG</span><span class="dot">◆</span><span>BLUE BIRD</span><span class="dot">◆</span>
+    <span>WEEK ONE</span><span class="dot">◆</span><span>SEAT REMOVAL</span><span class="dot">◆</span>
+    <span>FLOOR INSPECTION</span><span class="dot">◆</span><span>1998 BUS</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="article-grid">
+      <article class="article-content">
+
+        <h2>How We Ended Up With a Bus</h2>
+        <p>Honest answer: we watched too many skoolie YouTube videos. But also — we needed more space. After 18 months full-time in a Sprinter, we both agreed that one more winter of bumping elbows in 80 square feet of living space was one too many. A bus felt insane. We bought one anyway.</p>
+
+        <div class="callout">
+          <strong>🚌 The Bus: The Stats</strong>
+          1998 Blue Bird All-American Type D, 40 feet long, International DT466 diesel engine, Allison automatic transmission. Purchased from a rural Wisconsin school district at auction for $7,200. Original maintenance records available, which is exactly what you want when buying an old diesel.
+        </div>
+
+        <div class="bus-spec-grid">
+          <div class="bus-spec"><div class="val">1998</div><div class="key">Year</div></div>
+          <div class="bus-spec"><div class="val">147K</div><div class="key">Miles</div></div>
+          <div class="bus-spec"><div class="val">40ft</div><div class="key">Length</div></div>
+          <div class="bus-spec"><div class="val">$7,200</div><div class="key">Purchase</div></div>
+          <div class="bus-spec"><div class="val">72</div><div class="key">Original Seats</div></div>
+          <div class="bus-spec"><div class="val">~280</div><div class="key">Est. Sq Ft</div></div>
+        </div>
+
+        <h2>The Buying Process</h2>
+        <p>We found this bus on GovPlanet — a government surplus auction site. The listing had 11 photos and a brief mechanical inspection report. We drove 4 hours to inspect in person before bidding. Here's what we looked at on the inspection:</p>
+        <ul>
+          <li>Started cold without excessive smoke</li>
+          <li>Drove smoothly — no slipping in the Allison transmission</li>
+          <li>No visible oil leaks under the engine compartment (engine is under a hatch inside the bus on a Type D)</li>
+          <li>Air brakes pressurize and hold properly</li>
+          <li>Pulled two sections of floor mat to inspect for rust — found surface rust only in the spots we checked (more on this later)</li>
+          <li>Body panels mostly solid, some minor dings on the rear corner</li>
+          <li>School district records showed oil changes every 10,000–12,000 miles, consistent coolant service</li>
+        </ul>
+
+        <p>We bid on GovPlanet and won at $7,200 — about $2,000 under our maximum. Paid a $200 buyer's fee plus $180 to have it transported to our driveway on a flatbed (couldn't get it commercially insured instantly for driving). Total bus acquisition cost: $7,580.</p>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ Insurance and Registration</strong>
+          Get insurance sorted BEFORE you drive the bus. A school bus used as a personal vehicle has specific insurance requirements that vary by state. We used Progressive's RV insurance after re-titling — took 2 weeks and $135 in state fees. Research your specific state before purchasing.
+        </div>
+
+        <h2>Week 1: Demo Day (Days)</h2>
+
+        <div class="log-week">
+          <div class="log-date">Day 1–2</div>
+          <h3>Seat Removal: 72 Seats, 6 Hours</h3>
+          <p>School bus seats bolt through the floor with two 1/2" bolts each. That's 144 bolts for 72 seats. Many were corroded and needed penetrating oil and an impact gun. We soaked them all the night before with PB Blaster. Total time: 6 hours for two people. The seats are heavy — budget for a way to move them. We stacked them outside and listed them on Facebook Marketplace. Sold 60 of them for $15 each. That's $900 back — not a bad offset.</p>
+        </div>
+
+        <div class="log-week">
+          <div class="log-date">Day 3</div>
+          <h3>Floor Removal: The First Surprise</h3>
+          <p>School buses typically have a plywood subfloor over the structural steel "frame" floor. Under the plywood is a rubber mat, and under the mat is bare steel. We pulled all the plywood panels (they're separate sections, not one piece — helpful) and found the rubber mat beneath in varying states of decomposition. The mat had been sealing moisture against the steel for decades in some areas.</p>
+          <p>When we pulled the rubber mat sections — that's where the surprises started.</p>
+        </div>
+
+        <h2>What We Found Under the Floor</h2>
+
+        <div class="discovery-box reveal">
+          <div class="discovery-icon">✅</div>
+          <div class="discovery-text">
+            <h4>Front Third: Clean</h4>
+            <p>The front 12 feet of the bus had minimal rust — surface rust only, easily treated. The school district replaced the front floor section about 8 years ago based on the records.</p>
+          </div>
+        </div>
+
+        <div class="discovery-box reveal">
+          <div class="discovery-icon">⚠️</div>
+          <div class="discovery-text">
+            <h4>Middle Third: Moderate</h4>
+            <p>Active rust on about 40% of the structural floor in this section. Deep pitting in several areas, but no perforations. Treatable with mechanical removal + POR-15. Estimated work: 2 full days.</p>
+          </div>
+        </div>
+
+        <div class="discovery-box reveal">
+          <div class="discovery-icon">❌</div>
+          <div class="discovery-text">
+            <h4>Rear Third: Problem Area</h4>
+            <p>The rear section near the emergency door had 6 perforations (holes through the structural floor) and 2 crossmembers with severe pitting. This requires welding before any other work can happen. Unplanned expense: called three mobile welders, got quotes of $480–$800 for patching the perforations and treating the crossmembers.</p>
+          </div>
+        </div>
+
+        <div class="log-week">
+          <div class="log-date">Day 4–5</div>
+          <h3>Emergency Door Seal and Skylight Inspection</h3>
+          <p>The emergency door seal was deteriorated — this is the big rear door required by law on school buses. Replacement seal ordered ($68 from a bus parts supplier). The 5 factory roof hatches (skylights) were all intact and operational — a relief, since replacing these is expensive. Two had slightly degraded rubber gaskets that we'll reseal with butyl tape before insulation.</p>
+        </div>
+
+        <div class="log-week">
+          <div class="log-date">Day 6–7</div>
+          <h3>Interior Teardown Complete</h3>
+          <p>Removed all remaining interior panels, overhead grab rails, driver's partition, emergency equipment mounts, and the first aid cabinet. The inside is now completely bare — bare steel walls, bare steel ceiling bows, bare (problem) floor. This is where it starts to feel real.</p>
+          <p>Standing in 280 square feet of empty metal space is both terrifying and exciting. It smells like 27 years of school bus. That smell goes away eventually, we're told.</p>
+        </div>
+
+        <h2>Budget After Week 1</h2>
+        <table class="cost-table">
+          <thead><tr><th>Item</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Bus purchase (GovPlanet)</td><td>$7,200</td></tr>
+            <tr><td>Buyer's fee</td><td>$200</td></tr>
+            <tr><td>Transport (flatbed)</td><td>$180</td></tr>
+            <tr><td>State re-titling + registration</td><td>$135</td></tr>
+            <tr><td>PB Blaster (seat bolt penetrant)</td><td>$18</td></tr>
+            <tr><td>Impact socket set (for seat removal)</td><td>$44</td></tr>
+            <tr><td>Emergency door seal (ordered)</td><td>$68</td></tr>
+            <tr><td>Welding quote (not yet paid)</td><td>~$620</td></tr>
+            <tr><td>Seat sales (offset)</td><td>-$900</td></tr>
+            <tr class="total"><td><strong>Week 1 Running Total</strong></td><td><strong>$7,565</strong></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Lessons Learned in Week 1</h2>
+        <ol>
+          <li><strong>Inspect MORE floor than you think</strong> — We pulled 4 sections before buying. We should have pulled 10. The worst rust was in the rear, which we didn't fully inspect before purchase.</li>
+          <li><strong>Budget 30–50% more for structural work than you estimate</strong> — Our "small rust" budget was $400. Real cost will be $600+.</li>
+          <li><strong>Sell the seats immediately</strong> — Facebook Marketplace demand for bus seats is surprisingly good. List them the day you pull them.</li>
+          <li><strong>The smell is temporary</strong> — Allegedly.</li>
+        </ol>
+
+        <div class="callout">
+          <strong>📅 Build Log Schedule</strong>
+          We're documenting this build weekly. Subscribe to the newsletter to get each update as it goes live. Next week: welding, rust treatment, and the start of our floor plan design.
+        </div>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-widget">
+          <h4>🚌 Skoolie Resources</h4>
+          <div class="sidebar-links">
+            <a href="../guides/skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Skoolie Full Guide</a>
+            <a href="skoolie-rust-guide.html" class="sidebar-link"><span class="link-icon">🔧</span> Rust Removal Guide</a>
+            <a href="../guides/budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <h4>📋 All Build Logs</h4>
+          <div class="sidebar-links">
+            <a href="transit-build-log.html" class="sidebar-link"><span class="link-icon">🚐</span> Transit Build Log</a>
+            <a href="../builds/index.html" class="sidebar-link"><span class="link-icon">🔧</span> All Community Builds</a>
+          </div>
+        </div>
+        <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+          <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Follow This Build</h4>
+          <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">New log entries weekly. Subscribe so you don't miss them.</p>
+          <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe Free →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>THINKING ABOUT A SKOOLIE?</h2>
+    <p>Read the full guide before you bid on anything.</p>
+    <div class="cta-btns">
+      <a href="../guides/skoolie.html" class="btn btn-white">Skoolie Guide →</a>
+      <a href="index.html" class="btn btn-ghost">More Posts</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="../index.html" class="logo">VAN<span>WILD</span></a><p>Real guides for real builds. No sponsors.</p></div>
+      <div class="footer-col"><h4>Guides</h4><ul>
+        <li><a href="../guides/solar.html">Solar Power</a></li><li><a href="../guides/insulation.html">Insulation</a></li>
+        <li><a href="../guides/budget.html">Budget</a></li><li><a href="../guides/battery.html">Batteries</a></li>
+        <li><a href="../guides/skoolie.html">Skoolie</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More</h4><ul>
+        <li><a href="../builds/index.html">Builds</a></li><li><a href="index.html">Blog</a></li>
+        <li><a href="../compare.html">Compare</a></li><li><a href="../about.html">About</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 VanWild.</span>
+      <div class="social-links"><a href="https://facebook.com" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

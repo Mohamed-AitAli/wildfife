@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About VanWild — No Sponsors, No BS</title>
+    <meta name="description" content="VanWild is a van and skoolie conversion resource built by a full-time van lifer. No sponsors, no affiliate-driven advice.">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(32px, 6vw, 80px);
+            align-items: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .about-img {
+            border-radius: var(--radius-lg);
+            background: var(--mid);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-img::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: calc(var(--radius-lg) + 3px);
+            background: linear-gradient(135deg, var(--orange), transparent 60%);
+            z-index: -1;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+            gap: 20px;
+        }
+        
+        .value-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--sand);
+            padding: var(--space-md);
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .value-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        
+        .value-card h3 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .value-card p {
+            color: var(--muted);
+            font-size: var(--fs-sm);
+        }
+        
+        @media (max-width: 640px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .img-169 {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #16120e;
+            border-radius: var(--radius-lg);
+            margin: var(--space-md) 0;
+        }
+        
+        .img-169 img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .img-169 img[src=""] {
+            display: none;
+        }
+        
+        .img-169.loaded .img-placeholder {
+            display: none;
+        }
+        
+        .img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">VAN<span>WILD</span></a>
+            <ul class="nav-links">
+                <li><a href="guides/solar.html">Solar</a></li>
+                <li><a href="guides/insulation.html">Insulation</a></li>
+                <li><a href="guides/budget.html">Budget</a></li>
+                <li><a href="builds/index.html">Builds</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+            <a href="guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="guides/solar.html">SOLAR</a><a href="guides/insulation.html">INSULATION</a>
+        <a href="guides/budget.html">BUDGET</a><a href="builds/index.html">BUILDS</a>
+        <a href="blog.html">BLOG</a><a href="about.html">ABOUT</a>
+        <a href="guides/solar.html" class="btn btn-primary">Start Building →</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+        <div class="container page-hero-content">
+            <div class="tag dark">👋 Our Story</div>
+            <h1>WHY WE BUILT<br>VANWILD</h1>
+            <p class="lead">Because the internet is full of van content that's actually a sales pitch dressed up as advice. We got tired of it and built something different.</p>
+        </div>
+    </section>
+
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span>NO SPONSORS</span><span class="dot">◆</span><span>NO ADS-AS-ADVICE</span><span class="dot">◆</span>
+            <span>REAL EXPERIENCE</span><span class="dot">◆</span><span>COMMUNITY DRIVEN</span><span class="dot">◆</span>
+            <span>FULL-TIME VANLIFER</span><span class="dot">◆</span><span>HONEST REVIEWS</span><span class="dot">◆</span>
+            <span>NO SPONSORS</span><span class="dot">◆</span><span>NO ADS-AS-ADVICE</span><span class="dot">◆</span>
+            <span>REAL EXPERIENCE</span><span class="dot">◆</span><span>COMMUNITY DRIVEN</span><span class="dot">◆</span>
+            <span>FULL-TIME VANLIFER</span><span class="dot">◆</span><span>HONEST REVIEWS</span><span class="dot">◆</span>
+        </div>
+    </div>
+
+    <section class="section-pad">
+        <div class="container">
+
+            <div class="about-grid">
+                <div class="img-169" id="img1-wrap">
+                    <img id="img1" src="logo.jpeg" alt="Transit before the build — empty cargo van">
+
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <div class="tag">The Origin Story</div>
+                    <h2 style="font-family:var(--font-display);font-size:var(--fs-lg);letter-spacing:0.02em;margin-bottom:20px;">I BUILT MY FIRST VAN WRONG.<br>TWICE.</h2>
+                    <p>In 2021, I spent $14,000 on a Ford Transit build that had condensation running down the walls by November. I'd watched 60+ YouTube videos and read every blog I could find. Everything was either wrong, outdated, or quietly funded by
+                        the brands being recommended.</p>
+                    <p>I tore it down to the metal and rebuilt it. That second build worked. VanWild is everything I wish had existed before build number one.</p>
+                    <p>Today I've been living full-time in vans and (one brief skoolie experiment) for 4 years, covered 87,000 miles, and tested more gear than I care to admit. None of the brands mentioned on this site have paid me anything. If that ever
+                        changes, I'll say so clearly.</p>
+                    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:var(--space-md);">
+                        <div style="text-align:center;">
+                            <div style="font-family:var(--font-display);font-size:48px;color:var(--orange);line-height:1;">87K</div>
+                            <div style="font-size:12px;color:var(--muted);font-family:var(--font-head);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">Miles Driven</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-family:var(--font-display);font-size:48px;color:var(--orange);line-height:1;">4</div>
+                            <div style="font-size:12px;color:var(--muted);font-family:var(--font-head);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">Years Full-Time</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="font-family:var(--font-display);font-size:48px;color:var(--orange);line-height:1;">$0</div>
+                            <div style="font-size:12px;color:var(--muted);font-family:var(--font-head);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">Sponsor Money</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VALUES -->
+            <div class="section-header center reveal" style="max-width:600px;margin-inline:auto;">
+                <div class="tag">What We Stand For</div>
+                <h2>THE VANWILD PRINCIPLES</h2>
+            </div>
+            <div class="value-grid" style="margin-top:var(--space-md);">
+                <div class="value-card reveal">
+                    <div class="value-icon">🚫</div>
+                    <h3>No Sponsored Content</h3>
+                    <p>We don't accept money from brands to promote their products. Every recommendation on this site is based on personal use or vetted community experience.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-1">
+                    <div class="value-icon">💡</div>
+                    <h3>Show the Mistakes</h3>
+                    <p>Every guide includes what went wrong and what we'd do differently. The $340 spray foam disaster is documented in detail so you don't repeat it.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-2">
+                    <div class="value-icon">📊</div>
+                    <h3>Real Numbers Only</h3>
+                    <p>Every budget, cost estimate, and performance metric comes from real builds with real receipts — not estimates designed to make a product look good.</p>
+                </div>
+                <div class="value-card reveal reveal-delay-3">
+                    <div class="value-icon">🤝</div>
+                    <h3>Community First</h3>
+                    <p>Build logs from real community members are the heart of this site. Your experience and knowledge is more valuable than anything I can write alone.</p>
+                </div>
+            </div>
+
+            <!-- SUBMIT BUILD -->
+            <div id="submit" style="background:var(--dark);border-radius:var(--radius-lg);padding:var(--space-lg) var(--space-md);margin-top:var(--space-xl);text-align:center;" class="reveal">
+                <div class="tag dark">📷 Share Your Build</div>
+                <h2 style="font-family:var(--font-display);font-size:var(--fs-lg);color:white;letter-spacing:0.02em;margin-bottom:14px;">BUILT SOMETHING? WE WANT TO SEE IT.</h2>
+                <p style="color:rgba(255,255,255,0.6);max-width:500px;margin:0 auto 24px;">Submit your build with photos and a cost breakdown. If it's honest and complete, we'll feature it on the builds page — no editorial gatekeeping, no minimum budget requirement.</p>
+                <a href="https://web.facebook.com/share/g/1E25VbvRAD/" class="btn btn-primary">Submit Via Facebook Group →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2>START WITH THE GUIDES</h2>
+            <p>Everything we know, organized so you can build smarter than we did.</p>
+            <div class="cta-btns">
+                <a href="guides/solar.html" class="btn btn-white">Solar Guide →</a>
+                <a href="guides/budget.html" class="btn btn-ghost">Budget Guide →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo">VAN<span>WILD</span></a>
+                    <p>Real guides for real builds. No sponsors, no ads disguised as advice.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="guides/solar.html">Solar Power</a></li>
+                        <li><a href="guides/insulation.html">Insulation</a></li>
+                        <li><a href="guides/budget.html">Budget</a></li>
+                        <li><a href="guides/battery.html">Batteries</a></li>
+                        <li><a href="guides/skoolie.html">Skoolie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="builds/index.html">Builds</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 VanWild.</span>
+                <div class="social-links"><a href="https://web.facebook.com/share/g/1E25VbvRAD/" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

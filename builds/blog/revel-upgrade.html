@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrading a Winnebago Revel — Better Solar & Off-Grid Power — VanWild</title>
+    <meta name="description" content="The factory Revel solar system is underpowered. Sam and Alex replaced it completely — MPPT, lithium, 200W extra solar. Full cost breakdown.">
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>
+        .img-169 {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #16120e;
+            border-radius: var(--radius-lg);
+            margin: var(--space-md) 0;
+        }
+        
+        .img-169 img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .img-169 img[src=""] {
+            display: none;
+        }
+        
+        .img-169.loaded .img-placeholder {
+            display: none;
+        }
+        
+        .img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+        
+        .ph-name {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 44px);
+            color: rgba(244, 99, 30, 0.45);
+            letter-spacing: .06em;
+        }
+        
+        .ph-ratio {
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.18);
+        }
+        
+        .ph-icon {
+            font-size: 32px;
+            opacity: .2;
+        }
+        
+        .img-caption {
+            font-family: var(--font-head);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            letter-spacing: .05em;
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .compare-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0;
+            border-bottom: 1px solid var(--sand);
+        }
+        
+        .compare-row:last-child {
+            border-bottom: none;
+        }
+        
+        .compare-cell {
+            padding: 10px 14px;
+            font-size: var(--fs-sm);
+        }
+        
+        .compare-cell.head {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            background: var(--dark);
+            color: white;
+        }
+        
+        .compare-cell.old {
+            background: #fff5f5;
+            color: var(--muted);
+        }
+        
+        .compare-cell.new {
+            background: rgba(46, 125, 50, 0.06);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="container nav-inner">
+            <a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+            <ul class="nav-links">
+                <li><a href="../../guides/solar.html">Solar</a></li>
+                <li><a href="../../guides/insulation.html">Insulation</a></li>
+                <li><a href="../../guides/budget.html">Budget</a></li>
+                <li><a href="../index.html" class="active">Builds</a></li>
+                <li><a href="../../blog/index.html">Blog</a></li>
+                <li><a href="../../about.html">About</a></li>
+            </ul>
+            <a href="../../guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../../guides/solar.html">SOLAR</a><a href="../../guides/insulation.html">INSULATION</a>
+        <a href="../../guides/budget.html">BUDGET</a><a href="../index.html">BUILDS</a>
+        <a href="../../blog/index.html">BLOG</a><a href="../../about.html">ABOUT</a>
+        <a href="../../guides/solar.html" class="btn btn-primary">Start Building →</a>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+        <div class="container page-hero-content">
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a><span class="sep">›</span>
+                <a href="../index.html">Builds</a><span class="sep">›</span>
+                <span class="current">Revel Solar Upgrade</span>
+            </div>
+            <div class="tag dark">🏕 Build Log · Camper Upgrade</div>
+            <h1>UPGRADING A REVEL:<br>REAL SOLAR,<br>REAL OFF-GRID</h1>
+            <p class="lead">The factory Revel electrical system is badly underpowered for serious off-grid use. Sam and Alex replaced it entirely. Here's every component, every cost, and whether it was worth it.</p>
+            <span style="color:rgba(255,255,255,0.4);font-size:13px;font-family:var(--font-head);font-weight:600;">📅 Oct 2025 · 12 min read</span>
+        </div>
+    </section>
+
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span>WINNEBAGO REVEL</span><span class="dot">◆</span><span>$4,200</span><span class="dot">◆</span>
+            <span>SOLAR UPGRADE</span><span class="dot">◆</span><span>200Ah LITHIUM</span><span class="dot">◆</span>
+            <span>MPPT UPGRADE</span><span class="dot">◆</span><span>OFF-GRID POWER</span><span class="dot">◆</span>
+            <span>WINNEBAGO REVEL</span><span class="dot">◆</span><span>$4,200</span><span class="dot">◆</span>
+            <span>SOLAR UPGRADE</span><span class="dot">◆</span><span>200Ah LITHIUM</span><span class="dot">◆</span>
+            <span>MPPT UPGRADE</span><span class="dot">◆</span><span>OFF-GRID POWER</span><span class="dot">◆</span>
+        </div>
+    </div>
+
+    <section class="section-pad">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+
+                    <!-- img1 -->
+                    <div class="img-169" id="img1-wrap">
+                        <img id="img1" src="../img/rev1.jpeg" alt="Winnebago Revel exterior at a campsite">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img1</span><span class="ph-ratio">16 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Sam and Alex's 2018 Revel — a great platform that deserves a better electrical system than it comes with from the factory.</p>
+
+                    <h2>The Problem with the Factory Revel Electrical</h2>
+                    <p>The Revel is one of the best-designed Class B campers on the market. The 4×4 capability, the bed lift, the garage — all excellent. The factory electrical system, however, is a serious weak point for anyone who wants to camp off-grid
+                        for more than a day or two.</p>
+                    <p>Factory spec: one 80Ah AGM battery, 200W of solar through a PWM controller, 30A converter. That's roughly 50–60Ah of usable capacity (AGM shouldn't go below 50%), about 600Wh/day of solar generation in ideal conditions, and a controller
+                        that wastes 20–30% of available solar through inefficiency. For campground camping where you're plugging in every night, it's fine. For actual off-grid travel — national forests, BLM land, backcountry — it's inadequate.</p>
+
+                    <div class="callout callout-warn">
+                        <strong>⚠️ Warranty Note</strong> Modifying the factory electrical system on a Revel will void the Winnebago warranty on those specific components. Both Sam and Alex knew this and accepted it. If your Revel is new and under warranty,
+                        consider waiting or contacting Winnebago about approved upgrade paths.
+                    </div>
+
+                    <h2>What Was Replaced vs What Stayed</h2>
+                    <div style="border:1px solid var(--sand);border-radius:var(--radius-lg);overflow:hidden;margin:var(--space-md) 0;">
+                        <div class="compare-row">
+                            <div class="compare-cell head">Component</div>
+                            <div class="compare-cell head">Factory (removed)</div>
+                            <div class="compare-cell head">Upgraded (installed)</div>
+                        </div>
+                        <div class="compare-row">
+                            <div class="compare-cell">Battery bank</div>
+                            <div class="compare-cell old">80Ah AGM (~50Ah usable)</div>
+                            <div class="compare-cell new">200Ah LiFePO4 (180Ah usable)</div>
+                        </div>
+                        <div class="compare-row">
+                            <div class="compare-cell">Charge controller</div>
+                            <div class="compare-cell old">PWM 30A (inefficient)</div>
+                            <div class="compare-cell new">Victron MPPT 100/30</div>
+                        </div>
+                        <div class="compare-row">
+                            <div class="compare-cell">Solar capacity</div>
+                            <div class="compare-cell old">200W (factory roof)</div>
+                            <div class="compare-cell new">400W (added 200W panel)</div>
+                        </div>
+                        <div class="compare-row">
+                            <div class="compare-cell">Battery monitor</div>
+                            <div class="compare-cell old">None (estimated from voltage)</div>
+                            <div class="compare-cell new">Victron BMV-712 (accurate)</div>
+                        </div>
+                        <div class="compare-row">
+                            <div class="compare-cell">Inverter</div>
+                            <div class="compare-cell old">Factory 1000W (stayed)</div>
+                            <div class="compare-cell new">Factory 1000W (kept)</div>
+                        </div>
+                        <div class="compare-row">
+                            <div class="compare-cell">Converter/charger</div>
+                            <div class="compare-cell old">Factory 30A (stayed)</div>
+                            <div class="compare-cell new">Factory 30A (kept, programmed for lithium)</div>
+                        </div>
+                    </div>
+
+                    <!-- img2: new battery installation -->
+                    <div class="img-169" id="img2-wrap">
+                        <img id="img2" src="../img/rev2.jpeg" alt="New 200Ah lithium battery installed in Revel battery compartment">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img2</span><span class="ph-ratio">16 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">The Ampere Time 200Ah LiFePO4 fits the Revel battery compartment with about 2" of clearance — tight but clean.</p>
+
+                    <h2>The Battery Swap</h2>
+                    <p>The Revel battery compartment is sized for a Group 24 or Group 31 battery. The Ampere Time 200Ah LiFePO4 in Group 31 case size fits with minimal modification — just relocated one mounting bracket. Weight saving over the original AGM:
+                        48 lbs. The lithium battery is 22 lbs; the factory AGM was 70 lbs.</p>
+                    <p>Critical step: the factory Winnebago converter/charger must be reprogrammed to a lithium charging profile (14.4V absorption, 13.6V float) or it will overcharge the lithium battery. This is done via DIP switches on the WFCO converter
+                        — instructions are in the WFCO manual and took 10 minutes.</p>
+
+                    <!-- img3: Victron MPPT installed -->
+                    <div class="img-169" id="img3-wrap">
+                        <img id="img3" src="../img/rev3.jpeg" alt="Victron MPPT charge controller installed next to battery">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img3</span><span class="ph-ratio">16 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">Victron SmartSolar MPPT 100/30 installed in the battery bay. Bluetooth monitoring through the VictronConnect app.</p>
+
+                    <h2>Adding the Second Solar Panel</h2>
+                    <p>The Revel roof has space for one additional 200W panel beside the factory panel. Sam and Alex used a Renogy 200W slim panel with a profile low enough to clear the Revel's pop-top lid. Roof penetration for the additional cable was sealed
+                        with Dicor self-leveling lap sealant — same stuff used for RV roof repairs, extremely reliable.</p>
+                    <p>Both panels are wired in parallel (same voltage, doubled current) to the new Victron MPPT. The MPPT charges at 98% efficiency vs the factory PWM's ~72%. Combined effect: 400W of panels through MPPT generates more power than 600W of
+                        panels through PWM would.</p>
+
+                    <!-- img4: results at campsite -->
+                    <div class="img-169" id="img4-wrap">
+                        <img id="img4" src="../img/rev4.jpeg" alt="Revel parked at remote BLM campsite — off grid">
+                        <div class="img-placeholder"><span class="ph-icon">📸</span><span class="ph-name">img4</span><span class="ph-ratio">16 : 9 landscape</span></div>
+                    </div>
+                    <p class="img-caption">First real off-grid test: 9 days in the Utah backcountry, no hookups, battery never below 40% state of charge.</p>
+
+                    <h2>Full Cost Breakdown</h2>
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ampere Time 200Ah LiFePO4 Group 31</td>
+                                <td>$629</td>
+                            </tr>
+                            <tr>
+                                <td>Victron SmartSolar MPPT 100/30</td>
+                                <td>$168</td>
+                            </tr>
+                            <tr>
+                                <td>Victron BMV-712 battery monitor + shunt</td>
+                                <td>$108</td>
+                            </tr>
+                            <tr>
+                                <td>Renogy 200W slim panel (second panel)</td>
+                                <td>$188</td>
+                            </tr>
+                            <tr>
+                                <td>MC4 connectors + roof cable entry</td>
+                                <td>$38</td>
+                            </tr>
+                            <tr>
+                                <td>Dicor lap sealant (roof seal)</td>
+                                <td>$18</td>
+                            </tr>
+                            <tr>
+                                <td>Wiring, fuses, misc hardware</td>
+                                <td>$84</td>
+                            </tr>
+                            <tr>
+                                <td>WFCO manual + DIP switch change (DIY, free)</td>
+                                <td>$0</td>
+                            </tr>
+                            <tr class="total">
+                                <td><strong>Total Upgrade Cost</strong></td>
+                                <td><strong>$1,233</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size:var(--fs-sm);color:var(--muted);">The $4,200 figure on the builds gallery includes 2 months of Sam's time billed at a rough hourly rate since the installation took longer than expected due to routing the new panel wiring cleanly through the roof structure.</p>
+
+                    <h2>Was It Worth It?</h2>
+                    <p>Sam and Alex have put 14,000 miles on the Revel since the upgrade. They've done three trips over 7 days without any shore power. Before the upgrade, they were plugging in every 2 nights. The usable capacity went from ~50Ah (AGM at
+                        50% DoD) to 180Ah (lithium at 90% DoD) — a 3.6× improvement. The MPPT vs PWM swap alone generates 20–30% more power from the same roof space.</p>
+                    <p>"It's a completely different vehicle for off-grid travel. We would have done it on day one if we'd known how much it mattered." — Sam</p>
+
+                </article>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget">
+                        <h4>🔧 More Builds</h4>
+                        <div class="sidebar-links">
+                            <a href="transit-build.html" class="sidebar-link"><span class="link-icon">🚐</span> Transit — Every Receipt</a>
+                            <a href="sprinter-remote-work.html" class="sidebar-link"><span class="link-icon">🚐</span> Sprinter Remote Work</a>
+                            <a href="rodriguez-skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Rodriguez Skoolie</a>
+                            <a href="promaster-budget-build.html" class="sidebar-link"><span class="link-icon">💰</span> $3,800 ProMaster</a>
+                            <a href="short-bus-conversion.html" class="sidebar-link"><span class="link-icon">🚌</span> Short Bus</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>📚 Related Guides</h4>
+                        <div class="sidebar-links">
+                            <a href="../../guides/solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Guide</a>
+                            <a href="../../guides/battery.html" class="sidebar-link"><span class="link-icon">🔋</span> Battery Guide</a>
+                            <a href="../../blog/van-electrical-mistakes.html" class="sidebar-link"><span class="link-icon">🔌</span> Electrical Mistakes</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+                        <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Newsletter</h4>
+                        <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Weekly guides. No spam.</p>
+                        <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2>SIZE YOUR SOLAR RIGHT</h2>
+            <p>The solar calculator helps you pick the right system before you buy anything.</p>
+            <div class="cta-btns">
+                <a href="../../guides/solar.html" class="btn btn-white">Solar Guide →</a>
+                <a href="../index.html" class="btn btn-ghost">All Builds</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="../../index.html" class="logo">VAN<span>WILD</span></a>
+                    <p>Real guides for real builds. No sponsors.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="../../guides/solar.html">Solar Power</a></li>
+                        <li><a href="../../guides/insulation.html">Insulation</a></li>
+                        <li><a href="../../guides/budget.html">Budget</a></li>
+                        <li><a href="../../guides/battery.html">Batteries</a></li>
+                        <li><a href="../../guides/skoolie.html">Skoolie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="../index.html">All Builds</a></li>
+                        <li><a href="../../blog/index.html">Blog</a></li>
+                        <li><a href="../../compare.html">Compare</a></li>
+                        <li><a href="../../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 VanWild.</span>
+                <div class="social-links"><a href="https://web.facebook.com/profile.php?id=100066665391782" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+        for (let i = 1; i <= 4; i++) {
+            const img = document.getElementById('img' + i);
+            const wrap = document.getElementById('img' + i + '-wrap');
+            if (!img || !wrap) continue;
+            const hide = () => {
+                if (img.naturalWidth > 0) wrap.classList.add('loaded');
+            };
+            img.addEventListener('load', hide);
+            hide();
+        }
+    </script>
+</body>
+
+</html>
