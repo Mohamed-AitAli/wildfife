@@ -1,225 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Van Insulation Guide — VanWild</title>
-<meta name="description" content="Spray foam vs rigid board vs Thinsulate. Complete van insulation guide with condensation control, R-values, and real costs.">
-<link rel="stylesheet" href="../css/main.css">
-<style>
-.ins-compare-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%,220px), 1fr));
-  gap: 16px; margin: var(--space-md) 0;
-}
-.ins-card {
-  background: var(--white); border: 1px solid var(--sand);
-  border-radius: var(--radius-lg); padding: var(--space-sm) var(--space-md);
-  transition: var(--transition);
-}
-.ins-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-sm); }
-.ins-card .rating { font-family: var(--font-display); font-size: 40px; color: var(--orange); }
-.ins-card h4 { font-family: var(--font-head); font-weight: 800; margin: 6px 0; }
-.ins-card p { font-size: var(--fs-sm); color: var(--muted); }
-.ins-card .pros { color: #2e7d32; font-size: 13px; margin-top: 10px; }
-.ins-card .cons { color: #c62828; font-size: 13px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Insulation Guide — Vanlife</title>
+    <meta name="description" content="Spray foam vs rigid board vs Thinsulate. Complete van insulation guide with condensation control, R-values, and real costs.">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .ins-compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+            gap: 16px;
+            margin: var(--space-md) 0;
+        }
+        
+        .ins-card {
+            background: var(--white);
+            border: 1px solid var(--sand);
+            border-radius: var(--radius-lg);
+            padding: var(--space-sm) var(--space-md);
+            transition: var(--transition);
+        }
+        
+        .ins-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .ins-card .rating {
+            font-family: var(--font-display);
+            font-size: 40px;
+            color: var(--orange);
+        }
+        
+        .ins-card h4 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            margin: 6px 0;
+        }
+        
+        .ins-card p {
+            font-size: var(--fs-sm);
+            color: var(--muted);
+        }
+        
+        .ins-card .pros {
+            color: #2e7d32;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        
+        .ins-card .cons {
+            color: #c62828;
+            font-size: 13px;
+        }
+    </style>
 </head>
+
 <body>
 
-<nav id="nav">
-  <div class="container nav-inner">
-    <a href="../index.html" class="logo">VAN<span>WILD</span></a>
-    <ul class="nav-links">
-      <li><a href="solar.html">Solar</a></li>
-      <li><a href="insulation.html" class="active">Insulation</a></li>
-      <li><a href="budget.html">Budget</a></li>
-      <li><a href="battery.html">Batteries</a></li>
-      <li><a href="skoolie.html">Skoolie</a></li>
-      <li><a href="../blog.html">Blog</a></li>
-    </ul>
-    <a href="../index.html#guides" class="btn btn-primary nav-cta btn-sm">All Guides →</a>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="solar.html">SOLAR</a>
-  <a href="insulation.html">INSULATION</a>
-  <a href="budget.html">BUDGET</a>
-  <a href="battery.html">BATTERIES</a>
-  <a href="skoolie.html">SKOOLIE</a>
-  <a href="../blog.html">BLOG</a>
-  <a href="../index.html" class="btn btn-primary">← Home</a>
-</div>
-
-<section class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('http://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');"></div>
-  <div class="page-hero-gradient"></div>
-  <div class="container page-hero-content">
-    <div class="breadcrumb">
-      <a href="../index.html">Home</a><span class="sep">›</span>
-      <a href="../index.html#guides">Guides</a><span class="sep">›</span>
-      <span class="current">Insulation</span>
-    </div>
-    <div class="tag dark">🧱 Complete Guide</div>
-    <h1>VAN INSULATION<br>DONE RIGHT</h1>
-    <p class="lead">Spray foam vs rigid board vs Thinsulate — we test them all. Stop condensation and cold before they ruin your build and your health.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;">
-      <span style="color:rgba(255,255,255,0.5);font-size:13px;font-family:var(--font-head);font-weight:600;">📖 20 min read · Last updated Feb 2026</span>
-    </div>
-  </div>
-</section>
-
-<div class="marquee-section" aria-hidden="true">
-  <div class="marquee-track">
-    <span>SPRAY FOAM</span><span class="dot">◆</span><span>RIGID BOARD</span><span class="dot">◆</span>
-    <span>THINSULATE</span><span class="dot">◆</span><span>CONDENSATION CONTROL</span><span class="dot">◆</span>
-    <span>R-VALUES</span><span class="dot">◆</span><span>VAPOR BARRIERS</span><span class="dot">◆</span>
-    <span>SPRAY FOAM</span><span class="dot">◆</span><span>RIGID BOARD</span><span class="dot">◆</span>
-    <span>THINSULATE</span><span class="dot">◆</span><span>CONDENSATION CONTROL</span><span class="dot">◆</span>
-    <span>R-VALUES</span><span class="dot">◆</span><span>VAPOR BARRIERS</span><span class="dot">◆</span>
-  </div>
-</div>
-
-<section class="section-pad">
-  <div class="container">
-    <div class="article-grid">
-      <article class="article-content">
-
-        <h2>Why Insulation Is Your Most Important Decision</h2>
-        <p>You can upgrade your solar or swap out your bed. Insulation is different — once walls are up, ripping it out to fix a mistake costs you weeks and thousands. Bad insulation creates condensation that leads to rust and mold. Get this right first.</p>
-
-        <div class="callout">
-          <strong>🔑 The Golden Rule</strong>
-          Every van needs a condensation management strategy — not just an R-value number. Vapor barriers done wrong create more problems than no vapor barrier at all.
+    <nav id="nav">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">VAN<span>LIFE</span></a>
+            <ul class="nav-links">
+                <li><a href="solar.html">Solar</a></li>
+                <li><a href="insulation.html" class="active">Insulation</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="battery.html">Batteries</a></li>
+                <li><a href="skoolie.html">Skoolie</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+            </ul>
+            <a href="../index.html#guides" class="btn btn-primary nav-cta btn-sm">All Guides →</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
         </div>
-
-        <h2>The Main Insulation Options</h2>
-        <div class="ins-compare-grid">
-          <div class="ins-card reveal">
-            <div class="rating">A</div>
-            <h4>Spray Foam (Closed Cell)</h4>
-            <p>The gold standard for vans. Seals metal, acts as vapor barrier, highest R-value per inch.</p>
-            <div class="pros">✓ No condensation gap<br>✓ Adheres to metal<br>✓ R-6 to R-7 per inch</div>
-            <div class="cons">✗ Expensive<br>✗ Hard to DIY perfectly</div>
-          </div>
-          <div class="ins-card reveal reveal-delay-1">
-            <div class="rating">B+</div>
-            <h4>Polyiso Rigid Board</h4>
-            <p>Best budget option. Cut to fit, tape seams. Pair with spray foam in gaps for best results.</p>
-            <div class="pros">✓ Cheap & effective<br>✓ High R-value (R-6.5/in)<br>✓ Easy DIY</div>
-            <div class="cons">✗ Gaps need sealing<br>✗ Moisture can sneak behind</div>
-          </div>
-          <div class="ins-card reveal reveal-delay-2">
-            <div class="rating">B</div>
-            <h4>3M Thinsulate</h4>
-            <p>Excellent for curves, ribs, and awkward shapes. Doesn't hold moisture — used in premium builds.</p>
-            <div class="pros">✓ Fits any shape<br>✓ Doesn't trap moisture<br>✓ Easy to cut & install</div>
-            <div class="cons">✗ Lower R-value (R-3.3)<br>✗ More expensive per R</div>
-          </div>
-          <div class="ins-card reveal reveal-delay-3">
-            <div class="rating">D</div>
-            <h4>Fiberglass Batts</h4>
-            <p>Do NOT use in a van. Holds moisture, supports mold growth, terrible in metal cavity applications.</p>
-            <div class="pros">✓ Cheap upfront</div>
-            <div class="cons">✗ Holds moisture<br>✗ Mold risk<br>✗ Not van-appropriate</div>
-          </div>
-        </div>
-
-        <h2>R-Value: How Much Do You Need?</h2>
-        <p>R-value measures thermal resistance. In a van, you're limited by space — you can't fill 12 inches of fiberglass like a house wall. Aim for these targets:</p>
-
-        <table class="cost-table">
-          <thead><tr><th>Location</th><th>Target R-Value</th><th>Recommended Material</th></tr></thead>
-          <tbody>
-            <tr><td>Walls (between ribs)</td><td>R-8 to R-12</td><td>Polyiso + can foam gaps</td></tr>
-            <tr><td>Ceiling</td><td>R-10 to R-14</td><td>Polyiso or Thinsulate</td></tr>
-            <tr><td>Floor</td><td>R-6 to R-10</td><td>1.5" XPS rigid foam</td></tr>
-            <tr><td>Doors</td><td>R-5 to R-8</td><td>Thinsulate (flexible)</td></tr>
-            <tr><td>Wheel wells</td><td>R-6+</td><td>Spray foam or Thinsulate</td></tr>
-          </tbody>
-        </table>
-
-        <h2>Condensation: The Silent Build Killer</h2>
-        <p>Condensation forms when warm, moist interior air hits cold metal. In a van, you produce moisture constantly — breathing, cooking, showering. Here's the only reliable solution:</p>
-
-        <ol>
-          <li><strong>Eliminate all cold metal surfaces</strong> — spray foam touching every bare metal surface eliminates thermal bridging</li>
-          <li><strong>Ventilate properly</strong> — a Maxxair or Fan-Tastic fan running on low at night moves moisture out before it settles</li>
-          <li><strong>Use a vapor barrier correctly</strong> — or don't use one at all; partial vapor barriers trap moisture</li>
-          <li><strong>Monitor humidity</strong> — keep a hygrometer; 40–55% RH is ideal</li>
-        </ol>
-
-        <div class="callout callout-warn">
-          <strong>⚠️ Vapor Barrier Warning</strong>
-          Many YouTube tutorials recommend plastic sheeting vapor barriers. In a van, an improperly installed vapor barrier traps moisture against the metal shell — the opposite of what you want. Either spray foam the entire shell, or skip the plastic entirely.
-        </div>
-
-        <h2>Cost Breakdown</h2>
-        <table class="cost-table">
-          <thead><tr><th>Item</th><th>Standard Transit/Sprinter</th><th>Full Skoolie</th></tr></thead>
-          <tbody>
-            <tr><td>Spray foam (2-part kit)</td><td>$200–$400</td><td>$500–$900</td></tr>
-            <tr><td>Polyiso rigid board</td><td>$100–$200</td><td>$250–$500</td></tr>
-            <tr><td>Thinsulate (ceiling/doors)</td><td>$150–$300</td><td>$350–$700</td></tr>
-            <tr><td>Tape, foam, misc</td><td>$40–$80</td><td>$80–$150</td></tr>
-            <tr class="total"><td><strong>Total</strong></td><td><strong>$490–$980</strong></td><td><strong>$1,180–$2,250</strong></td></tr>
-          </tbody>
-        </table>
-
-      </article>
-
-      <aside class="article-sidebar">
-        <div class="sidebar-widget">
-          <h4>📚 All Guides</h4>
-          <div class="sidebar-links">
-            <a href="solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Power</a>
-            <a href="insulation.html" class="sidebar-link"><span class="link-icon">🧱</span> Insulation</a>
-            <a href="budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
-            <a href="battery.html" class="sidebar-link"><span class="link-icon">🔋</span> Batteries</a>
-            <a href="skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Skoolie Build</a>
-          </div>
-        </div>
-        <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
-          <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Free Newsletter</h4>
-          <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Get new guides every week. No spam.</p>
-          <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe Free →</a>
-        </div>
-      </aside>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="solar.html">SOLAR</a>
+        <a href="insulation.html">INSULATION</a>
+        <a href="budget.html">BUDGET</a>
+        <a href="battery.html">BATTERIES</a>
+        <a href="skoolie.html">SKOOLIE</a>
+        <a href="../blog.html">BLOG</a>
+        <a href="../index.html" class="btn btn-primary">← Home</a>
     </div>
-  </div>
-</section>
 
-<section class="cta-banner">
-  <div class="container" style="position:relative;z-index:1;">
-    <h2>NEXT: BUDGETS</h2>
-    <p>Know what you're getting into before you spend a single dollar.</p>
-    <div class="cta-btns">
-      <a href="budget.html" class="btn btn-white">Read Budget Guide →</a>
-      <a href="../index.html#guides" class="btn btn-ghost">All Guides</a>
-    </div>
-  </div>
-</section>
+    <section class="page-hero">
+        <div class="page-hero-bg" style="background-image:url('http://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');"></div>
+        <div class="page-hero-gradient"></div>
+        <div class="container page-hero-content">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a><span class="sep">›</span>
+                <a href="../index.html#guides">Guides</a><span class="sep">›</span>
+                <span class="current">Insulation</span>
+            </div>
+            <div class="tag dark">🧱 Complete Guide</div>
+            <h1>VAN INSULATION<br>DONE RIGHT</h1>
+            <p class="lead">Spray foam vs rigid board vs Thinsulate — we test them all. Stop condensation and cold before they ruin your build and your health.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+                <span style="color:rgba(255,255,255,0.5);font-size:13px;font-family:var(--font-head);font-weight:600;">📖 20 min read · Last updated Feb 2026</span>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><a href="../index.html" class="logo">VAN<span>WILD</span></a><p>Real guides for real builds. No sponsors.</p></div>
-      <div class="footer-col"><h4>Guides</h4><ul>
-        <li><a href="solar.html">Solar Power</a></li><li><a href="insulation.html">Insulation</a></li>
-        <li><a href="budget.html">Budget</a></li><li><a href="battery.html">Batteries</a></li>
-        <li><a href="skoolie.html">Skoolie</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>More</h4><ul>
-        <li><a href="../builds/index.html">Builds</a></li><li><a href="../blog.html">Blog</a></li>
-        <li><a href="../compare.html">Compare</a></li><li><a href="../about.html">About</a></li>
-      </ul></div>
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span>SPRAY FOAM</span><span class="dot">◆</span><span>RIGID BOARD</span><span class="dot">◆</span>
+            <span>THINSULATE</span><span class="dot">◆</span><span>CONDENSATION CONTROL</span><span class="dot">◆</span>
+            <span>R-VALUES</span><span class="dot">◆</span><span>VAPOR BARRIERS</span><span class="dot">◆</span>
+            <span>SPRAY FOAM</span><span class="dot">◆</span><span>RIGID BOARD</span><span class="dot">◆</span>
+            <span>THINSULATE</span><span class="dot">◆</span><span>CONDENSATION CONTROL</span><span class="dot">◆</span>
+            <span>R-VALUES</span><span class="dot">◆</span><span>VAPOR BARRIERS</span><span class="dot">◆</span>
+        </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 VanWild.</span>
-      <div class="social-links"><a href="https://facebook.com" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
-    </div>
-  </div>
-</footer>
-<script src="../js/main.js"></script>
+
+    <section class="section-pad">
+        <div class="container">
+            <div class="article-grid">
+                <article class="article-content">
+
+                    <h2>Why Insulation Is Your Most Important Decision</h2>
+                    <p>You can upgrade your solar or swap out your bed. Insulation is different — once walls are up, ripping it out to fix a mistake costs you weeks and thousands. Bad insulation creates condensation that leads to rust and mold. Get this
+                        right first.</p>
+
+                    <div class="callout">
+                        <strong>🔑 The Golden Rule</strong> Every van needs a condensation management strategy — not just an R-value number. Vapor barriers done wrong create more problems than no vapor barrier at all.
+                    </div>
+
+                    <h2>The Main Insulation Options</h2>
+                    <div class="ins-compare-grid">
+                        <div class="ins-card reveal">
+                            <div class="rating">A</div>
+                            <h4>Spray Foam (Closed Cell)</h4>
+                            <p>The gold standard for vans. Seals metal, acts as vapor barrier, highest R-value per inch.</p>
+                            <div class="pros">✓ No condensation gap<br>✓ Adheres to metal<br>✓ R-6 to R-7 per inch</div>
+                            <div class="cons">✗ Expensive<br>✗ Hard to DIY perfectly</div>
+                        </div>
+                        <div class="ins-card reveal reveal-delay-1">
+                            <div class="rating">B+</div>
+                            <h4>Polyiso Rigid Board</h4>
+                            <p>Best budget option. Cut to fit, tape seams. Pair with spray foam in gaps for best results.</p>
+                            <div class="pros">✓ Cheap & effective<br>✓ High R-value (R-6.5/in)<br>✓ Easy DIY</div>
+                            <div class="cons">✗ Gaps need sealing<br>✗ Moisture can sneak behind</div>
+                        </div>
+                        <div class="ins-card reveal reveal-delay-2">
+                            <div class="rating">B</div>
+                            <h4>3M Thinsulate</h4>
+                            <p>Excellent for curves, ribs, and awkward shapes. Doesn't hold moisture — used in premium builds.</p>
+                            <div class="pros">✓ Fits any shape<br>✓ Doesn't trap moisture<br>✓ Easy to cut & install</div>
+                            <div class="cons">✗ Lower R-value (R-3.3)<br>✗ More expensive per R</div>
+                        </div>
+                        <div class="ins-card reveal reveal-delay-3">
+                            <div class="rating">D</div>
+                            <h4>Fiberglass Batts</h4>
+                            <p>Do NOT use in a van. Holds moisture, supports mold growth, terrible in metal cavity applications.</p>
+                            <div class="pros">✓ Cheap upfront</div>
+                            <div class="cons">✗ Holds moisture<br>✗ Mold risk<br>✗ Not van-appropriate</div>
+                        </div>
+                    </div>
+
+                    <h2>R-Value: How Much Do You Need?</h2>
+                    <p>R-value measures thermal resistance. In a van, you're limited by space — you can't fill 12 inches of fiberglass like a house wall. Aim for these targets:</p>
+
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Target R-Value</th>
+                                <th>Recommended Material</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Walls (between ribs)</td>
+                                <td>R-8 to R-12</td>
+                                <td>Polyiso + can foam gaps</td>
+                            </tr>
+                            <tr>
+                                <td>Ceiling</td>
+                                <td>R-10 to R-14</td>
+                                <td>Polyiso or Thinsulate</td>
+                            </tr>
+                            <tr>
+                                <td>Floor</td>
+                                <td>R-6 to R-10</td>
+                                <td>1.5" XPS rigid foam</td>
+                            </tr>
+                            <tr>
+                                <td>Doors</td>
+                                <td>R-5 to R-8</td>
+                                <td>Thinsulate (flexible)</td>
+                            </tr>
+                            <tr>
+                                <td>Wheel wells</td>
+                                <td>R-6+</td>
+                                <td>Spray foam or Thinsulate</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Condensation: The Silent Build Killer</h2>
+                    <p>Condensation forms when warm, moist interior air hits cold metal. In a van, you produce moisture constantly — breathing, cooking, showering. Here's the only reliable solution:</p>
+
+                    <ol>
+                        <li><strong>Eliminate all cold metal surfaces</strong> — spray foam touching every bare metal surface eliminates thermal bridging</li>
+                        <li><strong>Ventilate properly</strong> — a Maxxair or Fan-Tastic fan running on low at night moves moisture out before it settles</li>
+                        <li><strong>Use a vapor barrier correctly</strong> — or don't use one at all; partial vapor barriers trap moisture</li>
+                        <li><strong>Monitor humidity</strong> — keep a hygrometer; 40–55% RH is ideal</li>
+                    </ol>
+
+                    <div class="callout callout-warn">
+                        <strong>⚠️ Vapor Barrier Warning</strong> Many YouTube tutorials recommend plastic sheeting vapor barriers. In a van, an improperly installed vapor barrier traps moisture against the metal shell — the opposite of what you want.
+                        Either spray foam the entire shell, or skip the plastic entirely.
+                    </div>
+
+                    <h2>Cost Breakdown</h2>
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Standard Transit/Sprinter</th>
+                                <th>Full Skoolie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Spray foam (2-part kit)</td>
+                                <td>$200–$400</td>
+                                <td>$500–$900</td>
+                            </tr>
+                            <tr>
+                                <td>Polyiso rigid board</td>
+                                <td>$100–$200</td>
+                                <td>$250–$500</td>
+                            </tr>
+                            <tr>
+                                <td>Thinsulate (ceiling/doors)</td>
+                                <td>$150–$300</td>
+                                <td>$350–$700</td>
+                            </tr>
+                            <tr>
+                                <td>Tape, foam, misc</td>
+                                <td>$40–$80</td>
+                                <td>$80–$150</td>
+                            </tr>
+                            <tr class="total">
+                                <td><strong>Total</strong></td>
+                                <td><strong>$490–$980</strong></td>
+                                <td><strong>$1,180–$2,250</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </article>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget">
+                        <h4>📚 All Guides</h4>
+                        <div class="sidebar-links">
+                            <a href="solar.html" class="sidebar-link"><span class="link-icon">☀️</span> Solar Power</a>
+                            <a href="insulation.html" class="sidebar-link"><span class="link-icon">🧱</span> Insulation</a>
+                            <a href="budget.html" class="sidebar-link"><span class="link-icon">💰</span> Budget Guide</a>
+                            <a href="battery.html" class="sidebar-link"><span class="link-icon">🔋</span> Batteries</a>
+                            <a href="skoolie.html" class="sidebar-link"><span class="link-icon">🚌</span> Skoolie Build</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
+                        <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Free Newsletter</h4>
+                        <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Get new guides every week. No spam.</p>
+                        <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe Free →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2>NEXT: BUDGETS</h2>
+            <p>Know what you're getting into before you spend a single dollar.</p>
+            <div class="cta-btns">
+                <a href="budget.html" class="btn btn-white">Read Budget Guide →</a>
+                <a href="../index.html#guides" class="btn btn-ghost">All Guides</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="../index.html" class="logo">VAN<span>LIFE</span></a>
+                    <p>Real guides for real builds. No sponsors.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="solar.html">Solar Power</a></li>
+                        <li><a href="insulation.html">Insulation</a></li>
+                        <li><a href="budget.html">Budget</a></li>
+                        <li><a href="battery.html">Batteries</a></li>
+                        <li><a href="skoolie.html">Skoolie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="../builds/index.html">Builds</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../compare.html">Compare</a></li>
+                        <li><a href="../about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 VanLife.</span>
+                <div class="social-links"><a href="https://facebook.com" class="social-link">📘</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶️</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
 </body>
+
 </html>
