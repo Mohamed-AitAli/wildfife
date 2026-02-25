@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — VanWild</title>
+    <meta name="description" content="Get in touch with VanWild. Questions about your build, guide feedback, community submissions, or press inquiries.">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* ── CONTACT GRID ── */
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: clamp(40px, 6vw, 80px);
+            align-items: flex-start;
+        }
+        
+        @media (max-width: 780px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* ── LEFT: INFO PANEL ── */
+        
+        .contact-info-panel {
+            position: sticky;
+            top: 90px;
+        }
+        
+        .contact-reason {
+            background: var(--white);
+            border: 1px solid var(--sand);
+            border-radius: var(--radius-lg);
+            padding: var(--space-sm) var(--space-md);
+            margin-bottom: 12px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+        
+        .contact-reason:hover {
+            border-color: var(--orange);
+            transform: translateX(6px);
+        }
+        
+        .reason-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--orange-light);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .reason-text h4 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: var(--fs-sm);
+            margin-bottom: 4px;
+        }
+        
+        .reason-text p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+        /* Social strip */
+        
+        .social-strip {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: var(--space-md);
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 99px;
+            border: 1px solid var(--sand);
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background: var(--white);
+            color: var(--text);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-btn:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(244, 99, 30, 0.25);
+        }
+        /* Response time badge */
+        
+        .response-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--dark);
+            border-radius: var(--radius);
+            padding: 12px 18px;
+            margin-top: var(--space-md);
+        }
+        
+        .response-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4caf50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+            animation: pulse-dot 2s infinite;
+            flex-shrink: 0;
+        }
+        
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 0 6px rgba(76, 175, 80, 0.1);
+            }
+        }
+        
+        .response-text {
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: 13px;
+            color: white;
+        }
+        
+        .response-text span {
+            color: rgba(255, 255, 255, 0.45);
+            display: block;
+            font-weight: 400;
+            font-size: 12px;
+        }
+        /* ── RIGHT: FORM PANEL ── */
+        
+        .contact-form-panel {
+            background: var(--white);
+            border: 1px solid var(--sand);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md) clamp(var(--space-md), 5vw, 56px);
+        }
+        
+        .form-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 5vw, 52px);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        
+        .form-subtitle {
+            color: var(--muted);
+            font-size: var(--fs-sm);
+            margin-bottom: var(--space-md);
+        }
+        /* Form fields */
+        
+        .field-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        @media (max-width: 560px) {
+            .field-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+        
+        .field label {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text);
+        }
+        
+        .field input,
+        .field textarea,
+        .field select {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1.5px solid var(--sand);
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            font-size: var(--fs-sm);
+            background: var(--cream);
+            color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            appearance: none;
+        }
+        
+        .field input:focus,
+        .field textarea:focus,
+        .field select:focus {
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(244, 99, 30, 0.12);
+        }
+        
+        .field textarea {
+            resize: vertical;
+            min-height: 140px;
+            line-height: 1.65;
+        }
+        
+        .field select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A6B5D' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+        /* Character count */
+        
+        .char-count {
+            font-size: 12px;
+            color: var(--muted);
+            text-align: right;
+            font-family: var(--font-head);
+            font-weight: 600;
+        }
+        /* Checkbox row */
+        
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .checkbox-row input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            accent-color: var(--orange);
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        
+        .checkbox-row label {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+        
+        .checkbox-row a {
+            color: var(--orange);
+        }
+        /* Submit button */
+        
+        .btn-submit {
+            width: 100%;
+            justify-content: center;
+            font-size: var(--fs-sm);
+            padding: 16px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-submit::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+        
+        .btn-submit:hover::after {
+            transform: translateX(100%);
+        }
+        /* Success state */
+        
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: var(--space-lg) var(--space-md);
+        }
+        
+        .form-success .success-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+        }
+        
+        .form-success h3 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 44px);
+            letter-spacing: 0.02em;
+            margin-bottom: 12px;
+        }
+        
+        .form-success p {
+            color: var(--muted);
+            font-size: var(--fs-sm);
+        }
+        /* ══════════════════════════════════
+           FAQ STRIP
+        ══════════════════════════════════ */
+        
+        .faq-strip {
+            margin-top: var(--space-xl);
+        }
+        /* number counter on the list */
+        
+        .faq-list {
+            counter-reset: faq-counter;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        /* ── each item ── */
+        
+        .faq-item {
+            counter-increment: faq-counter;
+            border-bottom: 1px solid var(--sand);
+            position: relative;
+        }
+        
+        .faq-item:first-child {
+            border-top: 1px solid var(--sand);
+        }
+        /* ── question button ── */
+        
+        .faq-q {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 40px 1fr 32px;
+            align-items: center;
+            gap: 16px;
+            padding: 22px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: var(--fs-base);
+            color: var(--dark);
+            transition: color 0.2s;
+        }
+        
+        .faq-q:hover {
+            color: var(--orange);
+        }
+        /* number badge */
+        
+        .faq-q::before {
+            content: counter(faq-counter, decimal-leading-zero);
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--orange);
+            letter-spacing: 0.04em;
+            line-height: 1;
+        }
+        /* chevron icon — pure CSS */
+        
+        .faq-q::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid var(--muted);
+            border-bottom: 2px solid var(--muted);
+            transform: rotate(45deg) translateY(-3px);
+            transition: transform 0.3s cubic-bezier(.4, 0, .2, 1), border-color 0.2s;
+            justify-self: center;
+        }
+        
+        .faq-q:hover::after {
+            border-color: var(--orange);
+        }
+        
+        .faq-q[aria-expanded="true"]::after {
+            transform: rotate(-135deg) translateY(-3px);
+            border-color: var(--orange);
+        }
+        
+        .faq-q[aria-expanded="true"] {
+            color: var(--orange);
+        }
+        /* ── answer panel ── */
+        
+        .faq-a {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s cubic-bezier(.4, 0, .2, 1);
+        }
+        
+        .faq-a>div {
+            overflow: hidden;
+        }
+        
+        .faq-a.open {
+            grid-template-rows: 1fr;
+        }
+        
+        .faq-a p {
+            padding: 0 0 24px 56px;
+            /* indent aligns with question text */
+            color: var(--muted);
+            font-size: var(--fs-sm);
+            line-height: 1.8;
+            margin: 0;
+        }
+        /* highlight bar on the active item */
+        
+        .faq-item:has(.faq-q[aria-expanded="true"]) {
+            background: rgba(244, 99, 30, 0.03);
+        }
+        
+        @media (max-width: 560px) {
+            .faq-q {
+                grid-template-columns: 32px 1fr 24px;
+                gap: 12px;
+                padding: 18px 0;
+                font-size: var(--fs-sm);
+            }
+            .faq-a p {
+                padding-left: 44px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">VAN<span>WILD</span></a>
+            <ul class="nav-links">
+                <li><a href="guides/solar.html">Solar</a></li>
+                <li><a href="guides/insulation.html">Insulation</a></li>
+                <li><a href="guides/budget.html">Budget</a></li>
+                <li><a href="builds/index.html">Builds</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="guides/solar.html">SOLAR</a>
+        <a href="guides/insulation.html">INSULATION</a>
+        <a href="guides/budget.html">BUDGET</a>
+        <a href="builds/index.html">BUILDS</a>
+        <a href="blog/index.html">BLOG</a>
+        <a href="about.html">ABOUT</a>
+        <a href="guides/solar.html" class="btn btn-primary">Start Building →</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+        <div class="container page-hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><span class="sep">›</span>
+                <span class="current">Contact</span>
+            </div>
+            <div class="tag dark">✉️ Get in Touch</div>
+            <h1>LET'S TALK<br>ABOUT YOUR BUILD</h1>
+            <p class="lead">Questions, feedback, build submissions, press, or just want to say what van you bought — we read every message.</p>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span>BUILD QUESTIONS</span><span class="dot">◆</span>
+            <span>SUBMIT YOUR BUILD</span><span class="dot">◆</span>
+            <span>GUIDE FEEDBACK</span><span class="dot">◆</span>
+            <span>PARTNERSHIPS</span><span class="dot">◆</span>
+            <span>PRESS INQUIRIES</span><span class="dot">◆</span>
+            <span>COMMUNITY</span><span class="dot">◆</span>
+            <span>BUILD QUESTIONS</span><span class="dot">◆</span>
+            <span>SUBMIT YOUR BUILD</span><span class="dot">◆</span>
+            <span>GUIDE FEEDBACK</span><span class="dot">◆</span>
+            <span>PARTNERSHIPS</span><span class="dot">◆</span>
+            <span>PRESS INQUIRIES</span><span class="dot">◆</span>
+            <span>COMMUNITY</span><span class="dot">◆</span>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <section class="section-pad">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- ── LEFT: WHY + SOCIAL ── -->
+                <div class="contact-info-panel">
+                    <p style="font-size:var(--fs-sm);color:var(--muted);margin-bottom:var(--space-md);line-height:1.75;">
+                        VanWild is run by one person — no team, no support queue. Messages go directly to the person who built this site and who answers build questions every day in the community.
+                    </p>
+
+                    <div class="contact-reason reveal">
+                        <div class="reason-icon">🔧</div>
+                        <div class="reason-text">
+                            <h4>Build Questions</h4>
+                            <p>Stuck on insulation, wiring, plumbing? Describe your setup and get a real answer — not a link to a forum thread from 2017.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-reason reveal">
+                        <div class="reason-icon">📷</div>
+                        <div class="reason-text">
+                            <h4>Submit Your Build</h4>
+                            <p>Finished something real? Send photos and a cost breakdown. If it's honest, we'll feature it. No minimum budget required.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-reason reveal">
+                        <div class="reason-icon">📝</div>
+                        <div class="reason-text">
+                            <h4>Guide Feedback</h4>
+                            <p>Found something wrong, outdated, or missing from a guide? Tell us. This site gets better because readers call out errors.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-reason reveal">
+                        <div class="reason-icon">🤝</div>
+                        <div class="reason-text">
+                            <h4>Partnerships &amp; Press</h4>
+                            <p>Journalist, podcast host, or brand with a relevant product? Use the form and select the right topic so it reaches us faster.</p>
+                        </div>
+                    </div>
+
+                    <!-- Response time -->
+                    <div class="response-badge reveal">
+                        <div class="response-dot"></div>
+                        <div class="response-text">
+                            Typical response: 24–48 hours
+                            <span>Mon–Fri · We don't do autoresponders</span>
+                        </div>
+                    </div>
+
+                    <!-- Social links -->
+                    <div class="social-strip reveal">
+                        <a href="https://web.facebook.com/share/g/1WjWFDg7TQ/" class="social-btn">📘 Facebook Group</a>
+                        <a href="https://web.facebook.com/share/g/1WjWFDg7TQ/" class="social-btn">📷 Instagram</a>
+                        <a href="https://www.youtube.com/channel/UC8cr9x-oLaklVMk3xf_5tQg" class="social-btn">▶️ YouTube</a>
+                        <a href="https://www.youtube.com/channel/UC8cr9x-oLaklVMk3xf_5tQg" class="social-btn">🎵 TikTok</a>
+
+                    </div>
+
+                    <p style="margin-top:var(--space-md);font-size:13px;color:var(--muted);">
+                        For faster build help, the <strong>Facebook community</strong> has thousands of builders online daily — often you'll get an answer within the hour.
+                    </p>
+                </div>
+
+                <!-- ── RIGHT: FORM ── -->
+                <div class="contact-form-panel reveal">
+
+                    <!-- Form view -->
+                    <div id="formView">
+                        <form id="contactForm" action="https://formspree.io/f/xojnykao" method="POST">
+                            <input type="hidden" name="_subject" value="New message from VanWild Contact page">
+
+                            <div class="form-title">SEND A MESSAGE</div>
+                            <p class="form-subtitle">All fields marked * are required. We read everything.</p>
+
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Your first name" autocomplete="given-name" required>
+                                </div>
+                                <div class="field">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Optional" autocomplete="family-name">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="topic">Topic *</label>
+                                <select id="topic" name="topic" required>
+        <option value="" disabled selected>Select what this is about…</option>
+        <option value="build-question">Build Question</option>
+        <option value="submit-build">Submit My Build</option>
+        <option value="guide-feedback">Guide Feedback / Correction</option>
+        <option value="partnership">Partnership / Sponsorship Inquiry</option>
+        <option value="press">Press / Media</option>
+        <option value="other">Other</option>
+      </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="rig">Your Rig (optional)</label>
+                                <input type="text" id="rig" name="rig" placeholder='e.g. 2020 Ford Transit 148" high-roof, or 1999 Blue Bird'>
+                            </div>
+
+                            <div class="field">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Be specific — the more detail you give, the more useful our answer will be." maxlength="2000" required oninput="updateCount(this)"></textarea>
+                                <div class="char-count"><span id="charCount">0</span> / 2000</div>
+                            </div>
+
+                            <div class="checkbox-row">
+                                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                                <label for="newsletter">
+        Add me to the weekly newsletter — new guides, build logs, and tips. Unsubscribe any time.
+        <a href="privacy-policy.html">Privacy Policy</a>.
+      </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+      Send Message →
+    </button>
+
+                            <p style="margin-top:14px;font-size:12px;color:var(--muted);text-align:center;">
+                                By submitting you agree to our <a href="privacy-policy.html" style="color:var(--orange);">Privacy Policy</a>. We never sell your email.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Success view (hidden until submit) -->
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">✅</div>
+                        <h3>MESSAGE SENT.</h3>
+                        <p>Thanks — we'll get back to you within 24–48 hours.<br>In the meantime, the community on Facebook usually has same-day answers.</p>
+                        <div style="display:flex;gap:12px;justify-content:center;margin-top:var(--space-md);flex-wrap:wrap;">
+                            <a href="https://web.facebook.com/share/g/1WjWFDg7TQ/" class="btn btn-primary btn-sm">Join the Community →</a>
+                            <a href="guides/solar.html" class="btn btn-outline btn-sm">Read the Guides</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ── FAQ STRIP ── -->
+            <div class="faq-strip">
+                <div class="section-header reveal">
+                    <div class="tag">Common Questions</div>
+                    <h2>BEFORE YOU WRITE</h2>
+                    <p>Quick answers to the most common messages we receive.</p>
+                </div>
+
+                <div class="faq-list">
+
+                    <div class="faq-item reveal">
+                        <button class="faq-q" aria-expanded="false">Do you do paid partnerships or sponsored content?</button>
+                        <div class="faq-a">
+                            <div>
+                                <p>No. VanWild has a strict no-sponsored-content policy. We don't accept payment to feature products, don't run affiliate links disguised as recommendations, and don't do sponsored "reviews." If a product appears on VanWild
+                                    it's because we've used it or a community builder has used it and documented it honestly. If you're a brand looking to pay for promotion, the answer is no.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-q" aria-expanded="false">Can I submit my van or skoolie build?</button>
+                        <div class="faq-a">
+                            <div>
+                                <p>Yes — that's one of the things we most want. Requirements: real photos (not renders), a real cost breakdown with actual numbers, and an honest writeup that includes what went wrong. We don't feature builds with vague costs
+                                    ("around $15,000") or builds that are obviously incomplete. Use the contact form above and select "Submit My Build."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-q" aria-expanded="false">I found an error in one of your guides. What should I do?</button>
+                        <div class="faq-a">
+                            <div>
+                                <p>Tell us. Seriously. We update guides when we find errors and we credit the person who caught it if they want. Use the form above and select "Guide Feedback / Correction." Include the specific guide page and the specific
+                                    error. Outdated pricing, wrong wire gauge recommendations, incorrect technical information — all of it matters and we want to know.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-q" aria-expanded="false">Do you offer one-on-one build consulting?</button>
+                        <div class="faq-a">
+                            <div>
+                                <p>Not for pay — we don't do paid consulting. However, we answer build questions via the contact form for free, and the Facebook community has thousands of experienced builders who answer questions daily. For complex electrical
+                                    or structural questions, posting in the community usually gets better and faster help than any single person could provide.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-q" aria-expanded="false">I'm a journalist / podcaster. Can I interview you?</button>
+                        <div class="faq-a">
+                            <div>
+                                <p>Possibly, depending on the topic and audience fit. Use the contact form and select "Press / Media." Include the outlet, the topic you'd want to cover, and the audience size or context. We prioritize vanlife-adjacent audiences
+                                    where the conversation would actually be useful to people planning a build.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2>START YOUR BUILD TODAY</h2>
+            <p>The guides are free. The community is free. There's no reason to wait.</p>
+            <div class="cta-btns">
+                <a href="guides/solar.html" class="btn btn-white">Solar Guide →</a>
+                <a href="guides/budget.html" class="btn btn-ghost">Budget Guide →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">VAN<span>WILD</span></a>
+                    <p>Real guides for real builds. No sponsors, no ads disguised as advice.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="guides/solar.html">Solar Power</a></li>
+                        <li><a href="guides/insulation.html">Insulation</a></li>
+                        <li><a href="guides/budget.html">Budget</a></li>
+                        <li><a href="guides/battery.html">Batteries</a></li>
+                        <li><a href="guides/skoolie.html">Skoolie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="builds/index.html">Builds</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="compare.html">Compare</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 VanWild. Built by a vanlife nerd.</span>
+                <div class="social-links">
+                    <a href="https://facebook.com" class="social-link" aria-label="Facebook">📘</a>
+                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                    <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        /* ── character counter ── */
+        function updateCount(el) {
+            document.getElementById('charCount').textContent = el.value.length;
+        }
+
+        /* ── form submission — runs after DOM is ready ── */
+        document.addEventListener('DOMContentLoaded', function() {
+
+            /* ── FAQ ACCORDION ── */
+            document.querySelectorAll('.faq-q').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var isOpen = btn.getAttribute('aria-expanded') === 'true';
+                    var answer = btn.nextElementSibling;
+
+                    /* Close all others */
+                    document.querySelectorAll('.faq-q').forEach(function(other) {
+                        other.setAttribute('aria-expanded', 'false');
+                        other.nextElementSibling.classList.remove('open');
+                    });
+
+                    /* Toggle this one */
+                    if (!isOpen) {
+                        btn.setAttribute('aria-expanded', 'true');
+                        answer.classList.add('open');
+                    }
+                });
+            });
+
+            var form = document.getElementById('contactForm');
+            if (!form) return; // safety guard
+
+            form.addEventListener('submit', async function(e) {
+                /* STOP the browser from navigating to Formspree */
+                e.preventDefault();
+                e.stopPropagation();
+
+                var firstName = document.getElementById('firstName').value.trim();
+                var email = document.getElementById('email').value.trim();
+                var topic = document.getElementById('topic').value;
+                var message = document.getElementById('message').value.trim();
+
+                /* Validate */
+                if (!firstName) {
+                    alert('Please enter your first name.');
+                    return;
+                }
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                if (!topic) {
+                    alert('Please select a topic.');
+                    return;
+                }
+                if (message.length < 20) {
+                    alert('Please write a message of at least 20 characters.');
+                    return;
+                }
+
+                /* Loading state */
+                var btn = form.querySelector('button[type="submit"]');
+                var originalLabel = btn.textContent;
+                btn.textContent = 'Sending…';
+                btn.disabled = true;
+
+                try {
+                    var response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        /* Hide form, show success panel */
+                        document.getElementById('formView').style.display = 'none';
+                        document.getElementById('formSuccess').style.display = 'block';
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        form.reset();
+                        document.getElementById('charCount').textContent = '0';
+                    } else {
+                        var data = await response.json().catch(function() {
+                            return null;
+                        });
+                        var msg = (data && data.errors && data.errors[0]) ? data.errors[0].message : 'Submission failed. Please try again.';
+                        alert(msg);
+                        btn.textContent = originalLabel;
+                        btn.disabled = false;
+                    }
+
+                } catch (err) {
+                    alert('Network error — please check your connection and try again.');
+                    btn.textContent = originalLabel;
+                    btn.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — VanWild</title>
+<meta name="description" content="VanWild Privacy Policy. How we collect, use, and protect your data. Covers cookies, Google AdSense, analytics, and your rights.">
+<!-- Canonical: update to your actual domain -->
+<link rel="canonical" href="https://vanwild.com/privacy-policy.html">
+<link rel="stylesheet" href="css/main.css">
+<style>
+
+/* ── POLICY LAYOUT ── */
+.policy-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Last updated bar */
+.policy-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  background: var(--white); border: 1px solid var(--sand);
+  border-radius: var(--radius); padding: 14px 20px;
+  margin-bottom: var(--space-md);
+}
+.policy-meta-item {
+  font-family: var(--font-head); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+.policy-meta-item strong { color: var(--text); }
+
+/* Section anchors jump offset */
+.policy-section { scroll-margin-top: 100px; }
+.policy-section + .policy-section { margin-top: var(--space-lg); }
+
+.policy-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3.5vw, 34px);
+  letter-spacing: 0.02em; line-height: 1;
+  color: var(--dark); margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--sand);
+}
+.policy-section h3 {
+  font-family: var(--font-head); font-weight: 800;
+  font-size: var(--fs-md); margin: 24px 0 10px;
+  color: var(--dark);
+}
+.policy-section p {
+  font-size: var(--fs-sm); line-height: 1.8;
+  color: var(--text); margin-bottom: 14px;
+}
+.policy-section ul, .policy-section ol {
+  padding-left: 22px; margin-bottom: 16px;
+}
+.policy-section li {
+  font-size: var(--fs-sm); line-height: 1.7; color: var(--text); margin-bottom: 8px;
+}
+.policy-section ul li { list-style: disc; }
+.policy-section ol li { list-style: decimal; }
+
+/* Highlight boxes */
+.policy-highlight {
+  background: var(--orange-light);
+  border-left: 4px solid var(--orange);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px; margin: 20px 0;
+}
+.policy-highlight p { margin: 0; color: var(--dark); font-weight: 500; }
+
+.policy-info {
+  background: var(--white); border: 1px solid var(--sand);
+  border-radius: var(--radius-lg); padding: 20px 24px; margin: 20px 0;
+}
+.policy-info p { margin: 0; font-size: 13px; }
+
+/* Table of contents */
+.toc-box {
+  background: var(--dark); border-radius: var(--radius-lg);
+  padding: var(--space-md); margin-bottom: var(--space-lg);
+}
+.toc-box h4 {
+  font-family: var(--font-display); font-size: 22px; color: white;
+  letter-spacing: 0.04em; margin-bottom: 18px;
+}
+.toc-list { display: flex; flex-direction: column; gap: 0; }
+.toc-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  text-decoration: none; transition: gap 0.2s;
+}
+.toc-item:last-child { border-bottom: none; }
+.toc-item:hover { gap: 18px; }
+.toc-num {
+  font-family: var(--font-display); font-size: 15px; color: var(--orange);
+  width: 26px; flex-shrink: 0;
+}
+.toc-label {
+  font-family: var(--font-head); font-weight: 600; font-size: 13px;
+  color: rgba(255,255,255,0.75); letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.toc-item:hover .toc-label { color: white; }
+
+/* Adsense notice box */
+.adsense-box {
+  background: #1A1612; border: 1px solid rgba(244,99,30,0.3);
+  border-radius: var(--radius-lg); padding: var(--space-md); margin: 20px 0;
+}
+.adsense-box .adsense-title {
+  font-family: var(--font-head); font-weight: 800;
+  font-size: var(--fs-sm); color: var(--orange); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.adsense-box p { color: rgba(255,255,255,0.65); font-size: 13px; margin-bottom: 10px; }
+.adsense-box p:last-child { margin-bottom: 0; }
+.adsense-box a { color: var(--orange); }
+
+/* Contact info in policy */
+.contact-box {
+  background: var(--white); border: 1px solid var(--sand);
+  border-radius: var(--radius-lg); padding: var(--space-md); margin-top: var(--space-md);
+  text-align: center;
+}
+.contact-box h4 { font-family: var(--font-head); font-weight: 800; margin-bottom: 10px; }
+.contact-box p { font-size: var(--fs-sm); color: var(--muted); margin-bottom: 18px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">VAN<span>WILD</span></a>
+    <ul class="nav-links">
+      <li><a href="guides/solar.html">Solar</a></li>
+      <li><a href="guides/insulation.html">Insulation</a></li>
+      <li><a href="guides/budget.html">Budget</a></li>
+      <li><a href="builds/index.html">Builds</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="guides/solar.html" class="btn btn-primary nav-cta btn-sm">Start Building →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="guides/solar.html">SOLAR</a>
+  <a href="guides/insulation.html">INSULATION</a>
+  <a href="guides/budget.html">BUDGET</a>
+  <a href="builds/index.html">BUILDS</a>
+  <a href="blog/index.html">BLOG</a>
+  <a href="about.html">ABOUT</a>
+  <a href="guides/solar.html" class="btn btn-primary">Start Building →</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-gradient" style="background:linear-gradient(135deg,#1A1612 0%,#3A2F25 100%);"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">›</span>
+      <span class="current">Privacy Policy</span>
+    </div>
+    <div class="tag dark">📄 Legal</div>
+    <h1>PRIVACY<br>POLICY</h1>
+    <p class="lead">How VanWild collects, uses, stores, and protects your data. Plain language where possible. Required legalese where necessary.</p>
+  </div>
+</section>
+
+<!-- POLICY CONTENT -->
+<section class="section-pad">
+  <div class="container">
+    <div class="policy-wrap">
+
+      <!-- LAST UPDATED -->
+      <div class="policy-meta">
+        <div class="policy-meta-item">Last Updated: <strong>February 25, 2026</strong></div>
+        <div class="policy-meta-item">Effective: <strong>February 25, 2026</strong></div>
+        <div class="policy-meta-item">Applies to: <strong>vanwild.com</strong></div>
+      </div>
+
+      <!-- QUICK SUMMARY -->
+      <div class="policy-highlight">
+        <p><strong>Plain English Summary:</strong> VanWild uses Google Analytics to understand how people use the site, and Google AdSense to show relevant ads. Both use cookies. We collect the email addresses of newsletter subscribers only. We never sell your data. You can opt out of personalized advertising. This policy explains all of that in full below.</p>
+      </div>
+
+      <!-- TABLE OF CONTENTS -->
+      <div class="toc-box">
+        <h4>CONTENTS</h4>
+        <div class="toc-list">
+          <a href="#who-we-are"     class="toc-item"><span class="toc-num">01</span><span class="toc-label">Who We Are</span></a>
+          <a href="#data-collected" class="toc-item"><span class="toc-num">02</span><span class="toc-label">Information We Collect</span></a>
+          <a href="#how-we-use"     class="toc-item"><span class="toc-num">03</span><span class="toc-label">How We Use Your Information</span></a>
+          <a href="#cookies"        class="toc-item"><span class="toc-num">04</span><span class="toc-label">Cookies &amp; Tracking Technologies</span></a>
+          <a href="#google-adsense" class="toc-item"><span class="toc-num">05</span><span class="toc-label">Google AdSense &amp; Advertising</span></a>
+          <a href="#analytics"      class="toc-item"><span class="toc-num">06</span><span class="toc-label">Google Analytics</span></a>
+          <a href="#third-parties"  class="toc-item"><span class="toc-num">07</span><span class="toc-label">Third-Party Services</span></a>
+          <a href="#data-sharing"   class="toc-item"><span class="toc-num">08</span><span class="toc-label">Data Sharing &amp; Disclosure</span></a>
+          <a href="#data-retention" class="toc-item"><span class="toc-num">09</span><span class="toc-label">Data Retention</span></a>
+          <a href="#your-rights"    class="toc-item"><span class="toc-num">10</span><span class="toc-label">Your Rights &amp; Opt-Out Options</span></a>
+          <a href="#children"       class="toc-item"><span class="toc-num">11</span><span class="toc-label">Children's Privacy</span></a>
+          <a href="#ccpa"           class="toc-item"><span class="toc-num">12</span><span class="toc-label">California Privacy Rights (CCPA)</span></a>
+          <a href="#gdpr"           class="toc-item"><span class="toc-num">13</span><span class="toc-label">European Users (GDPR)</span></a>
+          <a href="#security"       class="toc-item"><span class="toc-num">14</span><span class="toc-label">Data Security</span></a>
+          <a href="#changes"        class="toc-item"><span class="toc-num">15</span><span class="toc-label">Changes to This Policy</span></a>
+          <a href="#contact-us"     class="toc-item"><span class="toc-num">16</span><span class="toc-label">Contact Us</span></a>
+        </div>
+      </div>
+
+      <!-- 01: WHO WE ARE -->
+      <div class="policy-section" id="who-we-are">
+        <h2>01 — Who We Are</h2>
+        <p>VanWild ("we," "us," or "our") is a website dedicated to van and school bus conversion guides, community builds, and vanlife resources. VanWild is operated as an independent website. Our website is located at <strong>vanwild.com</strong>.</p>
+        <p>This Privacy Policy applies to all pages, content, forms, and services operated under the vanwild.com domain. By using VanWild, you agree to the collection and use of information in accordance with this policy.</p>
+      </div>
+
+      <!-- 02: INFORMATION WE COLLECT -->
+      <div class="policy-section" id="data-collected">
+        <h2>02 — Information We Collect</h2>
+
+        <h3>Information You Provide Directly</h3>
+        <p>When you use our contact form or subscribe to our newsletter, we collect:</p>
+        <ul>
+          <li><strong>Name</strong> (first name required; last name optional)</li>
+          <li><strong>Email address</strong> (required for newsletter signup and contact form submissions)</li>
+          <li><strong>Message content</strong> from the contact form</li>
+          <li><strong>Your rig details</strong> if voluntarily provided in the contact form</li>
+          <li><strong>Build submission content</strong> (photos, cost breakdowns, descriptions) if you submit a build for publication</li>
+        </ul>
+
+        <h3>Information Collected Automatically</h3>
+        <p>When you visit VanWild, certain information is automatically collected by our servers and third-party services:</p>
+        <ul>
+          <li><strong>IP address</strong> (typically anonymized or aggregated)</li>
+          <li><strong>Browser type and version</strong></li>
+          <li><strong>Operating system</strong></li>
+          <li><strong>Referring URL</strong> (the page that linked you to us)</li>
+          <li><strong>Pages visited and time spent on each page</strong></li>
+          <li><strong>Date and time of visit</strong></li>
+          <li><strong>Device type</strong> (desktop, mobile, tablet)</li>
+          <li><strong>General geographic location</strong> (country/region level, not precise location)</li>
+        </ul>
+        <p>This data is collected via Google Analytics and is used in aggregated, anonymized form to understand how visitors use the site. We do not use this data to identify individual users.</p>
+
+        <h3>Cookies and Similar Technologies</h3>
+        <p>VanWild uses cookies for analytics and advertising. See <a href="#cookies" style="color:var(--orange);">Section 04</a> for full details.</p>
+      </div>
+
+      <!-- 03: HOW WE USE -->
+      <div class="policy-section" id="how-we-use">
+        <h2>03 — How We Use Your Information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+          <li><strong>Responding to contact form submissions</strong> — to answer your questions, process build submissions, or respond to inquiries</li>
+          <li><strong>Sending the newsletter</strong> — to deliver weekly guides, build posts, and site updates to subscribers who have opted in</li>
+          <li><strong>Improving the website</strong> — analytics data helps us understand which guides are most useful, where users drop off, and how to improve content</li>
+          <li><strong>Displaying advertisements</strong> — to fund free content on the site through Google AdSense (see <a href="#google-adsense" style="color:var(--orange);">Section 05</a>)</li>
+          <li><strong>Legal compliance</strong> — to comply with applicable laws and regulations</li>
+        </ul>
+
+        <div class="policy-info">
+          <p><strong>What we do NOT do:</strong> We do not sell your personal information. We do not share your email address with third parties for marketing purposes. We do not use your data to build individual behavioral profiles outside of what Google Analytics and AdSense collect in aggregate form.</p>
+        </div>
+      </div>
+
+      <!-- 04: COOKIES -->
+      <div class="policy-section" id="cookies">
+        <h2>04 — Cookies &amp; Tracking Technologies</h2>
+        <p>Cookies are small text files stored on your device by your browser. VanWild uses the following types of cookies:</p>
+
+        <h3>Essential Cookies</h3>
+        <p>These cookies are necessary for the website to function. They do not collect personal information and cannot be disabled without affecting site functionality. We do not currently set any first-party essential cookies beyond standard session management.</p>
+
+        <h3>Analytics Cookies (Google Analytics)</h3>
+        <p>We use Google Analytics to collect aggregated, anonymized data about how visitors use VanWild. Google Analytics sets the following cookies:</p>
+        <ul>
+          <li><code>_ga</code> — distinguishes users; expires after 2 years</li>
+          <li><code>_ga_[ID]</code> — persists session state; expires after 2 years</li>
+          <li><code>_gid</code> — distinguishes users; expires after 24 hours</li>
+          <li><code>_gat</code> — throttles request rate; expires after 1 minute</li>
+        </ul>
+        <p>We have enabled IP anonymization in Google Analytics. This means Google Analytics shortens IP addresses within EU member states before any transmission to Google's servers. You can opt out of Google Analytics tracking using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+        <h3>Advertising Cookies (Google AdSense)</h3>
+        <p>Google AdSense uses cookies to serve personalized advertisements based on your interests and browsing history across the web. See <a href="#google-adsense" style="color:var(--orange);">Section 05</a> for full details. The main cookies used include:</p>
+        <ul>
+          <li><code>IDE</code> — used by Google DoubleClick to register and report user actions after viewing or clicking an advertisement; expires after 13 months</li>
+          <li><code>DSID</code> — stores user preferences for signed-in Google accounts; expires after 2 weeks</li>
+          <li><code>test_cookie</code> — checks if the user's browser supports cookies; expires after 1 day</li>
+          <li><code>__gads</code> / <code>__gpi</code> — stores ad interaction data; expires after 13 months</li>
+        </ul>
+
+        <h3>Managing Cookies</h3>
+        <p>You can control cookies through your browser settings. Most browsers allow you to refuse cookies, delete existing cookies, or be notified when new cookies are set. Note that disabling cookies may affect site functionality and your ad experience. Instructions for managing cookies in common browsers:</p>
+        <ul>
+          <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/kb/enhanced-tracking-protection-firefox-desktop" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Apple Safari</a></li>
+          <li><a href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Microsoft Edge</a></li>
+        </ul>
+      </div>
+
+      <!-- 05: GOOGLE ADSENSE -->
+      <div class="policy-section" id="google-adsense">
+        <h2>05 — Google AdSense &amp; Advertising</h2>
+
+        <div class="adsense-box">
+          <div class="adsense-title">📢 About Advertising on VanWild</div>
+          <p>VanWild uses Google AdSense to display advertisements. These ads help fund the free guides and content on this site. All editorial content on VanWild is independent of advertising — ads never influence our guide recommendations or product mentions.</p>
+          <p>You can opt out of personalized advertising at any time: <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> · <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">AdChoices</a></p>
+        </div>
+
+        <p>VanWild participates in Google AdSense, an advertising service provided by Google LLC ("Google"). Google AdSense uses cookies to display ads based on your prior visits to this website and other sites across the web.</p>
+
+        <h3>How Google AdSense Uses Your Data</h3>
+        <p>Google uses data collected through AdSense cookies to:</p>
+        <ul>
+          <li>Serve personalized advertisements based on your browsing history and interests (if you have not opted out of personalized ads)</li>
+          <li>Measure the effectiveness of advertisements</li>
+          <li>Prevent ad fraud</li>
+          <li>Improve ad relevance and user experience</li>
+        </ul>
+
+        <h3>Personalized vs Non-Personalized Ads</h3>
+        <p>By default, Google AdSense may show personalized ads based on your interests across the web. If you prefer not to receive personalized ads, you can opt out via:</p>
+        <ul>
+          <li><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google Ads Settings</a></li>
+          <li><a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Digital Advertising Alliance (DAA) Opt-Out</a></li>
+          <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Network Advertising Initiative (NAI) Opt-Out</a></li>
+          <li>For EU users: <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Your Online Choices</a></li>
+        </ul>
+        <p>Opting out of personalized ads does not mean you will stop seeing ads — you will still see non-personalized ads based on the page content.</p>
+
+        <h3>Google's Privacy Policy</h3>
+        <p>For full details on how Google collects and uses data through AdSense, please review <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google's Advertising Policy</a>.</p>
+
+        <h3>Consent Management (EU/EEA Users)</h3>
+        <p>For users in the European Union and European Economic Area, Google requires a Consent Management Platform (CMP) before serving personalized ads. VanWild uses Google's Funding Choices (or equivalent CMP) to collect consent from EU/EEA visitors before any personalized advertising cookies are set. You will see a consent banner when visiting from these regions and can update your preferences at any time.</p>
+      </div>
+
+      <!-- 06: ANALYTICS -->
+      <div class="policy-section" id="analytics">
+        <h2>06 — Google Analytics</h2>
+        <p>VanWild uses Google Analytics 4 (GA4) provided by Google LLC to analyze website traffic and usage patterns. Google Analytics helps us understand which guides are most useful, how users navigate the site, and where we can improve.</p>
+        <p>Google Analytics collects data such as pages viewed, time on site, geographic location (country/region), device type, and traffic source. This data is aggregated and anonymized — we cannot identify individual users from this data.</p>
+        <p>We have configured Google Analytics with the following privacy settings:</p>
+        <ul>
+          <li>IP anonymization is enabled</li>
+          <li>Data sharing with Google is limited to Analytics purposes</li>
+          <li>Data retention is set to 14 months</li>
+          <li>Google Signals is disabled unless required by applicable law</li>
+        </ul>
+        <p>To opt out of Google Analytics tracking across all websites, install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google Analytics Opt-out Browser Add-on</a>.</p>
+        <p>For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google's Privacy Policy</a>.</p>
+      </div>
+
+      <!-- 07: THIRD PARTIES -->
+      <div class="policy-section" id="third-parties">
+        <h2>07 — Third-Party Services</h2>
+        <p>VanWild uses the following third-party services, each of which operates under its own privacy policy:</p>
+        <ul>
+          <li><strong>Google AdSense</strong> — advertising (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Privacy Policy</a>)</li>
+          <li><strong>Google Analytics</strong> — website analytics (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Privacy Policy</a>)</li>
+          <li><strong>Google Fonts</strong> — typography (Bebas Neue, Syne, Inter); Google may receive data when fonts load (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Privacy Policy</a>)</li>
+          <li><strong>Newsletter email provider</strong> — we use a third-party email service provider (ESP) to send our newsletter. The specific provider is disclosed to subscribers at signup. The ESP processes email addresses of newsletter subscribers on our behalf.</li>
+          <li><strong>Form processor</strong> — contact form submissions may be processed through a form service (e.g., Formspree or Netlify Forms). These services process form data to deliver it to us but do not retain it for their own marketing purposes.</li>
+          <li><strong>Hosting provider</strong> — our web host stores server logs including IP addresses as standard practice. These logs are retained according to our host's standard data retention policies.</li>
+        </ul>
+        <p>We have no control over the practices of these third-party services. We encourage you to review their respective privacy policies.</p>
+      </div>
+
+      <!-- 08: DATA SHARING -->
+      <div class="policy-section" id="data-sharing">
+        <h2>08 — Data Sharing &amp; Disclosure</h2>
+        <p>We do not sell, trade, or rent your personal information to third parties. We may share your data only in the following limited circumstances:</p>
+
+        <h3>Service Providers</h3>
+        <p>We share data with service providers who assist us in operating the website (such as our email provider and form processor), on the condition that they agree to keep this information confidential and use it only to provide services to us.</p>
+
+        <h3>Legal Requirements</h3>
+        <p>We may disclose your information if required to do so by law, or in good-faith belief that such action is necessary to comply with a legal obligation, protect and defend our rights or property, prevent or investigate possible wrongdoing in connection with the site, protect the personal safety of users of the site or the public, or protect against legal liability.</p>
+
+        <h3>Business Transfers</h3>
+        <p>If VanWild is acquired, merged, or sold, user data may be transferred as part of that transaction. We will notify users by posting a prominent notice on the website before any such transfer takes effect, and update this Privacy Policy to reflect the change in ownership.</p>
+
+        <h3>With Your Consent</h3>
+        <p>If you submit your build for publication, certain information you provide (your rig details, build costs, and photos) will be published on the website. We will always ask for your explicit consent before publishing any personal details, and you can specify a display name or remain anonymous.</p>
+      </div>
+
+      <!-- 09: DATA RETENTION -->
+      <div class="policy-section" id="data-retention">
+        <h2>09 — Data Retention</h2>
+        <p>We retain your data for as long as necessary to fulfill the purposes for which it was collected:</p>
+        <ul>
+          <li><strong>Contact form submissions</strong> — retained for up to 2 years to allow for follow-up communication, then permanently deleted</li>
+          <li><strong>Newsletter subscriber data</strong> — retained until you unsubscribe. Upon unsubscription, your email address is removed from our active list. Depending on our email provider's policies, suppression lists may be maintained to honor your unsubscribe request</li>
+          <li><strong>Google Analytics data</strong> — data is retained for 14 months as configured in Google Analytics, after which it is automatically deleted</li>
+          <li><strong>Server logs</strong> — typically retained for 30–90 days depending on our hosting provider's standard policies</li>
+          <li><strong>Published build submissions</strong> — retained indefinitely on the site unless you request removal</li>
+        </ul>
+        <p>You may request deletion of your personal data at any time by contacting us using the information in <a href="#contact-us" style="color:var(--orange);">Section 16</a>.</p>
+      </div>
+
+      <!-- 10: YOUR RIGHTS -->
+      <div class="policy-section" id="your-rights">
+        <h2>10 — Your Rights &amp; Opt-Out Options</h2>
+        <p>Depending on your location, you have the following rights regarding your personal data:</p>
+
+        <h3>Newsletter Opt-Out</h3>
+        <p>Every newsletter we send includes an unsubscribe link. Clicking this link immediately removes you from our mailing list. Alternatively, you can contact us directly to be removed.</p>
+
+        <h3>Advertising Opt-Out</h3>
+        <p>You can opt out of personalized advertising served through Google AdSense using the methods described in <a href="#google-adsense" style="color:var(--orange);">Section 05</a>. You can also manage ad preferences across all Google properties at <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">myaccount.google.com</a>.</p>
+
+        <h3>Analytics Opt-Out</h3>
+        <p>Install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google Analytics Opt-out Browser Add-on</a> to prevent Google Analytics from tracking your visits across all websites.</p>
+
+        <h3>Access, Correction, and Deletion</h3>
+        <p>You have the right to request access to the personal data we hold about you, to request correction of inaccurate data, and to request deletion of your data. To exercise these rights, contact us at the address in <a href="#contact-us" style="color:var(--orange);">Section 16</a>. We will respond to requests within 30 days.</p>
+
+        <h3>Do Not Track</h3>
+        <p>Some browsers include a "Do Not Track" (DNT) feature. At this time, VanWild does not alter its data collection practices in response to DNT signals because there is no common standard for interpreting such signals. Google Analytics and AdSense have their own mechanisms for opt-out as described above.</p>
+      </div>
+
+      <!-- 11: CHILDREN -->
+      <div class="policy-section" id="children">
+        <h2>11 — Children's Privacy</h2>
+        <p>VanWild is not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at the address in <a href="#contact-us" style="color:var(--orange);">Section 16</a> and we will take steps to delete that information.</p>
+        <p>If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information promptly.</p>
+      </div>
+
+      <!-- 12: CCPA -->
+      <div class="policy-section" id="ccpa">
+        <h2>12 — California Privacy Rights (CCPA / CPRA)</h2>
+        <p>If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), provides you with specific rights regarding your personal information.</p>
+
+        <h3>Your CCPA Rights</h3>
+        <ul>
+          <li><strong>Right to Know</strong> — You have the right to request that we disclose what personal information we collect, use, disclose, and sell about you.</li>
+          <li><strong>Right to Delete</strong> — You have the right to request that we delete personal information we have collected from you, subject to certain exceptions.</li>
+          <li><strong>Right to Opt Out of Sale</strong> — You have the right to opt out of the sale of your personal information. <strong>VanWild does not sell personal information.</strong></li>
+          <li><strong>Right to Correct</strong> — You have the right to request that we correct inaccurate personal information we maintain about you.</li>
+          <li><strong>Right to Non-Discrimination</strong> — We will not discriminate against you for exercising any of your CCPA rights.</li>
+        </ul>
+
+        <h3>Categories of Personal Information Collected</h3>
+        <p>In the preceding 12 months, we have collected the following categories of personal information as defined by the CCPA:</p>
+        <ul>
+          <li><strong>Identifiers</strong> — name and email address (from contact form and newsletter signup)</li>
+          <li><strong>Internet or electronic network activity</strong> — browsing behavior, pages viewed, clicks (via Google Analytics)</li>
+          <li><strong>Inferences</strong> — interests and preferences derived from browsing activity (by Google AdSense for ad personalization)</li>
+        </ul>
+
+        <h3>Exercising Your Rights</h3>
+        <p>To exercise your CCPA rights, contact us using the information in <a href="#contact-us" style="color:var(--orange);">Section 16</a>. We will verify your identity before processing your request and respond within 45 days as required by law.</p>
+      </div>
+
+      <!-- 13: GDPR -->
+      <div class="policy-section" id="gdpr">
+        <h2>13 — European Users (GDPR)</h2>
+        <p>If you are located in the European Union, European Economic Area, or United Kingdom, the General Data Protection Regulation (GDPR) and applicable national data protection laws provide you with specific rights.</p>
+
+        <h3>Legal Basis for Processing</h3>
+        <p>We process your personal data under the following legal bases:</p>
+        <ul>
+          <li><strong>Consent</strong> — newsletter subscription and personalized advertising (you can withdraw consent at any time)</li>
+          <li><strong>Legitimate interests</strong> — responding to contact form submissions, website analytics to improve content, preventing fraud</li>
+          <li><strong>Legal obligation</strong> — where required by applicable law</li>
+        </ul>
+
+        <h3>Your GDPR Rights</h3>
+        <ul>
+          <li><strong>Right of access</strong> — to receive a copy of personal data we hold about you</li>
+          <li><strong>Right to rectification</strong> — to correct inaccurate personal data</li>
+          <li><strong>Right to erasure</strong> ("right to be forgotten") — to request deletion of your personal data</li>
+          <li><strong>Right to restriction of processing</strong> — to request that we limit how we use your data</li>
+          <li><strong>Right to data portability</strong> — to receive your data in a structured, machine-readable format</li>
+          <li><strong>Right to object</strong> — to object to processing based on legitimate interests or for direct marketing purposes</li>
+          <li><strong>Rights related to automated decision-making</strong> — we do not engage in automated decision-making or profiling that produces legal effects</li>
+        </ul>
+
+        <h3>Data Transfers Outside the EEA</h3>
+        <p>Google Analytics and Google AdSense may transfer your data to the United States and other countries outside the European Economic Area. Google processes this data pursuant to its Standard Contractual Clauses and its certification under applicable data transfer frameworks. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Google's Privacy Policy</a>.</p>
+
+        <h3>Consent Withdrawal</h3>
+        <p>Where we rely on consent as the legal basis for processing, you have the right to withdraw consent at any time. Withdrawing consent does not affect the lawfulness of processing that occurred before withdrawal.</p>
+
+        <h3>Right to Lodge a Complaint</h3>
+        <p>If you believe your data protection rights have been violated, you have the right to lodge a complaint with your local supervisory authority. In the UK, this is the <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Information Commissioner's Office (ICO)</a>.</p>
+      </div>
+
+      <!-- 14: SECURITY -->
+      <div class="policy-section" id="security">
+        <h2>14 — Data Security</h2>
+        <p>We take reasonable measures to protect your personal information from unauthorized access, use, alteration, and destruction. These measures include:</p>
+        <ul>
+          <li>HTTPS encryption for all data transmitted between your browser and our website</li>
+          <li>Access controls limiting who can access stored contact form data</li>
+          <li>Using reputable third-party services with their own security practices for email, analytics, and advertising</li>
+        </ul>
+        <p>However, no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee absolute security.</p>
+        <p>If you believe your data has been compromised or you have a security concern, please contact us immediately at the address in <a href="#contact-us" style="color:var(--orange);">Section 16</a>.</p>
+      </div>
+
+      <!-- 15: CHANGES -->
+      <div class="policy-section" id="changes">
+        <h2>15 — Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will:</p>
+        <ul>
+          <li>Update the "Last Updated" date at the top of this page</li>
+          <li>Post a notice on the website for material changes</li>
+          <li>Notify newsletter subscribers of significant changes via email where required by law</li>
+        </ul>
+        <p>Your continued use of VanWild after any changes take effect constitutes your acceptance of the updated Privacy Policy. We encourage you to review this page periodically to stay informed.</p>
+        <p>Archived versions of this Privacy Policy are available upon request.</p>
+      </div>
+
+      <!-- 16: CONTACT -->
+      <div class="policy-section" id="contact-us">
+        <h2>16 — Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, want to exercise your data rights, or have a privacy-related concern, please contact us:</p>
+
+        <div class="contact-box reveal">
+          <h4>VanWild Privacy Contact</h4>
+          <p>Use the contact form on our website and select "Privacy / Data Request" as the topic. We will respond within 30 days (45 days for CCPA requests, as permitted by law).</p>
+          <a href="contact.html" class="btn btn-primary btn-sm" style="margin-bottom:14px;">Contact Form →</a>
+          <p style="font-size:12px;color:var(--muted);margin-top:10px;">
+            For GDPR erasure requests, include "GDPR Erasure Request" in your message and specify the data you want deleted. For CCPA requests, include "CCPA Request" and specify the right you are exercising.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /policy-wrap -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">VAN<span>WILD</span></a>
+        <p>Real guides for real builds. No sponsors, no ads disguised as advice.</p>
+      </div>
+      <div class="footer-col"><h4>Guides</h4><ul>
+        <li><a href="guides/solar.html">Solar Power</a></li>
+        <li><a href="guides/insulation.html">Insulation</a></li>
+        <li><a href="guides/budget.html">Budget</a></li>
+        <li><a href="guides/battery.html">Batteries</a></li>
+        <li><a href="guides/skoolie.html">Skoolie</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>More</h4><ul>
+        <li><a href="builds/index.html">Builds</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VanWild. Built by a vanlife nerd.</span>
+      <div class="social-links">
+        <a href="https://facebook.com" class="social-link">📘</a>
+        <a href="#" class="social-link">📷</a>
+        <a href="#" class="social-link">▶️</a>
+        <a href="#" class="social-link">🎵</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
