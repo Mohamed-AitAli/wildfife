@@ -17,14 +17,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3566227284953352" crossorigin="anonymous"></script>
-    <title>Van Solar Setup Guide — Vanlife</title>
-    <meta name="description" content="Complete van solar guide: panels, charge controllers, batteries, inverters. Real wiring diagrams and cost breakdowns.">
+    <title>Van Solar Setup Guide — Sizing, Wiring & Real Costs</title>
+    <meta name="description" content="Complete van solar guide: panel sizing for your daily watt-hour use, MPPT vs PWM controllers, battery bank sizing, inverter selection, wiring and cost.">
+    <!-- SEO-META-BLOCK -->
+    <meta name="google-adsense-account" content="ca-pub-3566227284953352">
+    <meta name="keywords" content="van life, van conversion, skoolie, camper, solar, insulation, lithium battery, DIY van, school bus conversion">
+    <meta name="author" content="VanLife Editorial Team">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://vanlife.website/guides/solar.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="VanLife">
+    <meta property="og:title" content="Van Solar Setup Guide — Sizing, Wiring & Real Costs">
+    <meta property="og:description" content="Complete van solar guide: panel sizing for your daily watt-hour use, MPPT vs PWM controllers, battery bank sizing, inverter selection, wiring and cost.">
+    <meta property="og:url" content="https://vanlife.website/guides/solar.html">
+    <meta property="og:image" content="https://vanlife.website/og-image.svg">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Van Solar Setup Guide — Sizing, Wiring & Real Costs">
+    <meta name="twitter:description" content="Complete van solar guide: panel sizing for your daily watt-hour use, MPPT vs PWM controllers, battery bank sizing, inverter selection, wiring and cost.">
+    <meta name="twitter:image" content="https://vanlife.website/og-image.svg">
+
+    <meta name="theme-color" content="#1A1612">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vanlife.website/#website",
+      "url": "https://vanlife.website/",
+      "name": "VanLife",
+      "publisher": {
+        "@id": "https://vanlife.website/#org"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://vanlife.website/#org",
+      "name": "VanLife",
+      "url": "https://vanlife.website/",
+      "logo": "https://vanlife.website/favicon.svg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vanlife.website/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://vanlife.website/index.html#guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Van Solar Setup Guide — Sizing, Wiring & Real Costs",
+          "item": "https://vanlife.website/guides/solar.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Van Solar Setup Guide — Sizing, Wiring & Real Costs",
+      "description": "Complete van solar guide: panel sizing for your daily watt-hour use, MPPT vs PWM controllers, battery bank sizing, inverter selection, wiring and cost.",
+      "url": "https://vanlife.website/guides/solar.html",
+      "image": "https://vanlife.website/og-image.svg",
+      "datePublished": "2026-02-01",
+      "dateModified": "2026-05-11",
+      "inLanguage": "en-US",
+      "author": {
+        "@type": "Organization",
+        "name": "VanLife",
+        "url": "https://vanlife.website/"
+      },
+      "publisher": {
+        "@id": "https://vanlife.website/#org"
+      },
+      "mainEntityOfPage": "https://vanlife.website/guides/solar.html"
+    }
+  ]
+}
+    </script>
+
     <link rel="stylesheet" href="../css/main.css">
     <style>
         /* Page-specific extras */
         
         .solar-hero-bg {
-            background-image: url('http://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');
+            background-image: url('https://vanconversion.infinityfreeapp.com/wp-content/uploads/2026/02/Add_some_camping_4k_202512282033-scaled.jpeg');
         }
         
         .system-diagram {
@@ -161,7 +252,7 @@
                 <li><a href="budget.html">Budget</a></li>
                 <li><a href="battery.html">Batteries</a></li>
                 <li><a href="skoolie.html">Skoolie</a></li>
-                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
             </ul>
             <a href="../index.html#guides" class="btn btn-primary nav-cta btn-sm">All Guides →</a>
             <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -173,7 +264,7 @@
         <a href="budget.html">BUDGET</a>
         <a href="battery.html">BATTERIES</a>
         <a href="skoolie.html">SKOOLIE</a>
-        <a href="../blog.html">BLOG</a>
+        <a href="../blog/index.html">BLOG</a>
         <a href="../index.html" class="btn btn-primary">← Home</a>
     </div>
 
@@ -375,14 +466,14 @@
                         <h4>🔗 Quick Links</h4>
                         <div class="sidebar-links">
                             <a href="../compare.html" class="sidebar-link"><span class="link-icon">⚖️</span> Van vs Bus vs Camper</a>
-                            <a href="../blog.html" class="sidebar-link"><span class="link-icon">📝</span> Blog & News</a>
+                            <a href="../blog/index.html" class="sidebar-link"><span class="link-icon">📝</span> Blog & News</a>
                             <a href="../about.html" class="sidebar-link"><span class="link-icon">👋</span> About vanlife</a>
                         </div>
                     </div>
                     <div class="sidebar-widget" style="background:var(--orange);border-color:var(--orange);">
                         <h4 style="color:white;border-bottom-color:rgba(255,255,255,0.3);">✉️ Free Newsletter</h4>
                         <p style="color:rgba(255,255,255,0.85);font-size:13px;margin-bottom:14px;">Get new guides every week. No spam.</p>
-                        <a href="#" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe Free →</a>
+                        <a href="../contact.html#newsletter" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Subscribe Free →</a>
                     </div>
                 </aside>
 
@@ -424,7 +515,7 @@
                     <h4>More</h4>
                     <ul>
                         <li><a href="../builds/index.html">Builds</a></li>
-                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
                         <li><a href="../compare.html">Compare</a></li>
                         <li><a href="../about.html">About</a></li>
                     </ul>
@@ -433,9 +524,9 @@
             <div class="footer-bottom">
                 <span>© 2026 Vanlife. Built by a vanlife nerd.</span>
                 <div class="social-links">
-                    <a href="https://facebook.com" class="social-link">📘</a>
-                    <a href="#" class="social-link">📷</a>
-                    <a href="#" class="social-link">▶️</a>
+                    <a href="https://web.facebook.com/share/g/1CMCa5agXJ/" rel="noopener" target="_blank" class="social-link">📘</a>
+                    <a href="https://web.facebook.com/share/g/1CMCa5agXJ/" rel="noopener" target="_blank" class="social-link">📷</a>
+                    <a href="https://web.facebook.com/share/g/1CMCa5agXJ/" rel="noopener" target="_blank" class="social-link">▶️</a>
                 </div>
             </div>
         </div>
