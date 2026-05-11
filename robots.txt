@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# AdSense crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# AdsBot (landing page quality)
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+Sitemap: https://vanlife.website/sitemap.xml
