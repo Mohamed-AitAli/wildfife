@@ -1,0 +1,8 @@
+# WordPress deploy experiments — static site only on GitHub Pages
+wordpress/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.cursor/
